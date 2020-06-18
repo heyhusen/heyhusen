@@ -11,11 +11,20 @@
     </template>
 
     <p>These are some of the latest articles on my blog. You can find more at <a href="https://blog.husenis.me" target="_blank" title="Husen Blog">https://blog.husenis.me</a>.</p>
+    <br>
+    
+    <BlogPost/>
+
   </Layout>
 </template>
 
 <script>
+import BlogPost from '~/components/BlogPost.vue'
+
 export default {
+  components: {
+    BlogPost
+  },
   metaInfo: {
     title: 'Blog'
   }

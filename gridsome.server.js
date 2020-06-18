@@ -30,6 +30,26 @@ module.exports = function (api) {
       about: data.entry[0].aboutMe,
     })
 
+    const Blogs = await axios({
+      method: 'get',
+      url: 'https://dev.to/api/articles/me/published',
+      headers: {'api-key': process.env.DEVTO_API_KEY}
+    });
+    const blogCollection = actions.addCollection({
+      typeName: 'BlogPosts'
+    })
+    for (const blog of Blogs.data) {
+      blogCollection.addNode({
+        id: blog.id,
+        title: blog.title,
+        description: blog.description,
+        url: process.env.BLOG_URL + blog.slug,
+        time: blog.published_at,
+        creator: blog.user.name,
+        thumbnail: blog.cover_image
+      })
+    }
+
     // Github
     /**
     const githubData = axios({

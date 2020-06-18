@@ -6,6 +6,8 @@ import 'buefy/dist/buefy.css'
 import '~/assets/sass/styles.scss'
 // import '@creativebulma/bulma-divider/dist/bulma-divider.min.css'
 import 'bulma-timeline/dist/css/bulma-timeline.min.css'
+import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse';
+import VueFilterDateFormat from '@vuejs-community/vue-filter-date-format';
 
 import DefaultLayout from '~/layouts/Default.vue'
 
@@ -19,6 +21,8 @@ export default function (Vue, { router, head, isClient }) {
   head.bodyAttrs = { class: 'has-navbar-fixed-top' }
   
   Vue.use(Buefy)
+  Vue.use(VueFilterDateParse);
+  Vue.use(VueFilterDateFormat);
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
