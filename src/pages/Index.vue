@@ -121,7 +121,7 @@
             It is all about me. How about you? Do you have a project that you want to talk about?
           </h2>
           <h1 class="title">
-            <b-button tag="g-link"
+            <b-button tag="router-link"
               to="/contact"
               type="is-info">
               Contact Me
