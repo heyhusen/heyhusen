@@ -45,64 +45,9 @@ module.exports = function (api) {
         description: blog.description,
         url: process.env.BLOG_URL + blog.slug,
         time: blog.published_at,
-        creator: blog.user.name,
         thumbnail: blog.cover_image
       })
     }
-
-    // Github
-    /**
-    const githubData = axios({
-      method: 'get',
-      url: 'https://api.github.com/graphql',
-      headers: {'Authorization': 'Bearer ' + process.env.GITHUB_TOKEN},
-      data: {
-        query: `
-          query {
-            organization(login: "datakrama") {
-              name
-              location
-              email
-              description
-              avatarUrl
-              isVerified
-              twitterUsername
-              websiteUrl
-              repositories(orderBy: {field: PUSHED_AT, direction: DESC}, last: 8) {
-                nodes {
-                  nameWithOwner
-                  name
-                  description
-                  homepageUrl
-                  forkCount
-                  repositoryTopics(last: 10) {
-                    nodes {
-                      topic {
-                        name
-                      }
-                      url
-                    }
-                  }
-                  releases(last: 1) {
-                    nodes {
-                      name
-                      tagName
-                      url
-                      description
-                    }
-                  }
-                }
-              }
-            }
-          } 
-        ` 
-      }
-    })
-    const githubCollection = actions.addCollection({
-      typeName: 'Repositories'
-    })
-    githubCollection.addNode(githubData.data);
-    **/
   })
 
   api.loadSource(async store => {

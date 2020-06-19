@@ -31,7 +31,6 @@ query {
         description
         url
         time
-        creator
         thumbnail
       }
     }

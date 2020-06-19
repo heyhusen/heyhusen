@@ -22,11 +22,11 @@
 import BlogPost from '~/components/BlogPost.vue'
 
 export default {
-  components: {
-    BlogPost
-  },
   metaInfo: {
     title: 'Blog'
+  },
+  components: {
+    BlogPost
   }
 }
 </script>

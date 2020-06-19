@@ -11,6 +11,9 @@
     </template>
 
     <p>All my open source projects are published under the name <a :href="$static.metadata.datakramaUrl" target="_blank" title="Datakrama">Datakrama</a>. You can find more at the repository on <a href="https://github.com/datakrama" target="_blank">Github</a>.</p>
+    <br>
+
+    <GithubRepository />
   </Layout>
 </template>
 
@@ -23,9 +26,14 @@ query {
 </static-query>
 
 <script>
+import GithubRepository from '~/components/GithubRepository.vue'
+
 export default {
   metaInfo: {
     title: 'Open Source'
+  },
+  components: {
+    GithubRepository
   }
 }
 </script>

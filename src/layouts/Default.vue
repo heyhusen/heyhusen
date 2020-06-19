@@ -16,7 +16,7 @@
         <div class="navbar-menu">
           <div class="navbar-end">
             <g-link class="navbar-item" to="/">About</g-link>
-            <g-link class="navbar-item" to="/work">Works</g-link>
+            <!--  <g-link class="navbar-item" to="/work">Works</g-link> -->
             <g-link class="navbar-item" to="/open-source">Open Source</g-link>
             <g-link class="navbar-item" to="/blog">Blog</g-link>
             <g-link class="navbar-item" to="/contact">Contact</g-link>
@@ -75,7 +75,3 @@ query {
     }
   }
 </script>
-
-<style>
-
-</style>
