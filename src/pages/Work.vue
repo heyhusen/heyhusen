@@ -3,7 +3,7 @@
 
     <template slot="topdesc">
       <h1 class="title">
-        Works
+        Works<span class="has-text-danger">_</span>
       </h1>
       <h2 class="subtitle">
         Some of the published works I have done.

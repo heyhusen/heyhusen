@@ -3,7 +3,7 @@
 
     <template slot="topdesc">
       <h1 class="title">
-        Hi, I'm Ahmad Husen.
+        Hi, I'm Ahmad Husen<span class="has-text-danger">_</span>
       </h1>
       <h2 class="subtitle">
         A backend developer who <b-icon icon="cards-heart" type="is-danger">></b-icon> open source.
@@ -46,7 +46,7 @@
         <section class="hero is-white has-text-centered">
           <div class="hero-body">
             <div class="container">
-              <h1 class="title">Skills</h1>
+              <h1 class="title">Skills<span class="has-text-primary">_</span></h1>
               <b-tag type="is-php" rounded>PHP</b-tag> <b-tag type="is-mysql" rounded>MySQL</b-tag>  <b-tag type="is-codeigniter" rounded>CodeIgniter</b-tag> <b-tag type="is-laravel" rounded>Laravel</b-tag> <b-tag type="is-dark" rounded>Microservice</b-tag> <b-tag type="is-git" rounded>Git</b-tag> <b-tag type="is-linux" rounded>Linux</b-tag>
             </div>
           </div>

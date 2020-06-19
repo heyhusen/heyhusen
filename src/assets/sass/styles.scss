@@ -1,6 +1,13 @@
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
+// Typography
+$family-sans-serif: "Fira Sans", sans-serif;
+$family-monospace: "Space Mono", monospace;
+$family-primary: $family-sans-serif;
+$title-family: $family-monospace;
+$subtitle-family: $family-monospace;
+
 // Set your colors
 $primary: #2b2f8e;
 $primary-invert: findColorInvert($primary);

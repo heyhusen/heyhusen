@@ -3,7 +3,7 @@
 
     <template slot="topdesc">
       <h1 class="title">
-        Blog
+        Blog<span class="has-text-danger">_</span>
       </h1>
       <h2 class="subtitle">
         Sometimes I also share something about this coding world.

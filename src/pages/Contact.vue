@@ -3,7 +3,7 @@
 
     <template slot="topdesc">
       <h1 class="title">
-        Contact
+        Contact<span class="has-text-danger">_</span>
       </h1>
       <h2 class="subtitle">
         Want to talk about your project? Or just chatting with me? Let's meet up.

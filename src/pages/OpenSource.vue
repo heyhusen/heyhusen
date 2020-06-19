@@ -3,7 +3,7 @@
 
     <template slot="topdesc">
       <h1 class="title">
-        Open Source
+        Open Source<span class="has-text-danger">_</span>
       </h1>
       <h2 class="subtitle">
         This is how I contribute to this community.
