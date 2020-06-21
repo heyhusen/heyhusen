@@ -11,13 +11,21 @@
     </template>
 
     <p>Here are some of my works that I can show. But, not all of these have a Git repository.</p>
+    <br>
+
+    <Portfolio />
   </Layout>
 </template>
 
 <script>
+import Portfolio from '~/components/Portfolio.vue'
+
 export default {
   metaInfo: {
     title: 'Works'
+  },
+  components: {
+    Portfolio
   }
 }
 </script>

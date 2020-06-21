@@ -1,18 +1,18 @@
 <template>
   <div class="container">
       <div class="columns">
-        <div v-for="edge in $static.posts.edges" :key="edge.node.id" class="column is-one-quarter">
+        <div v-for="article in articles" :key="article.id" class="column is-one-quarter">
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-2by1">
-                      <a :href="edge.node.url" target="_blank" :title="edge.node.title"><img :src="edge.node.thumbnail" :alt="edge.node.title"></a>
+                      <a :href="blogUrl + '/' + article.slug" target="_blank" :title="article.title"><img :src="article.cover_image" :alt="article.title"></a>
                     </figure>
                 </div>
                 <div class="card-content">
                   <div class="content">
-                    <a :href="edge.node.url" target="_blank" :title="edge.node.title"><p class="title is-4">{{ edge.node.title }}</p></a>
-                    <p class="subtitle is-7">Published on {{ edge.node.time | dateParse('YYYY-MM-DD HH:mm:ss') | dateFormat('MMM D, YYYY') }}</p>
-                    <p>{{ edge.node.description }}</p>
+                    <a :href="blogUrl + '/' + article.slug" target="_blank" :title="article.title"><p class="title is-4">{{ article.title }}</p></a>
+                    <p class="subtitle is-7">Published on {{ article.published_at | dateParse('YYYY-MM-DD HH:mm:ss') | dateFormat('MMM D, YYYY') }}</p>
+                    <p>{{ article.description }}</p>
                   </div>
                 </div>
             </div>
@@ -21,25 +21,28 @@
   </div>
 </template>
 
-<static-query>
-query {
-  posts: allBlogPosts {
-    edges {
-      node {
-        id
-        title
-        description
-        url
-        time
-        thumbnail
-      }
+<script>
+import axios from 'axios'
+
+export default {
+  name: 'BlogPost',
+  data () {
+    return {
+      articles: null,
+      blogUrl: process.env.GRIDSOME_BLOG_URL
+    }
+  },
+  async mounted () {
+    try {
+      const results = await axios({
+        method: 'get',
+        url: '/devto/articles/?username=husenisme'
+      })
+
+      this.articles = results.data
+    } catch (error) {
+      console.log(error)
     }
   }
-}
-</static-query>
-
-<script>
-export default {
-  name: 'BlogPost'
 }
 </script>

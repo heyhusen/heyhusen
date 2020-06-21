@@ -12,35 +12,7 @@
 
     <div class="columns">
       <div class="column is-two-thirds">
-        <article class="media">
-          <figure class="media-left">
-            <p class="image is-128x128">
-              <img class="is-rounded" :src="$page.bio.edges[0].node.avatar + '?s=200'">
-            </p>
-          </figure>
-          <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>{{ $page.bio.edges[0].node.name }}</strong> &middot; <a :href="'mailto:' + $page.bio.edges[0].node.email" target="_blank">{{ $page.bio.edges[0].node.email }}</a> <small><b-icon icon="map-marker" size="is-small"></b-icon> {{ $page.bio.edges[0].node.location }}</small>
-                <br>
-                {{ $page.bio.edges[0].node.about }}
-              </p>
-            </div>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <a class="level-item">
-                  <b-icon icon="reply"></b-icon>
-                </a>
-                <a class="level-item">
-                  <b-icon icon="twitter-retweet"></b-icon>
-                </a>
-                <a class="level-item">
-                  <b-icon icon="heart"></b-icon>
-                </a>
-              </div>
-            </nav>
-          </div>
-        </article>
+        <About />
       </div>
       <div class="column">
         <section class="hero is-white has-text-centered">
@@ -134,26 +106,15 @@
   </Layout>
 </template>
 
-<page-query>
-query {
-  bio: allBio {
-    edges {
-      node {
-        name
-        email
-        avatar
-        about
-        location
-      }
-    }
-  }
-}
-</page-query>  
-
 <script>
+import About from '~/components/About.vue'
+
 export default {
   metaInfo: {
     title: 'Home'
+  },
+  components: {
+    About
   }
 }
 </script>

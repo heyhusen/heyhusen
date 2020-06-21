@@ -9,7 +9,7 @@
         </template>
         <template slot="end">
           <b-navbar-item tag="g-link" to="/">About</b-navbar-item>
-          <!-- <b-navbar-item tag="g-link" to="/work">Works</b-navbar-item> -->
+          <b-navbar-item tag="g-link" to="/work">Works</b-navbar-item>
           <b-navbar-item tag="g-link" to="/open-source">Open Source</b-navbar-item>
           <b-navbar-item tag="g-link" to="/blog">Blog</b-navbar-item>
           <b-navbar-item tag="g-link" to="/contact">Contact</b-navbar-item>
