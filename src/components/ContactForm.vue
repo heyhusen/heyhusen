@@ -45,7 +45,7 @@ export default {
         return {
             email: '',
             message: '',
-            endpoint: 'https://formspree.io/xzbjgnyk'
+            endpoint: process.env.FORMSPREE_ENDPOINT
         }
     },  
     methods: {
