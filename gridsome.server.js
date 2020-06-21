@@ -13,7 +13,7 @@ module.exports = function (api) {
     app.use(
       '/api',
       createProxyMiddleware({
-        target: process.env.GRIDSOME_API_URL,
+        target: process.env.API_URL,
         changeOrigin: true
       })
     )
@@ -21,7 +21,7 @@ module.exports = function (api) {
     app.use(
       '/gravatar',
       createProxyMiddleware({
-        target: 'https://www.gravatar.com',
+        target: process.env.GRAVATAR_URL,
         changeOrigin: true,
         pathRewrite: {
           '/gravatar': ''
@@ -32,7 +32,7 @@ module.exports = function (api) {
     app.use(
       '/devto',
       createProxyMiddleware({
-        target: 'https://dev.to',
+        target: process.env.DEVTO_URL,
         changeOrigin: true,
         pathRewrite: {
           '/devto': '/api'

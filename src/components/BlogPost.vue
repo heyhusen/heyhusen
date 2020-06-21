@@ -36,7 +36,7 @@ export default {
     try {
       const results = await axios({
         method: 'get',
-        url: '/devto/articles/?username=husenisme'
+        url: process.env.GRIDSOME_DEVTO_URL + '/articles/?username=husenisme'
       })
 
       this.articles = results.data

@@ -44,7 +44,7 @@ export default {
     },
     async mounted () {
         try {
-            const results = await axios.get('/gravatar/' + process.env.GRIDSOME_GRAVATAR_HASH + '.json')
+            const results = await axios.get(process.env.GRIDSOME_GRAVATAR_URL + '/' + process.env.GRIDSOME_GRAVATAR_HASH + '.json')
 
             this.about = results.data.entry[0]
         } catch (error) {
