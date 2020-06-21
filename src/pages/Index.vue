@@ -6,7 +6,7 @@
         Hi, I'm Ahmad Husen<span class="has-text-danger">_</span>
       </h1>
       <h2 class="subtitle">
-        A backend developer who <b-icon icon="cards-heart" type="is-danger">></b-icon> open source.
+        A backend developer and OSS enthusiat.
       </h2>
     </template>
 
