@@ -34,6 +34,7 @@
 
 <script>
 import axios from 'axios'
+import jsonpAdapter from 'axios-jsonp'
 
 export default {
     name: 'About',
@@ -44,7 +45,11 @@ export default {
     },
     async mounted () {
         try {
-            const results = await axios.get(process.env.GRIDSOME_GRAVATAR_URL + '/' + process.env.GRIDSOME_GRAVATAR_HASH + '.json?callback=?')
+            const results = await axios({
+                method: 'get',
+                adapter: jsonpAdapter,
+                url: process.env.GRIDSOME_GRAVATAR_URL + '/' + process.env.GRIDSOME_GRAVATAR_HASH + '.json'
+            })
 
             this.about = results.data.entry[0]
         } catch (error) {
