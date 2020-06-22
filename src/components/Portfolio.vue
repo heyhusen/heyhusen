@@ -32,7 +32,7 @@ export default {
         try {
             const results = await axios({
                 method: 'get',
-                url: process.env.GRIDSOME_API_URL + '/work',
+                url: process.env.GRIDSOME_API_URL + '/api/work',
                 headers: {
                     'Accept': 'application/json'
                 }
