@@ -3,7 +3,7 @@
 
     <template slot="topdesc">
       <h1 class="title">
-        Hi, I'm Ahmad Husen<span class="has-text-danger">_</span>
+        Hi, I'm Husen<span class="has-text-danger">_</span>
       </h1>
       <h2 class="subtitle">
         A backend developer and OSS enthusiast.
