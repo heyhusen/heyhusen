@@ -13,7 +13,7 @@ module.exports = {
       use: 'gridsome-source-github-api',
       options: {
         // token: required by the GitHub API
-        token: process.env.GITHUB_TOKEN,
+        token: process.env.APP_GITHUB_TOKEN,
   
         // GraphQLquery: defaults to a search query
         graphQLQuery: `
