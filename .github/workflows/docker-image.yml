@@ -14,7 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
       env:
         GRIDSOME_GRAVATAR_URL: https://www.gravatar.com
         GRIDSOME_GRAVATAR_HASH: fd72a8fefdc8c5261e8a416f73bb0a18
@@ -24,4 +23,5 @@ jobs:
         GRIDSOME_DEVTO_URL: https://dev.to/api
         GRIDSOME_BLOG_URL: ${{ secrets.GRIDSOME_BLOG_URL }}
         GRIDSOME_FORMSPREE_ENDPOINT: ${{ secrets.GRIDSOME_FORMSPREE_ENDPOINT }}
-      run: docker build . -t husenisme/site
+    -   name: Build the Docker image
+        run: docker build . -t husenisme/site
