@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/husenisme/site/master/src/assets/img/logo.png" width="70%" />
-</p>
-
 # My Site
 
 This is my personal site as well as my portfolio. Made with Gridsome (Jamstack) and Bulma (Buefy), containing data from several sources.
