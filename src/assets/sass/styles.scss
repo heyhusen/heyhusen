@@ -1,6 +1,9 @@
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
+// Layout
+$section-padding: 1.5rem 1.5rem;
+
 // Typography
 $family-sans-serif: "Fira Sans", sans-serif;
 $family-monospace: "Space Mono", monospace;

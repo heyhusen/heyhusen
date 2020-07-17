@@ -25,10 +25,9 @@
         </div>
       </section>
     </header>
-    <section>
+    <section class="section">
       <div class="container is-fullhd">
         <div class="has-text-right has-text-left-mobile">
-          <br>
             <!-- <a :href="$static.metadata.datakramaUrl" target="_blank">Datakrama</a> -->
             <a href="https://github.com/husenisme" target="_blank"><b-icon icon="github" type="is-github"></b-icon></a>
             <a href="https://dev.to/husenisme" target="_blank"><b-icon icon="dev-to" type="is-devto"></b-icon></a>
