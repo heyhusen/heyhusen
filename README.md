@@ -46,7 +46,3 @@ You can install this project using two method, basic and Docker container.
 
 ## License
 Licensed under the MIT [License](https://github.com/husenisme/site/blob/master/LICENSE).
-
-<p align="center">
-  <img src="https://gridsome.org/logos/logo-normal.svg" width="20%" title="Gridsome" /> <img src="https://bulma.io/images/made-with-bulma--semiblack.png" width="20%" title="Bulma"/>
-</p>
