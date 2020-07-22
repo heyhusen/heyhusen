@@ -1,3 +1,5 @@
-Add static files here. Files in this directory will be copied directly to `dist` folder during build. For example, /static/robots.txt will be located at https://yoursite.com/robots.txt.
+# My Site
 
-This file should be deleted.
+This is my personal site as well as my portfolio. Made with Gridsome (Jamstack) and Bulma (Buefy), containing data from several sources.
+
+Auto-deployed from [husenisme/site](https://github.com/husenisme/site)

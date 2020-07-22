@@ -1,10 +1,3 @@
-<p align="center">
-  <a href="http://husenis.me" title="Husenisme" target="_blank"><img src="https://raw.githubusercontent.com/husenisme/husenisme/master/src/assets/img/logo.png" width="25%"/></a>
-</p>
-
-### Hi there, I'm Husen 👋
-
-<!--
 # My Site
 
 This is my personal site as well as my portfolio. Made with Gridsome (Jamstack) and Bulma (Buefy), containing data from several sources.
@@ -49,4 +42,3 @@ You can install this project using two method, basic and Docker container.
 
 ## License
 Licensed under the MIT [License](https://github.com/husenisme/site/blob/master/LICENSE).
--->
