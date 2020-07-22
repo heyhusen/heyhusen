@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: ubuntu-latest
 
@@ -38,4 +38,11 @@ jobs:
           GRIDSOME_DEVTO_URL: https://dev.to/api
           GRIDSOME_BLOG_URL: ${{ secrets.GRIDSOME_BLOG_URL }}
           GRIDSOME_FORMSPREE_ENDPOINT: ${{ secrets.GRIDSOME_FORMSPREE_ENDPOINT }}
-        run: yarn deploy
+        run: yarn build
+        
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.5.7
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
