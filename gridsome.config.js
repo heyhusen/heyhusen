@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Ahmad Husen',
   siteDescription: 'Portfolio from Ahmad Husen',
-  siteUrl: 'https://husenis.me',
+  siteUrl: 'https://husenisme.github.io',
   plugins: [
     {
       use: 'gridsome-source-github-api',
