@@ -45,5 +45,5 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.APP_GITHUB_TOKEN }}
           REPOSITORY_NAME: husenisme/husenisme.github.io
-          BRANCH: master
-          FOLDER: .
+          BRANCH: gh-pages
+          FOLDER: dist
