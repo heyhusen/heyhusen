@@ -6,7 +6,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse'
 import VueFilterDateFormat from '@vuejs-community/vue-filter-date-format'
 
-export default function (Vue, { router, head, isClient }) {
+export default function (Vue, { head }) {
   // Add an external CSS file
   head.link.push({
     rel: 'stylesheet',
@@ -15,10 +15,13 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   // Add attributes to BODY tag
-  head.bodyAttrs = { class: 'bg-gray-200 text-gray-800 font-sans text-base md:text-lg leading-normal antialiased tracking-normal' }
-  
-  Vue.use(VueFilterDateParse);
-  Vue.use(VueFilterDateFormat);
+  head.bodyAttrs = {
+    class:
+      'bg-gray-200 text-gray-800 font-sans text-base md:text-lg leading-normal antialiased tracking-normal',
+  }
+
+  Vue.use(VueFilterDateParse)
+  Vue.use(VueFilterDateFormat)
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
