@@ -6,7 +6,7 @@
         Hi, I'm Husen<span class="has-text-danger">_</span>
       </h1>
       <h2 class="subtitle">
-        A backend developer and OSS enthusiast.
+        A backend developer and blogger.
       </h2>
     </template>
 
@@ -90,7 +90,7 @@
       <div class="hero-body">
         <div class="container">
           <h2 class="subtitle">
-            It is all about me. How about you? Do you have a project that you want to talk about?
+            Enough about me. How about you? Do you have a project that you want to talk about?
           </h2>
           <h1 class="title">
             <b-button tag="router-link"
