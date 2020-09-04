@@ -7,8 +7,21 @@
 module.exports = {
   siteName: 'Ahmad Husen',
   siteDescription: 'Portfolio from Ahmad Husen',
-  siteUrl: 'https://husenisme.github.io',
+  siteUrl: 'https://hapakaien.github.io',
   plugins: [
+    {
+      use: 'gridsome-plugin-tailwindcss',
+      /**
+       * These are the default options. You don't need to set any options to get
+       * going. Seriously, you don't need to declare tailwind.config.js.
+       **/
+      options: {
+        tailwindConfig: './tailwind.config.js',
+        // presetEnvConfig: {},
+        // shouldImport: true,
+        // shouldTimeTravel: true
+      },
+    },
     {
       use: 'gridsome-source-github-api',
       options: {

@@ -1,31 +1,22 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
-import '~/assets/sass/styles.scss'
-// import '@creativebulma/bulma-divider/dist/bulma-divider.min.css'
-import 'bulma-timeline/dist/css/bulma-timeline.min.css'
-import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse';
-import VueFilterDateFormat from '@vuejs-community/vue-filter-date-format';
-
 import DefaultLayout from '~/layouts/Default.vue'
 
+import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse'
+import VueFilterDateFormat from '@vuejs-community/vue-filter-date-format'
+
 export default function (Vue, { router, head, isClient }) {
+  // Add an external CSS file
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Fira+Sans&family=Space+Mono&display=swap'
-  })
-
-  head.link.push({
-      rel: 'stylesheet',
-      href: 'https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css'
+    href:
+      'https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap',
   })
 
   // Add attributes to BODY tag
-  head.bodyAttrs = { class: 'has-navbar-fixed-top' }
+  head.bodyAttrs = { class: 'bg-gray-200 text-gray-800 font-sans text-base md:text-lg leading-normal antialiased tracking-normal' }
   
-  Vue.use(Buefy)
   Vue.use(VueFilterDateParse);
   Vue.use(VueFilterDateFormat);
 
