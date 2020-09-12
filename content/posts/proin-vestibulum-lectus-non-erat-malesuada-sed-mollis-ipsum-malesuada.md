@@ -10,7 +10,7 @@ date: 2020-09-11T09:39:30.280Z
 author: 1599831417602-hY18hTewn
 tag:
   - 1599831398813-azilg9CmV
-featuredImage: uploads/flowers-5443922_1920.jpg
+featuredImage: assets/uploads/flowers-5443922_1920.jpg
 ---
 <!--StartFragment-->
 
