@@ -10,7 +10,7 @@ date: 2020-09-11T09:37:40.858Z
 author: 1599831417602-hY18hTewn
 tag:
   - 1599831381679-h7G7VNeeW
-featuredImage: uploads/carbon-2-.png
+featuredImage: assets/uploads/carbon-5-.png
 ---
 <!--StartFragment-->
 
