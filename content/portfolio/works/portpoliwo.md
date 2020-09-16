@@ -6,5 +6,6 @@ tag:
   - 1599903841536-XJwiYy_re
   - 1599903857116-XjontuOHh
 featuredImage: uploads/portpoliwo.lara_.png
+description: Simple CMS using Laravel and Vue.js as SPA
 ---
 Simple CMS using Laravel and Vue.js as SPA
