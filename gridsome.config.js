@@ -107,18 +107,6 @@ module.exports = {
         component: './src/templates/Blog/Author.vue',
       },
     ],
-    PortfolioWork: [
-      {
-        path: '/work/:year/:month/:day/:title',
-        component: './src/templates/Portfolio/Work.vue',
-      },
-    ],
-    PortfolioTag: [
-      {
-        path: '/work/tag/:title',
-        component: './src/templates/Portfolio/Tag.vue',
-      },
-    ],
   },
   transformers: {
     remark: {
