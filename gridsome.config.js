@@ -101,12 +101,6 @@ module.exports = {
         component: './src/templates/Blog/Tag.vue',
       },
     ],
-    BlogAuthor: [
-      {
-        path: '/blog/author/:title',
-        component: './src/templates/Blog/Author.vue',
-      },
-    ],
   },
   transformers: {
     remark: {
