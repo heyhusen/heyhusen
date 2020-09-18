@@ -1,14 +1,14 @@
 <template>
   <footer
-    class="text-center font-thin py-5 prose prose-sm max-w-none sm:prose sm:max-w-none md:py-12"
+    class="text-center prose prose-sm max-w-none sm:prose sm:max-w-none md:py-12"
   >
-    <div class="container mx-auto px-4 xl:px-0">
+    <div class="border-t border-gray-300 p-8 xl:container xl:mx-auto xl:px-0">
       Copyright &copy; 2020
       {{
         new Date().getFullYear() > 2020 ? `- ${new Date().getFullYear()}` : ''
       }}
       &middot;
-      <span class="text-yellow-400"
+      <span class="text-primary-500"
         ><g-link to="/">{{ $static.metadata.siteName }}</g-link></span
       >
       <br />Made with
@@ -39,7 +39,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="feather feather-coffee inline-block fill-current text-gray-500 h-4 w-4"
+        class="feather feather-coffee inline-block fill-current text-coffe h-4 w-4"
       >
         <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
         <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>

@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gradient-to-r from-blue-800 to-purple-900">
+  <div class="bg-white">
     <Header />
-    <div class="w-full px-0">
+    <div>
       <slot />
     </div>
     <Footer />

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <main class="bg-white text-gray-700">
+    <main>
       <div class="sm:p-8 max-w-4xl mx-auto">
         <div
           class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"

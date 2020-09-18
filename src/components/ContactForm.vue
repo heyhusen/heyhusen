@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="custom">
     <div class="space-x-2 mb-4">
       <a
         :href="$static.profile.linkedin"
@@ -129,7 +129,7 @@
         <div>
           <button
             type="submit"
-            class="bg-blue-700 w-full hover:bg-blue-800 text-white font-bold py-2 px-4 rounded"
+            class="bg-primary-500 w-full hover:bg-primary-800 text-white font-bold py-2 px-4 rounded"
           >
             Contact me
           </button>
