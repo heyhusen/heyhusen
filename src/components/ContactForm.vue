@@ -95,7 +95,7 @@
             <input
               v-model="contact.email"
               type="email"
-              class="form-input my-1 block w-full"
+              class="form-input bg-gray-300 outline-none focus:shadow-outline my-1 block w-full"
               placeholder="Enter valid e-mail."
             />
             <span
@@ -115,7 +115,7 @@
             <span class="text-gray-700">Message</span>
             <textarea
               v-model="contact.message"
-              class="form-textarea my-1 block w-full"
+              class="form-textarea bg-gray-300 outline-none focus:shadow-outline my-1 block w-full"
               rows="3"
               placeholder="Enter some message here."
             ></textarea>
