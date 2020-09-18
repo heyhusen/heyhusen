@@ -72,7 +72,7 @@ export default {
   name: 'BlogPost',
   props: {
     article: {
-      type: Array,
+      type: [Array, Object],
       default: () => [],
     },
     index: {

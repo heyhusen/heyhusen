@@ -35,7 +35,7 @@ export default {
   name: 'PortfolioWork',
   props: {
     work: {
-      type: Array,
+      type: [Array, Object],
       default: () => [],
     },
     index: {
