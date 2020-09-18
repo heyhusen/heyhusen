@@ -3,7 +3,7 @@ id: 1599831417602-hY18hTewn
 title: Ahmad Husen
 email: hello@husen.id
 blurb: Backend developer, with more interest in frontend and UX.
-link: https://ahmadhusen.com
+link: https://husen.id
 github: https://github.com/hapakaien
 twitter: https://twitter.com/hapakaien
 linkedin: https://linkedin.com/in/ahmadhusen
