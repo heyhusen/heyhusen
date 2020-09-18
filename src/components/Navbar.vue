@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div :class="{ 'bg-blue-800': $route.path === '/' }">
+    <div :class="{ 'bg-blue-900': $route.path === '/' }">
       <div
         class="py-4 px-4 sm:py-10 sm:flex sm:justify-between sm:items-center xl:container xl:mx-auto"
       >
@@ -92,7 +92,7 @@
       </div>
     </div>
     <svg
-      class="fill-current text-blue-800"
+      class="fill-current text-blue-900"
       :class="{ hidden: $route.path !== '/' }"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"

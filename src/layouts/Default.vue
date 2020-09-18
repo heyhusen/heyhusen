@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-br from-blue-600 to-purple-900">
+  <div class="bg-gradient-to-r from-blue-800 to-purple-900">
     <Header />
     <div class="w-full px-0">
       <slot />

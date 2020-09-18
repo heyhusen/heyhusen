@@ -42,7 +42,7 @@
             </div>
             <div class="mt-10 flex justify-center sm:justify-start">
               <g-link
-                class="no-underline bg-blue-800 text-gray-500 py-2 px-3 rounded hover:bg-blue-900 xl:py-3 xl:px-4"
+                class="no-underline bg-blue-900 text-gray-500 py-2 px-3 rounded hover:bg-indigo-900 xl:py-3 xl:px-4"
                 to="/about"
                 >More about me</g-link
               >
@@ -63,7 +63,7 @@
           class="shape-fill"
         ></path>
       </svg>
-      <div class="bg-white text-gray-800">
+      <div id="contact-form" class="bg-white text-gray-800">
         <div class="px-4 xl:container xl:mx-auto">
           <div
             class="px-4 pb-2 prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
