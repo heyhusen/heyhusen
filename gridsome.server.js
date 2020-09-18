@@ -6,50 +6,20 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 const axios = require('axios')
-const { createProxyMiddleware } = require('http-proxy-middleware')
+const md5 = require('md5')
 
 module.exports = function (api) {
-  api.configureServer(app => {
-    app.use(
-      '/api',
-      createProxyMiddleware({
-        target: process.env.API_URL,
-        changeOrigin: true
-      })
+  api.loadSource(async ({ addCollection }) => {
+    // Gravatar
+    const {
+      data: { entry: gravatar },
+    } = await axios.get(
+      `https://secure.gravatar.com/${md5(process.env.EMAIL)}.json`
     )
-
-    app.use(
-      '/gravatar',
-      createProxyMiddleware({
-        target: 'https://www.gravatar.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '/gravatar': ''
-        },
-      })
-    )
-
-    app.use(
-      '/devto',
-      createProxyMiddleware({
-        target: 'https://dev.to/api',
-        changeOrigin: true,
-        pathRewrite: {
-          '/devto': '/api'
-        },
-      })
-    )
+    addCollection('Gravatar').addNode(gravatar[0])
   })
 
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
-
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-
-  api.loadSource(async store => {
+  api.loadSource(async (store) => {
     store.addMetadata('datakramaUrl', 'https://github.com/datakrama')
   })
 }

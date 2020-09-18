@@ -5,11 +5,9 @@
         <div
           class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
         >
-          <div class="custom">
-            <h1 class="font-mono">Blog<span class="text-pink-600">_</span></h1>
-            Sometimes I also share something about this coding world, or just a
-            random technology stuff.
-          </div>
+          <h1 class="font-mono">
+            Blog Tag: {{ $page.tag.title }}<span class="text-pink-600">_</span>
+          </h1>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
           <BlogPost
@@ -25,10 +23,11 @@
 </template>
 
 <page-query>
-query {
-  articles: allBlogPost {
+query($id: ID) {
+  articles: allBlogPost(filter: { tag: { contains: [$id] } }) {
     edges {
       node {
+        id
         title
         path
         date
@@ -36,20 +35,26 @@ query {
         content
         featuredImage
         tag {
+          id
           title
-          path
         }
       }
     }
+  }
+
+  tag: blogTag(id: $id) {
+    title
   }
 }
 </page-query>
 
 <script>
 export default {
-  name: 'Blog',
-  metaInfo: {
-    title: 'Blog',
+  name: 'BlogTag',
+  metaInfo() {
+    return {
+      title: `Blog Tag: ${this.$page.tag.title}`,
+    }
   },
   components: {
     BlogPost: () => import('~/components/Blog/Post.vue'),

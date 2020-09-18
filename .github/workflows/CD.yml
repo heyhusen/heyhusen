@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Deploy
+name: CD
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -28,16 +28,9 @@ jobs:
 
       - name: Build app
         env:
-          GRIDSOME_GRAVATAR_URL: https://www.gravatar.com
-          GRIDSOME_GRAVATAR_HASH: fd72a8fefdc8c5261e8a416f73bb0a18
-          API_URL: ${{ secrets.API_URL }}
-          GRIDSOME_API_URL: ${{ secrets.API_URL }}
-          APP_GITHUB_TOKEN: ${{ secrets.APP_GITHUB_TOKEN }}
-          GRIDSOME_DEVTO_URL: https://dev.to/api
-          GRIDSOME_BLOG_URL: ${{ secrets.GRIDSOME_BLOG_URL }}
-          GRIDSOME_FORMSPREE_ENDPOINT: ${{ secrets.GRIDSOME_FORMSPREE_ENDPOINT }}
+          EMAIL: ${{ secrets.EMAIL }}
         run: yarn build
-        
+
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2.1.1
         with:

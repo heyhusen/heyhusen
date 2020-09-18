@@ -5,6 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse'
 import VueFilterDateFormat from '@vuejs-community/vue-filter-date-format'
+import VueDisqus from 'vue-disqus'
 
 export default function (Vue, { head }) {
   // Add an external CSS file
@@ -17,11 +18,12 @@ export default function (Vue, { head }) {
   // Add attributes to BODY tag
   head.bodyAttrs = {
     class:
-      'bg-gray-200 text-gray-800 font-sans text-base md:text-lg leading-normal antialiased tracking-normal',
+      'text-gray-400 font-sans text-base leading-normal antialiased tracking-normal md:text-lg lg:text-xl',
   }
 
   Vue.use(VueFilterDateParse)
   Vue.use(VueFilterDateFormat)
+  Vue.use(VueDisqus)
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)

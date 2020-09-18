@@ -6,64 +6,131 @@
 
 module.exports = {
   siteName: 'Ahmad Husen',
-  siteDescription: 'Portfolio from Ahmad Husen',
+  siteDescription: 'My personal site, portfolio, and blog',
   siteUrl: 'https://hapakaien.github.io',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
-      /**
-       * These are the default options. You don't need to set any options to get
-       * going. Seriously, you don't need to declare tailwind.config.js.
-       **/
       options: {
         tailwindConfig: './tailwind.config.js',
-        // presetEnvConfig: {},
-        // shouldImport: true,
-        // shouldTimeTravel: true
       },
     },
+    // Load all Blog Posts from file system
     {
-      use: 'gridsome-source-github-api',
+      use: '@gridsome/source-filesystem',
       options: {
-        // token: required by the GitHub API
-        token: process.env.APP_GITHUB_TOKEN,
-  
-        // GraphQLquery: defaults to a search query
-        graphQLQuery: `
-          query {
-            repositoryOwner(login: "datakrama") {
-              repositories(last: 12, orderBy: {field: PUSHED_AT, direction: DESC}) {
-                nodes {
-                  id
-                  pushedAt
-                  nameWithOwner
-                  description
-                  shortDescriptionHTML(limit: 40)
-                  url
-                  homepageUrl
-                  repositoryTopics(last: 10) {
-                    nodes {
-                      id
-                      url
-                      topic {
-                        name
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }        
-        `,
-  
-        // variables: defaults to variables needed for a search query
-        variables: {
-          owner: 'datakrama'
-        }
-      }
-    }
+        path: 'content/blog/posts/**/*.md',
+        typeName: 'BlogPost',
+        refs: {
+          tag: 'BlogTag',
+          author: 'BlogAuthor',
+        },
+      },
+    },
+    // Load Tags from file system
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/blog/tags/**/*.md',
+        typeName: 'BlogTag',
+        refs: {
+          posts: {
+            typeName: 'BlogPost',
+          },
+        },
+      },
+    },
+    // Load Authors from file system
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/blog/authors/**/*.md',
+        typeName: 'BlogAuthor',
+        refs: {
+          posts: {
+            typeName: 'BlogPost',
+          },
+        },
+      },
+    },
+    // Load all Portfolio Works from file system
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/portfolio/works/**/*.md',
+        typeName: 'PortfolioWork',
+        refs: {
+          tag: 'PortfolioTag',
+        },
+      },
+    },
+    // Load Tags from file system
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/portfolio/tags/**/*.md',
+        typeName: 'PortfolioTag',
+        refs: {
+          posts: {
+            typeName: 'PortfolioWork',
+          },
+        },
+      },
+    },
+    // Netlify CMS Plugin
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        modulePath: `src/cms/index.js`,
+        configPath: `src/cms/config.yml`,
+        publicPath: `/cms`,
+        htmlTitle: `Content Manager`,
+      },
+    },
   ],
+  templates: {
+    BlogPost: [
+      {
+        path: '/blog/:year/:month/:day/:title',
+        component: './src/templates/Blog/SinglePost.vue',
+      },
+    ],
+    BlogTag: [
+      {
+        path: '/blog/tag/:title',
+        component: './src/templates/Blog/Tag.vue',
+      },
+    ],
+    BlogAuthor: [
+      {
+        path: '/blog/author/:title',
+        component: './src/templates/Blog/Author.vue',
+      },
+    ],
+    PortfolioWork: [
+      {
+        path: '/work/:year/:month/:day/:title',
+        component: './src/templates/Portfolio/Work.vue',
+      },
+    ],
+    PortfolioTag: [
+      {
+        path: '/work/tag/:title',
+        component: './src/templates/Portfolio/Tag.vue',
+      },
+    ],
+  },
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        // ...global plugins
+      ],
+    },
+  },
   configureWebpack: {
     // merged with the internal config
-  }
+  },
 }
