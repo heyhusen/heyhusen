@@ -7,7 +7,6 @@
 module.exports = {
   siteName: 'Ahmad Husen',
   siteDescription: 'My personal site, portfolio, and blog',
-  siteUrl: 'https://husen.id',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
