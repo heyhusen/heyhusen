@@ -138,6 +138,7 @@
 <page-query>
 query($id: ID) {
   post: blogPost(id: $id) {
+    id
     title
     path
     date
@@ -145,10 +146,12 @@ query($id: ID) {
     content
     featuredImage
     tag {
+      id
       title
       path
     }
     author {
+      id
       title
       blurb
       email

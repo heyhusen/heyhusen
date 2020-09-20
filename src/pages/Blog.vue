@@ -31,6 +31,7 @@ query {
   articles: allBlogPost {
     edges {
       node {
+        id
         title
         path
         date
@@ -38,6 +39,7 @@ query {
         content
         featuredImage
         tag {
+          id
           title
           path
         }

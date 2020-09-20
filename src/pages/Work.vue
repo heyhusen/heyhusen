@@ -32,12 +32,14 @@
 <page-query>
 query {
   profile: blogAuthor(id: "1599831417602-hY18hTewn") {
+    id
     github
   }
 
   works: allPortfolioWork {
     edges {
       node {
+        id
         title
         path
         url
