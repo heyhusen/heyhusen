@@ -58,11 +58,11 @@
           ></g-link
         >
       </div>
-      <p
+      <div
         v-if="index === 0"
         class="hidden sm:block"
         v-html="article.node.content.slice(0, 130)"
-      ></p>
+      ></div>
     </div>
   </article>
 </template>

@@ -21,7 +21,7 @@
             </header>
             <div>
               <div>
-                <p v-html="$page.post.content"></p>
+                <div v-html="$page.post.content"></div>
               </div>
               <p
                 class="text-gray-300 flex flex-wrap text-xs sm:text-sm md:text-base xl:text-lg"
