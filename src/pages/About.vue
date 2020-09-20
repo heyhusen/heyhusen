@@ -79,6 +79,7 @@
 <page-query>
 query {
   gravatar(id: "187660235") {
+    id
     name {
       formatted
       familyName

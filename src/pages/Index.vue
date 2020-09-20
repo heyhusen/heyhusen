@@ -1,9 +1,7 @@
 <template>
   <Layout>
     <main>
-      <div
-        class="p-4 sm:px-10 sm:py-10 sm:flex sm:flex-col xl:container xl:mx-auto"
-      >
+      <div class="p-4 max-w-6xl mx-auto sm:px-10 sm:py-10 sm:flex sm:flex-col">
         <div class="sm:flex sm:flex-row sm:space-x-10 sm:items-center">
           <div
             class="w-40 h-40 mx-auto rounded overflow-hidden sm:mx-0 sm:flex-none md:h-56 md:w-56 lg:w-64 lg:h-64"
@@ -27,7 +25,8 @@
                 </h2>
                 <h2>
                   I am a
-                  <span class="text-primary-500">Web Developer</span>.
+                  <span class="text-primary-500">Web Developer</span> from
+                  {{ $page.gravatar.currentLocation }}.
                 </h2>
                 <h4>
                   I write
@@ -55,7 +54,7 @@
       </div>
 
       <div id="contact-form" class="bg-white text-gray-800">
-        <div class="px-4 xl:container xl:mx-auto">
+        <div class="px-4 max-w-6xl mx-auto">
           <div
             class="px-4 prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
           >
@@ -66,15 +65,13 @@
                 Don't be a stranger
               </span>
             </header>
-            <div class="md:flex md:items-center">
-              <div class="md:w-3/5 lg:w-1/2">
-                <p>
-                  <ContactForm />
-                </p>
+            <div
+              class="flex flex-col space-y-4 mt-4 md:flex-row md:space-y-0 md:items-center"
+            >
+              <div class="md:order-last md:px-4 md:w-2/5 lg:w-1/2">
+                Hey there.
               </div>
-              <div class="hidden p-4 md:block md:w-2/5 lg:w-1/2">
-                <g-image src="~/assets/img/undraw_contact_us_15o2.svg" />
-              </div>
+              <div class="md:w-3/5 lg:w-1/2"><ContactForm /></div>
             </div>
           </div>
         </div>
@@ -86,6 +83,7 @@
 <page-query>
 query {
   gravatar(id: "187660235") {
+    id
     name {
       formatted
       givenName

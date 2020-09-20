@@ -144,6 +144,7 @@
 <static-query>
 query {
   profile: blogAuthor(id: "1599831417602-hY18hTewn") {
+    id
     github
     twitter
     linkedin
