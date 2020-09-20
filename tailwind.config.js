@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  purge: ['./src/**/*.html', './src/**/*.vue', './src/**/*.js'],
+  purge: ['./src/**/*.html', './src/**/*.vue'],
   theme: {
     fontFamily: {
       sans: ['Raleway', 'sans-serif'],
