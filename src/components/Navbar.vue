@@ -4,7 +4,7 @@
       class="border-b border-gray-300 flex justify-between items-center xl:container xl:mx-auto"
     >
       <div
-        class="py-4 px-4 md:py-6 sm:flex sm:justify-start sm:items-center sm:space-x-4 lg:py-8"
+        class="py-3 px-4 sm:flex sm:justify-start sm:items-center sm:space-x-4 md:py-5"
       >
         <g-link
           class="text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700"
