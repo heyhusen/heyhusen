@@ -24,13 +24,13 @@
                 <div v-html="$page.post.content"></div>
               </div>
               <p
-                class="text-gray-300 flex flex-wrap text-xs sm:text-sm md:text-base xl:text-lg"
+                class="text-gray-100 flex flex-wrap text-xs sm:text-sm md:text-base xl:text-lg"
               >
                 <g-link
                   v-for="label in $page.post.tag"
                   :key="label.id"
                   :to="label.path"
-                  class="bg-blue-500 hover:bg-gray-600 py-1 px-2 rounded m-1"
+                  class="bg-secondary-500 hover:bg-gray-600 py-1 px-2 rounded m-1"
                   >#{{ label.title }}</g-link
                 >
               </p>
