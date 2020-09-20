@@ -87,6 +87,31 @@
 
     <ValidationObserver v-slot="{ handleSubmit }">
       <form class="space-y-2" @submit.prevent="handleSubmit(submitForm)">
+        <div v-if="result" class="text-green-600">
+          {{ result }}
+        </div>
+
+        <ValidationProvider
+          v-slot="{ errors, valid }"
+          name="Name"
+          rules="required"
+        >
+          <label class="block">
+            <span class="text-gray-700">Name</span>
+            <input
+              v-model="contact.name"
+              type="text"
+              class="form-input bg-gray-300 outline-none focus:shadow-outline my-1 block w-full"
+              placeholder="Enter your name."
+            />
+            <span
+              v-if="errors.length > 0"
+              :class="{ ' text-pink-600': errors[0], 'text-green-600': valid }"
+              >{{ errors.join('. ') }}</span
+            >
+          </label>
+        </ValidationProvider>
+
         <ValidationProvider
           v-slot="{ errors, valid }"
           name="E-Mail"
@@ -169,6 +194,7 @@ export default {
   data() {
     return {
       contact: {
+        name: '',
         email: '',
         message: '',
       },
@@ -182,8 +208,9 @@ export default {
         .then(({ data }) => {
           if (data.ok) {
             this.result = 'Message delivered successfully.'
-            this.email = ''
-            this.message = ''
+            this.contact.name = ''
+            this.contact.email = ''
+            this.contact.message = ''
           }
         })
     },

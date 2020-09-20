@@ -54,9 +54,9 @@
       </div>
 
       <div id="contact-form" class="bg-white text-gray-800">
-        <div class="px-4 max-w-6xl mx-auto">
+        <div class="px-4 max-w-6xl mx-auto sm:px-10">
           <div
-            class="px-4 prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
+            class="prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
           >
             <header class="custom flex text-lg md:text-2xl lg:text-3xl">
               <span
@@ -65,13 +65,15 @@
                 Don't be a stranger
               </span>
             </header>
-            <div
-              class="flex flex-col space-y-4 mt-4 md:flex-row md:space-y-0 md:items-center"
-            >
-              <div class="md:order-last md:px-4 md:w-2/5 lg:w-1/2">
-                Hey there.
+            <div>
+              <p>
+                Hey there! Feel free to contact me, if you have anything you
+                want to talk about. I will try to respond as quickly as
+                possible. Either via email or one of my social media accounts.
+              </p>
+              <div class="max-w-3xl mx-auto">
+                <ContactForm />
               </div>
-              <div class="md:w-3/5 lg:w-1/2"><ContactForm /></div>
             </div>
           </div>
         </div>
