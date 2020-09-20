@@ -6,7 +6,7 @@
           class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
         >
           <h1 class="font-mono">
-            About me<span class="text-pink-600">_</span>
+            About me<span class="text-secondary-500">_</span>
           </h1>
         </div>
         <div

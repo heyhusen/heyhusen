@@ -64,7 +64,7 @@
       </div>
       <div class="px-4">
         <g-link
-          class="bg-quaternary-500 text-gray-900 py-1 px-2 rounded hover:bg-quaternary-600 md:py-2 md:px-3"
+          class="bg-secondary-500 text-white py-1 px-2 rounded hover:bg-secondary-600 md:py-2 md:px-3"
           to="/#contact-form"
           >Contact me</g-link
         >

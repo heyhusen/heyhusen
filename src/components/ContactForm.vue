@@ -1,6 +1,8 @@
 <template>
   <div class="custom">
-    <div class="space-x-2 mb-4">
+    <div
+      class="mb-4 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2"
+    >
       <a
         :href="$static.profile.linkedin"
         target="_blank"

@@ -6,7 +6,9 @@
           class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
         >
           <div class="custom">
-            <h1 class="font-mono">Works<span class="text-pink-600">_</span></h1>
+            <h1 class="font-mono">
+              Works<span class="text-secondary-500">_</span>
+            </h1>
             Some of the projects I've worked on. For other projects, you can
             check out my
             <a :href="$page.profile.github" title="Github" target="_blank"

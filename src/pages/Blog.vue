@@ -6,7 +6,9 @@
           class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
         >
           <div class="custom">
-            <h1 class="font-mono">Blog<span class="text-pink-600">_</span></h1>
+            <h1 class="font-mono">
+              Blog<span class="text-secondary-500">_</span>
+            </h1>
             Sometimes I also share something about this coding world, or just a
             random technology stuff.
           </div>

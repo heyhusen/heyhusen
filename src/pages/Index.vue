@@ -6,7 +6,7 @@
       >
         <div class="sm:flex sm:flex-row sm:space-x-10 sm:items-center">
           <div
-            class="w-40 h-40 mx-auto rounded overflow-hidden sm:mx-0 sm:flex-none md:h-56 md:w-56 lg:w-64 lg:h-64 xl:w-96 xl:h-96"
+            class="w-40 h-40 mx-auto rounded overflow-hidden sm:mx-0 sm:flex-none md:h-56 md:w-56 lg:w-64 lg:h-64"
           >
             <g-image
               :src="$page.gravatar.thumbnailUrl + '?s=512'"
