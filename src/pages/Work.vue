@@ -1,9 +1,9 @@
 <template>
   <Layout>
     <main>
-      <div class="sm:p-8 max-w-4xl mx-auto">
+      <div class="sm:p-4 max-w-4xl mx-auto">
         <div
-          class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
+          class="px-4 py-10 prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
         >
           <div>
             <span class="custom">
@@ -18,7 +18,7 @@
             >.
           </div>
         </div>
-        <div class="grid grid-cols-1 sm:space-y-4">
+        <div class="grid grid-cols-1 p-4 sm:space-y-4">
           <PortfolioWork
             v-for="(work, index) in $page.works.edges"
             :key="work.node.id"

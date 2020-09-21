@@ -1,8 +1,8 @@
 <template>
   <article
-    class="p-4 flex flex-col space-y-4 group transition duration-200 ease-in-out transform sm:hover:-translate-y-1 hover:bg-gray-200 sm:flex-row sm:items-center sm:shadow sm:space-x-4 sm:space-y-0 sm:rounded"
+    class="flex flex-col shadow rounded group transition duration-200 ease-in-out transform sm:hover:-translate-y-1 hover:shadow-lg sm:flex-row sm:items-center"
   >
-    <div class="overflow-hidden flex-none w-full sm:w-2/5">
+    <div class="overflow-hidden flex-none w-full sm:w-2/5 sm:py-4">
       <g-image
         :src="work.node.featuredImage"
         width="500"
@@ -12,7 +12,7 @@
       />
     </div>
     <div
-      class="prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
+      class="p-4 prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
     >
       <header class="custom">
         <h2>{{ work.node.title }}</h2>
