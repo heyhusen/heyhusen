@@ -1,6 +1,6 @@
 <template>
   <article
-    class="flex flex-col items-stretch overflow-hidden group transition duration-200 ease-in-out hover:bg-gray-100 hover:shadow-lg sm:rounded sm:shadow"
+    class="flex flex-col items-stretch overflow-hidden group transition duration-200 ease-in-out transform hover:shadow-lg sm:hover:-translate-y-1 sm:rounded sm:shadow"
     :class="{
       'sm:flex-row sm:col-span-2 lg:col-span-3 xl:col-span-4': index === 0,
     }"
