@@ -1,18 +1,18 @@
 <template>
   <article
-    class="flex flex-col items-stretch overflow-hidden group transition duration-200 ease-in-out transform hover:shadow-lg sm:hover:-translate-y-1 sm:rounded sm:shadow"
+    class="flex flex-row items-center overflow-hidden group transition duration-200 ease-in-out transform hover:shadow-lg hover:-translate-y-1 rounded shadow sm:items-stretch"
     :class="{
-      'sm:flex-row sm:col-span-2 lg:col-span-3 xl:col-span-4': index === 0,
+      'sm:col-span-2 lg:col-span-3 xl:col-span-4': index === 0,
+      'sm:flex-col': index !== 0,
     }"
   >
-    <div class="relative overflow-hidden flex-none">
+    <div class="relative overflow-hidden flex-none pl-2 py-2 sm:p-0">
       <g-link :to="article.node.path" :title="article.node.title">
         <g-image
-          class="object-cover w-full"
+          class="object-cover h-20 w-20"
           :class="{
-            'h-40 sm:h-72 md:h-84 sm:w-64 md:w-84 lg:w-96 xl:w-128':
-              index === 0,
-            'h-40 sm:h-48 xl:h-56': index !== 0,
+            'sm:h-full sm:w-48 md:w-64 lg:w-84 xl:w-96': index === 0,
+            'sm:w-full sm:h-40 sm:h-48 xl:h-56': index !== 0,
           }"
           :src="'/' + article.node.featuredImage"
           width="500"
@@ -21,14 +21,6 @@
           :alt="article.node.title"
         />
       </g-link>
-      <span
-        class="absolute text-xs top-0 left-0 mt-2 ml-2 py-1 px-2 bg-blue-700 text-gray-100 rounded"
-        >{{
-          article.node.date
-            | dateParse('YYYY-MM-DD HH:mm:ss')
-            | dateFormat('MMM D, YYYY')
-        }}</span
-      >
     </div>
     <div
       class="p-2 prose prose-sm max-w-none sm:p-4 sm:prose sm:max-w-none md:prose-lg"
@@ -42,6 +34,14 @@
           ><h3>
             {{ article.node.title }}
           </h3></g-link
+        >
+        <span
+          class="text-xs sm:absolute sm:top-0 sm:left-0 sm:mt-2 sm:ml-2 sm:py-1 sm:px-2 sm:bg-blue-700 sm:text-gray-100 sm:rounded"
+          >{{
+            article.node.date
+              | dateParse('YYYY-MM-DD HH:mm:ss')
+              | dateFormat('MMM D, YYYY')
+          }}</span
         >
       </header>
       <div
@@ -59,11 +59,13 @@
           ></g-link
         >
       </div>
-      <div
-        v-if="index === 0"
-        class="hidden sm:block"
-        v-html="article.node.content.slice(0, 130)"
-      ></div>
+      <div class="custom">
+        <div
+          v-if="index === 0"
+          class="hidden sm:block"
+          v-html="article.node.content.slice(0, 130)"
+        ></div>
+      </div>
     </div>
   </article>
 </template>

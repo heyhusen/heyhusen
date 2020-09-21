@@ -1,9 +1,9 @@
 <template>
   <Layout>
-    <main class="bg-white">
+    <main>
       <div class="sm:p-4 xl:container xl:mx-auto">
         <div
-          class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
+          class="px-4 py-10 prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
         >
           <div class="custom">
             <h1 class="font-mono">
@@ -13,7 +13,9 @@
             random technology stuff.
           </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+        <div
+          class="grid px-4 pb-4 gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        >
           <BlogPost
             v-for="(article, index) in $page.articles.edges"
             :key="article.node.id"
