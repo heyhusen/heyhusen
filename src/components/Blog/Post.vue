@@ -1,6 +1,6 @@
 <template>
   <article
-    class="flex flex-col items-stretch overflow-hidden group transition duration-200 ease-in-out hover:shadow-lg hover:border-gray-300 sm:rounded sm:shadow"
+    class="flex flex-col items-stretch overflow-hidden group transition duration-200 ease-in-out hover:bg-gray-100 hover:shadow-lg sm:rounded sm:shadow"
     :class="{
       'sm:flex-row sm:col-span-2 lg:col-span-3 xl:col-span-4': index === 0,
     }"
@@ -8,7 +8,7 @@
     <div class="relative overflow-hidden flex-none">
       <g-link :to="article.node.path" :title="article.node.title">
         <g-image
-          class="object-cover w-full transition duration-200 ease-in-out transform group-hover:scale-125"
+          class="object-cover w-full"
           :class="{
             'h-40 sm:h-72 md:h-84 sm:w-64 md:w-84 lg:w-96 xl:w-128':
               index === 0,
@@ -36,7 +36,7 @@
     >
       <header class="custom">
         <g-link
-          class="no-underline"
+          class="no-underline group-hover:underline"
           :title="article.node.title"
           :to="article.node.path"
           ><h3>
@@ -46,14 +46,15 @@
       </header>
       <div
         v-if="index === 0"
-        class="flex flex-row space-x-1 mt-2 hidden sm:block"
+        class="custom flex flex-row space-x-1 mt-2 hidden sm:block"
       >
         <g-link
           v-for="blogTag in article.node.tag"
           :key="blogTag.id"
           :to="blogTag.path"
         >
-          <span class="py-1 px-2 bg-gray-700 text-gray-200 rounded"
+          <span
+            class="py-1 px-2 bg-secondary-500 text-gray-100 rounded hover:bg-secondary-600"
             >#{{ blogTag.title }}</span
           ></g-link
         >

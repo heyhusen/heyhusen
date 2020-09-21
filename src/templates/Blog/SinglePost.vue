@@ -30,7 +30,7 @@
                   v-for="label in $page.post.tag"
                   :key="label.id"
                   :to="label.path"
-                  class="bg-secondary-500 hover:bg-gray-600 py-1 px-2 rounded m-1"
+                  class="bg-secondary-500 hover:bg-secondary-600 py-1 px-2 rounded m-1"
                   >#{{ label.title }}</g-link
                 >
               </p>

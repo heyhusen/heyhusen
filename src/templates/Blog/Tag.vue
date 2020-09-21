@@ -1,12 +1,13 @@
 <template>
   <Layout>
-    <main class="bg-white text-gray-700">
+    <main>
       <div class="sm:p-4 xl:container xl:mx-auto">
         <div
           class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
         >
           <h1 class="font-mono">
-            Blog Tag: {{ $page.tag.title }}<span class="text-pink-600">_</span>
+            Blog Tag: {{ $page.tag.title
+            }}<span class="text-secondary-500">_</span>
           </h1>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
