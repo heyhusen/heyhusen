@@ -1,7 +1,7 @@
 <template>
   <div class="lg:rounded lg:shadow">
     <header class="px-4 prose max-w-none md:prose-lg">
-      <h3 class="py-3 w-auto font-bold border-b-2 border-yellow-500">
+      <h3 class="py-3 w-auto font-bold border-b-2 border-secondary-500">
         Latest Post
       </h3>
     </header>
