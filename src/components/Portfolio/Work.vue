@@ -1,6 +1,6 @@
 <template>
   <article
-    class="flex flex-col shadow rounded group transition duration-200 ease-in-out transform sm:hover:-translate-y-1 hover:shadow-lg sm:flex-row sm:items-center"
+    class="flex flex-col shadow rounded group transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-lg sm:flex-row sm:items-center"
   >
     <div class="overflow-hidden flex-none w-full sm:w-2/5 sm:py-4">
       <g-image
