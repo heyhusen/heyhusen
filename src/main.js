@@ -18,7 +18,7 @@ export default function (Vue, { head }) {
   // Add attributes to BODY tag
   head.bodyAttrs = {
     class:
-      'text-gray-700 font-sans text-base leading-normal antialiased tracking-normal md:text-lg lg:text-xl',
+      'text-gray-800 font-sans text-base leading-normal antialiased tracking-normal md:text-lg lg:text-xl',
   }
 
   Vue.use(VueFilterDateParse)
