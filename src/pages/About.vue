@@ -19,10 +19,10 @@
           />
           <p>
             I am a web developer. I live in a beautiful little town,
-            {{ $page.gravatar.currentLocation }}. In my spare time, I like to
-            watch movies, play games, or ride motorbikes. Sometimes, I also
-            write a <g-link to="/blog">blog</g-link>. And oh yes, I love cats
-            too.
+            {{ $page.gravatar.currentLocation }}. Another scheduled job of mine
+            is watching MotoGP races. Yes, I am a MotoGP fan. In my spare time,
+            I like to watch movies, play games, or ride motorbikes. Sometimes, I
+            also write a <g-link to="/blog">blog</g-link>.
           </p>
           <h2>Nickname</h2>
           <p>
@@ -32,7 +32,7 @@
             am with my brother in the same place, and someone calls me Ahmad, it
             will be confusing. Because we have the same first name, Ahmad. I
             just don't want this to become a habit. I would really appreciate it
-            if I am called by my nickname, Husen. Only Husen, not Husein,
+            if I am called by my (real) nickname, Husen. Only Husen, not Husein,
             especially Husain.
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,8 +59,8 @@
             MyWapBlog. A mobile blogging platforms were very popular back then,
             at least in Indonesia. Until one day when I got bored with my blog
             theme, I found that MyWapBlog allows its users to customize their
-            blog using CSS. Yes, back then it was only CSS. From then on, I
-            started learning CSS and fell in love with web development.
+            blog using CSS. From then on, I started learning CSS and fell in
+            love with web development.
           </p>
           <p>
             Then, I created a new blog on Blogger and learned HTML syntax and
@@ -70,6 +70,57 @@
             I even learned jQuery and simple SEO tricks while creating a
             WordPress theme for my blog.
           </p>
+          <p>
+            In 2016, I got my first contract at PT. Mabito Karya, a company
+            based in Bandung, Indonesia. Then, I started my freelance career in
+            2018, while still working as a staff at this company.
+          </p>
+          <h2>Web Development</h2>
+          <p>
+            Since 2016, I have always chosen
+            <a href="https://www.php.net/" target="_blank" title="PHP">PHP</a>
+            as my programming language, and
+            <a href="https://laravel.com/" target="_blank" title="Laravel"
+              >Laravel</a
+            >
+            for the framework. I usually build web applications using a
+            monolithic stack with tools like
+            <a href="https://www.php.net/" target="_blank" title="PHP">PHP</a>,
+            HTML, CSS,
+            <a href="https://jquery.com/" title="jQuery" target="_blank"
+              >jQuery</a
+            >, and
+            <a href="https://www.mysql.com/" title="MySQL" target="_blank"
+              >MySQL</a
+            >. However, to keep up with the existing technology, I now choose
+            <a href="https://vuejs.org/" title="Vue.js" target="_blank"
+              >Vue.js</a
+            >
+            and
+            <a
+              href="https://tailwindcss.com/"
+              title="Tailwind CSS"
+              target="_blank"
+              >Tailwind CSS</a
+            >
+            for the frontend. For future-proof purposes, I also always build
+            APIs for my backend. It will make web applications run faster and
+            easier to maintain.
+          </p>
+          <p>
+            As a developer, I always keep my code clean, easier to read, and
+            uncomplicated. I always thought that automated testing was a must.
+            I'm also still trying to adapt to my TDD habits. To continue
+            improving my skills, I always learn from reading articles and books
+            or watching screencasts related to the latest technology.
+          </p>
+        </div>
+        <div class="flex justify-center p-4">
+          <g-link
+            class="no-underline bg-primary-500 text-gray-300 py-2 px-3 rounded transition duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-primary-700 hover:text-gray-400 xl:py-3 xl:px-4"
+            to="/#contact-form"
+            >More question?</g-link
+          >
         </div>
       </div>
     </main>
