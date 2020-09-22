@@ -1,9 +1,11 @@
 <template>
   <div class="bg-white">
     <Header />
-    <div>
-      <slot />
-    </div>
+    <transition name="fade" appear>
+      <div>
+        <slot />
+      </div>
+    </transition>
     <Footer />
   </div>
 </template>
@@ -24,3 +26,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+</style>
