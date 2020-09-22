@@ -4,7 +4,7 @@
       class="border-b border-gray-300 flex justify-between items-center xl:container xl:mx-auto"
     >
       <div
-        class="py-3 px-4 sm:flex sm:justify-start sm:items-center sm:space-x-4 md:py-5"
+        class="px-4 py-2 sm:py-0 sm:flex sm:justify-start sm:items-center sm:space-x-4"
       >
         <g-link
           class="text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700"
@@ -47,17 +47,17 @@
         </g-link>
 
         <div
-          class="bg-white text-xs px-4 py-1 border-t border-solid border-gray-400 z-20 fixed inset-x-0 bottom-0 flex justify-between sm:text-base sm:p-0 sm:border-0 sm:z-0 sm:static sm:space-x-4 sm:justify-start sm:items-center md:text-lg lg:text-xl xl:text-2xl"
+          class="bg-white text-xs px-4 py-1 border-t border-solid border-gray-400 z-20 fixed inset-x-0 bottom-0 flex justify-between sm:text-base sm:p-0 sm:border-0 sm:z-0 sm:static sm:justify-start sm:items-center md:text-lg lg:text-xl xl:text-2xl"
         >
           <g-link
-            class="inline-block sm:hidden sm:hover:text-gray-900 sm:hover:underline"
+            class="inline-block sm:hidden"
             :class="{
-              'text-primary-500 hover:no-underline': $route.path == '/',
+              'text-primary-500': $route.path == '/',
             }"
             to="/"
           >
             <svg
-              class="h-8 w-8 mx-auto stroke-current text-gray-800"
+              class="h-8 w-8 mx-auto"
               :class="{
                 'block sm:hidden': $route.path !== '/',
                 hidden: $route.path == '/',
@@ -75,7 +75,7 @@
               />
             </svg>
             <svg
-              class="h-8 w-8 mx-auto fill-current text-primary-500"
+              class="h-8 w-8 mx-auto"
               :class="{
                 hidden: $route.path !== '/',
                 'block sm:hidden': $route.path == '/',
@@ -91,14 +91,15 @@
             Home
           </g-link>
           <g-link
-            class="inline-block sm:hover:text-gray-900 sm:hover:underline"
+            class="inline-block sm:px-4 sm:py-6 sm:hover:text-gray-900 sm:border-b-4 sm:border-solid sm:border-transparent sm:hover:border-gray-800 xl:py-8"
             :class="{
-              'text-primary-500 hover:no-underline': $route.path == '/about',
+              'text-primary-500 sm:border-b-4 sm:border-solid sm:border-primary-500':
+                $route.path == '/about',
             }"
             to="/about"
           >
             <svg
-              class="h-8 w-8 mx-auto stroke-current text-gray-800"
+              class="h-8 w-8 mx-auto"
               :class="{
                 'block sm:hidden': $route.path !== '/about',
                 hidden: $route.path == '/about',
@@ -116,7 +117,7 @@
               />
             </svg>
             <svg
-              class="h-8 w-8 mx-auto fill-current text-primary-500"
+              class="h-8 w-8 mx-auto"
               :class="{
                 hidden: $route.path !== '/about',
                 'block sm:hidden': $route.path == '/about',
@@ -134,9 +135,10 @@
             About
           </g-link>
           <g-link
-            class="inline-block sm:hover:text-gray-900 sm:hover:underline"
+            class="inline-block sm:px-4 sm:py-6 sm:hover:text-gray-900 sm:border-b-4 sm:border-solid sm:border-transparent sm:hover:border-gray-800 xl:py-8"
             :class="{
-              'text-primary-500 hover:no-underline': $route.path == '/work',
+              'text-primary-500 sm:border-b-4 sm:border-solid sm:border-primary-500':
+                $route.path == '/work',
             }"
             to="/work"
           >
@@ -177,9 +179,10 @@
             Portfolio
           </g-link>
           <g-link
-            class="inline-block sm:hover:text-gray-900 sm:hover:underline"
+            class="inline-block sm:px-4 sm:py-6 sm:hover:text-gray-900 sm:border-b-4 sm:border-solid sm:border-transparent sm:hover:border-gray-800 xl:py-8"
             :class="{
-              'text-primary-500 hover:no-underline': $route.path == '/blog',
+              'text-primary-500 sm:border-b-4 sm:border-solid sm:border-primary-500':
+                $route.path == '/blog',
             }"
             to="/blog"
           >
@@ -221,10 +224,9 @@
             Blog
           </g-link>
           <g-link
-            class="inline-block sm:hidden sm:hover:text-gray-900 sm:hover:underline"
+            class="inline-block sm:hidden"
             :class="{
-              'text-primary-500 hover:no-underline':
-                $route.path == '/#contact-form',
+              'text-primary-500': $route.path == '/#contact-form',
             }"
             to="/#contact-form"
           >
