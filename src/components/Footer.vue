@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="text-center prose prose-sm max-w-none sm:prose sm:max-w-none md:py-12"
+    class="mb-16 text-center prose prose-sm max-w-none sm:m-0 sm:prose sm:max-w-none md:py-12"
   >
     <div class="border-t border-gray-300 p-8 xl:container xl:mx-auto xl:px-0">
       Copyright &copy; 2020
