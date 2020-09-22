@@ -11,9 +11,7 @@
         :alt="work.node.title"
       />
     </div>
-    <div
-      class="p-4 prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
-    >
+    <div class="p-4 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
       <header class="custom">
         <h2>{{ work.node.title }}</h2>
       </header>

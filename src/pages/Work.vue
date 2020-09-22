@@ -3,7 +3,7 @@
     <main>
       <div class="sm:p-4 max-w-4xl mx-auto">
         <div
-          class="px-4 py-10 prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
+          class="px-4 py-10 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
         >
           <div>
             <span class="custom">

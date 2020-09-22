@@ -1,6 +1,6 @@
 <template>
   <div class="lg:rounded lg:shadow">
-    <header class="px-4 prose max-w-none md:prose-lg">
+    <header class="px-4 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
       <h3 class="py-3 w-auto font-bold border-b-2 border-secondary-500">
         Latest Post
       </h3>

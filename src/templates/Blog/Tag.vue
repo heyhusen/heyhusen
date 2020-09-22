@@ -3,7 +3,7 @@
     <main>
       <div class="sm:p-4 xl:container xl:mx-auto">
         <div
-          class="px-4 py-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
+          class="px-4 py-10 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
         >
           <h1 class="font-mono">
             Blog Tag: {{ $page.tag.title

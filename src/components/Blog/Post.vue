@@ -23,7 +23,7 @@
       </g-link>
     </div>
     <div
-      class="p-2 prose prose-sm max-w-none sm:p-4 sm:prose sm:max-w-none md:prose-lg"
+      class="p-2 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
       :class="{ 'lg:prose-xl': index === 0 }"
     >
       <header class="custom">

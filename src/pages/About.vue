@@ -10,7 +10,7 @@
           </h1>
         </div>
         <div
-          class="px-4 pb-10 prose prose-sm max-w-none sm:px-0 sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
+          class="px-4 pb-10 prose max-w-none sm:px-0 sm:prose-lg lg:prose-xl xl:prose-2xl"
         >
           <g-image
             class="float-right ml-4 h-full w-24 overflow-hidden sm:w-48 lg:w-64"

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <main class="p-4">
+    <main class="p-4 space-y-10 sm:space-y-0">
       <div class="max-w-6xl mx-auto sm:px-10 sm:py-10 sm:flex sm:flex-col">
         <div class="sm:flex sm:flex-row sm:space-x-10 sm:items-center">
           <div
@@ -12,9 +12,7 @@
             />
           </div>
           <div>
-            <div
-              class="prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl xl:prose-2xl"
-            >
+            <div class="prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
               <header class="py-4 custom">
                 <h2>
                   Hello! My name is {{ $page.gravatar.name.givenName }}
@@ -55,9 +53,7 @@
 
       <div id="contact-form" class="bg-white text-gray-800">
         <div class="max-w-6xl mx-auto sm:px-10">
-          <div
-            class="prose prose-sm max-w-none sm:prose sm:max-w-none md:prose-lg lg:prose-xl"
-          >
+          <div class="prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
             <header class="custom flex text-lg md:text-2xl lg:text-3xl">
               <span
                 class="w-auto font-bold border-b-2 border-primary-500 pb-2 px-4 mx-auto"

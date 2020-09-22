@@ -1,6 +1,6 @@
 <template>
   <Layout :hero="false">
-    <main class="bg-white text-gray-700">
+    <main>
       <div
         class="divide-y divide-gray-400 space-y-4 lg:flex lg:divide-y-0 lg:space-x-4 xl:container xl:mx-auto"
       >
@@ -10,7 +10,7 @@
             :src="'/' + $page.post.featuredImage"
           ></g-image>
           <article
-            class="px-4 pb-1 divide-y divide-gray-400 prose max-w-none md:prose-lg lg:prose-xl xl:prose-2xl"
+            class="px-4 pb-1 divide-y divide-gray-400 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
           >
             <header class="py-4 custom">
               <h2>{{ $page.post.title }}</h2>
@@ -68,7 +68,9 @@
           class="flex-none divide-y divide-gray-400 lg:divide-y-0 lg:space-y-4 lg:w-2/5 lg:pr-4 lg:text-xl xl:w-1/3"
         >
           <div class="lg:rounded lg:shadow">
-            <header class="px-4 prose max-w-none md:prose-lg">
+            <header
+              class="px-4 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
+            >
               <h3 class="py-3 w-auto font-bold border-b-2 border-secondary-500">
                 Find me
               </h3>
