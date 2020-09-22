@@ -29,11 +29,11 @@ export default {
 
 <style scoped>
 .fade-enter-active {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .fade-enter {
-  transform: translateX(10px);
+  transform: translateY(20px);
   opacity: 0;
 }
 </style>
