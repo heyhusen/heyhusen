@@ -9,4 +9,4 @@ featuredImage: uploads/portpoliwo.lara_.png
 description: Simple CMS using Laravel and Vue.js as SPA
 url: https://github.com/hapakaien/portpoliwo
 ---
-Simple CMS using Laravel and Vue.js as SPA
+Simple CMS using Laravel and Vue.js. This CMS was created to empower personal websites.
