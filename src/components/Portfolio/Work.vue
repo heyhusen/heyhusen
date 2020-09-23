@@ -5,7 +5,7 @@
     <div class="flex-none w-full md:w-2/5 md:py-4 lg:w-1/3">
       <g-image :src="work.node.featuredImage" :alt="work.node.title" />
     </div>
-    <div class="p-4 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
+    <div class="p-4 prose max-w-none sm:prose-lg lg:prose-xl">
       <header class="custom">
         <h2>{{ work.node.title }}</h2>
       </header>
