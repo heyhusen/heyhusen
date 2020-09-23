@@ -1,15 +1,9 @@
 <template>
   <article
-    class="flex flex-col shadow rounded group transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-lg sm:flex-row sm:items-center"
+    class="bg-secondary-200 overflow-hidden flex flex-col shadow rounded group transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-lg md:flex-row md:items-center"
   >
-    <div class="overflow-hidden flex-none w-full sm:w-2/5 sm:py-4">
-      <g-image
-        :src="work.node.featuredImage"
-        width="500"
-        height="500"
-        fit="contain"
-        :alt="work.node.title"
-      />
+    <div class="flex-none w-full md:w-2/5 md:py-4 lg:w-1/3">
+      <g-image :src="work.node.featuredImage" :alt="work.node.title" />
     </div>
     <div class="p-4 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
       <header class="custom">
