@@ -12,7 +12,7 @@
             />
           </div>
           <div>
-            <div class="prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
+            <div class="prose max-w-none sm:prose-lg lg:prose-xl">
               <header class="py-4 custom">
                 <h2>
                   Hello! My name is {{ $page.gravatar.name.givenName }}
@@ -53,13 +53,13 @@
 
       <div id="contact-form" class="bg-white text-gray-800">
         <div class="max-w-6xl mx-auto sm:px-10">
-          <div class="prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
-            <header class="custom flex text-lg md:text-2xl lg:text-3xl">
-              <span
+          <div class="prose max-w-none sm:prose-lg lg:prose-xl">
+            <header class="custom flex">
+              <h3
                 class="w-auto font-bold border-b-2 border-primary-500 pb-2 px-4 mx-auto"
               >
                 Don't be a stranger
-              </span>
+              </h3>
             </header>
             <div>
               <p>

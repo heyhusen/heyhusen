@@ -2,9 +2,7 @@
   <Layout>
     <main>
       <div class="sm:p-4 xl:container xl:mx-auto">
-        <div
-          class="px-4 py-10 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
-        >
+        <div class="px-4 py-10 prose max-w-none sm:prose-lg lg:prose-xl">
           <div class="custom">
             <h1 class="font-mono">
               Blog<span class="text-secondary-500">_</span>

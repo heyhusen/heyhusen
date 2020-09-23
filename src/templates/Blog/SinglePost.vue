@@ -10,10 +10,10 @@
             :src="'/' + $page.post.featuredImage"
           ></g-image>
           <article
-            class="px-4 pb-1 divide-y divide-gray-400 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
+            class="px-4 pb-1 divide-y divide-gray-400 prose max-w-none sm:prose-lg lg:prose-xl"
           >
             <header class="py-4 custom">
-              <h2>{{ $page.post.title }}</h2>
+              <h1>{{ $page.post.title }}</h1>
               <p>
                 Published at
                 {{ new Date($page.post.date).toLocaleString() }}
@@ -40,10 +40,10 @@
             class="mt-4 p-4 flex flex-col space-y-1 space-x-1 sm:flex-row md:space-x-4"
           >
             <g-image
-              class="h-16 w-auto mx-auto md:h-24 md:mx-0 lg:h-32 rounded-full"
+              class="h-16 w-auto mx-auto md:h-24 sm:mx-0 lg:h-32 rounded-full"
               :src="'/' + $page.post.author.image + '?s=256'"
             ></g-image>
-            <div class="text-center block md:text-left lg:text-xl xl:text-2xl">
+            <div class="text-center block sm:text-left lg:text-xl">
               <a
                 class="underline block"
                 :href="$page.post.author.link"
@@ -68,9 +68,7 @@
           class="flex-none divide-y divide-gray-400 lg:divide-y-0 lg:space-y-4 lg:w-2/5 lg:pr-4 lg:text-xl xl:w-1/3"
         >
           <div class="lg:rounded lg:shadow">
-            <header
-              class="px-4 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
-            >
+            <header class="px-4 prose max-w-none sm:prose-lg lg:prose-xl">
               <h3 class="py-3 w-auto font-bold border-b-2 border-secondary-500">
                 Find me
               </h3>

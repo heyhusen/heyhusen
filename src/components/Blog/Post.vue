@@ -23,7 +23,7 @@
       </g-link>
     </div>
     <div
-      class="p-2 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
+      class="p-2 prose max-w-none sm:prose-lg lg:prose-xl"
       :class="{ 'lg:prose-xl': index === 0 }"
     >
       <header class="custom">
@@ -31,9 +31,9 @@
           class="no-underline group-hover:underline"
           :title="article.node.title"
           :to="article.node.path"
-          ><h3>
+          ><h2>
             {{ article.node.title }}
-          </h3></g-link
+          </h2></g-link
         >
         <span
           class="text-xs sm:absolute sm:top-0 sm:left-0 sm:mt-2 sm:ml-2 sm:py-1 sm:px-2 sm:bg-blue-700 sm:text-gray-100 sm:rounded"

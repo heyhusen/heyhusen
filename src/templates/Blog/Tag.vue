@@ -2,15 +2,15 @@
   <Layout>
     <main>
       <div class="sm:p-4 xl:container xl:mx-auto">
-        <div
-          class="px-4 py-10 prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl"
-        >
+        <div class="px-4 py-10 prose max-w-none sm:prose-lg lg:prose-xl">
           <h1 class="font-mono">
             Blog Tag: {{ $page.tag.title
             }}<span class="text-secondary-500">_</span>
           </h1>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+        <div
+          class="px-4 pb-4 grid grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3"
+        >
           <BlogPost
             v-for="(article, index) in $page.articles.edges"
             :key="article.node.id"
