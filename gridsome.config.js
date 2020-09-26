@@ -109,6 +109,37 @@ module.exports = {
         },
       },
     },
+    {
+      use: '@microflash/gridsome-plugin-feed',
+      options: {
+        contentTypes: ['blogPost'],
+        feedOptions: {
+          title: 'Husen blog',
+          description: 'My personal blog about coding and other stuff',
+        },
+        rss: {
+          enabled: true,
+          output: '/feed.xml',
+        },
+        maxItems: 25,
+        htmlFields: ['content'],
+        enforceTrailingSlashes: false,
+        nodeToFeedItem: (node) => ({
+          title: node.title,
+          date: node.date,
+          description: node.excerpt,
+          content: node.content,
+          image: node.featuredImage,
+          author: [
+            {
+              name: node.author.title,
+              email: node.author.email,
+              link: node.author.link,
+            },
+          ],
+        }),
+      },
+    },
   ],
   templates: {
     BlogPost: [
