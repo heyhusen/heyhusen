@@ -12,12 +12,11 @@
           class="object-cover h-20 w-20"
           :class="{
             'sm:h-full sm:w-48 md:w-64 lg:w-84 xl:w-96': index === 0,
-            'sm:w-full sm:h-40 sm:h-48 xl:h-56': index !== 0,
+            'sm:w-full sm:h-40 md:h-48 xl:h-56': index !== 0,
           }"
-          :src="'/' + article.node.featuredImage"
-          width="500"
-          height="500"
-          fit="contain"
+          :src="
+            require(`!!assets-loader?width=500&height=500!@assets/${article.node.featuredImage}`)
+          "
           :alt="article.node.title"
         />
       </g-link>

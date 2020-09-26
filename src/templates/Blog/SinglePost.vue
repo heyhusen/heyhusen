@@ -7,7 +7,9 @@
         <section class="divide-y divide-gray-400 lg:pl-4">
           <g-image
             class="object-cover h-48 sm:h-64 w-full"
-            :src="'/' + $page.post.featuredImage"
+            :src="
+              require(`!!assets-loader?width=700!@assets/${$page.post.featuredImage}`)
+            "
           ></g-image>
           <article
             class="px-4 pb-1 divide-y divide-gray-400 prose max-w-none sm:prose-lg lg:prose-xl"
@@ -41,7 +43,9 @@
           >
             <g-image
               class="h-16 w-auto mx-auto md:h-24 sm:mx-0 lg:h-32 rounded-full"
-              :src="'/' + $page.post.author.image + '?s=256'"
+              :src="
+                require(`!!assets-loader?width=150&height=150&quality=90!@assets/${$page.post.author.image}`)
+              "
             ></g-image>
             <div class="text-center block sm:text-left lg:text-xl">
               <a

@@ -3,7 +3,12 @@
     class="bg-secondary-200 overflow-hidden flex flex-col shadow rounded group transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-lg md:flex-row md:items-center"
   >
     <div class="flex-none w-full md:w-2/5 md:py-4 lg:w-1/3">
-      <g-image :src="work.node.featuredImage" :alt="work.node.title" />
+      <g-image
+        :src="
+          require(`!!assets-loader?width=500!@assets/${work.node.featuredImage}`)
+        "
+        :alt="work.node.title"
+      />
     </div>
     <div class="p-4 prose max-w-none sm:prose-lg lg:prose-xl">
       <header class="custom">
