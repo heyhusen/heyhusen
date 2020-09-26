@@ -126,10 +126,11 @@ module.exports = {
         enforceTrailingSlashes: false,
         nodeToFeedItem: (node) => ({
           title: node.title,
+          link: `${node.author.link}/${node.path}`,
           date: node.date,
           description: node.excerpt,
           content: node.content,
-          image: node.featuredImage,
+          image: `${node.author.link}/${node.featuredImage}`,
           author: {
             name: node.author.title,
             email: node.author.email,
