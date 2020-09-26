@@ -112,7 +112,7 @@ module.exports = {
     {
       use: '@microflash/gridsome-plugin-feed',
       options: {
-        contentTypes: ['blogPost'],
+        contentTypes: ['BlogPost'],
         feedOptions: {
           title: 'Husen blog',
           description: 'My personal blog about coding and other stuff',
@@ -131,9 +131,9 @@ module.exports = {
           content: node.content,
           image: node.featuredImage,
           author: {
-            name: 'Ahmad Husen',
-            email: 'hello@husen.id',
-            link: 'https://husen.id',
+            name: node.author.title,
+            email: node.author.email,
+            link: node.author.link,
           },
         }),
       },
