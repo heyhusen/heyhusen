@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'Ahmad Husen',
   siteDescription: 'My personal site, portfolio, and blog',
+  siteUrl: 'https://husen.id',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
@@ -84,6 +85,28 @@ module.exports = {
         configPath: `src/cms/config.yml`,
         publicPath: `/cms`,
         htmlTitle: `Content Manager`,
+      },
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        config: {
+          '/blog/*': {
+            changefreq: 'weekly',
+            priority: 0.5,
+            lastmod: '2020-08-26',
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7,
+            lastmod: '2020-08-26',
+          },
+          '/work': {
+            changefreq: 'monthly',
+            priority: 0.7,
+            lastmod: '2020-08-26',
+          },
+        },
       },
     },
   ],
