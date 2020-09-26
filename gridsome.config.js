@@ -131,11 +131,13 @@ module.exports = {
           description: node.excerpt,
           content: node.content,
           image: `https://husen.id/${node.featuredImage}`,
-          author: {
-            name: node.author.title,
-            email: node.author.email,
-            link: node.author.link,
-          },
+          author: [
+            {
+              name: node.author.title,
+              email: node.author.email,
+              link: node.author.link,
+            },
+          ],
         }),
       },
     },
