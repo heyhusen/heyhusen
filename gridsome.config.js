@@ -126,7 +126,7 @@ module.exports = {
         enforceTrailingSlashes: false,
         nodeToFeedItem: (node) => ({
           title: node.title,
-          link: `https://husen.id/${node.path}`,
+          link: `https://husen.id${node.path}`,
           date: node.date,
           description: node.excerpt,
           content: node.content,
