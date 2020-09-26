@@ -7,7 +7,9 @@
             class="w-40 h-40 mx-auto rounded overflow-hidden sm:mx-0 sm:flex-none md:h-56 md:w-56 lg:w-64 lg:h-64"
           >
             <g-image
-              :src="$page.gravatar.thumbnailUrl + '?s=512'"
+              :src="
+                require(`!!assets-loader?width=500&height=500!~/assets/img/avatar/${$page.gravatar.hash}.png`)
+              "
               :alt="$page.gravatar.name.formatted"
             />
           </div>
@@ -82,6 +84,7 @@
 query {
   gravatar(id: "187660235") {
     id
+    hash
     name {
       formatted
       givenName

@@ -16,7 +16,10 @@ module.exports = function (api) {
     } = await axios.get(
       `https://secure.gravatar.com/${md5(process.env.EMAIL)}.json`
     )
-    addCollection('Gravatar').addNode(gravatar[0])
+    addCollection('Gravatar').addNode({
+      ...gravatar[0],
+      thumbnailUrl: `${gravatar[0].thumbnailUrl}?s=512`,
+    })
   })
 
   api.loadSource(async (store) => {

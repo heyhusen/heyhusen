@@ -15,6 +15,16 @@ module.exports = {
         tailwindConfig: './tailwind.config.js',
       },
     },
+    // Netlify CMS Plugin
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        modulePath: `src/cms/index.js`,
+        configPath: `src/cms/config.yml`,
+        publicPath: `/cms`,
+        htmlTitle: `Content Manager`,
+      },
+    },
     // Load all Blog Posts from file system
     {
       use: '@gridsome/source-filesystem',
@@ -77,16 +87,19 @@ module.exports = {
         },
       },
     },
-    // Netlify CMS Plugin
+    // Save gravatar
     {
-      use: `gridsome-plugin-netlify-cms`,
+      use: '@noxify/gridsome-plugin-remote-image',
       options: {
-        modulePath: `src/cms/index.js`,
-        configPath: `src/cms/config.yml`,
-        publicPath: `/cms`,
-        htmlTitle: `Content Manager`,
+        original: true,
+        cache: false,
+        typeName: 'Gravatar',
+        sourceField: 'thumbnailUrl',
+        targetField: 'avatar',
+        targetPath: './src/assets/img',
       },
     },
+    // Create sitemap
     {
       use: '@gridsome/plugin-sitemap',
       options: {
@@ -109,6 +122,7 @@ module.exports = {
         },
       },
     },
+    // Create RSS feed
     {
       use: '@microflash/gridsome-plugin-feed',
       options: {

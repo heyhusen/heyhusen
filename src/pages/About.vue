@@ -14,7 +14,9 @@
         >
           <g-image
             class="float-right ml-4 h-full w-24 overflow-hidden sm:w-48 lg:w-64"
-            :src="$page.gravatar.thumbnailUrl + '?s=512'"
+            :src="
+              require(`!!assets-loader?width=500&height=500!~/assets/img/avatar/${$page.gravatar.hash}.png`)
+            "
             :alt="$page.gravatar.name.formatted"
           />
           <p>
@@ -131,6 +133,7 @@
 query {
   gravatar(id: "187660235") {
     id
+    hash
     name {
       formatted
       familyName
