@@ -8,7 +8,7 @@
           <g-image
             class="object-cover h-48 sm:h-64 w-full"
             :src="
-              require(`!!assets-loader?width=700!@assets/${$page.post.featuredImage}`)
+              require(`!!assets-loader?width=700!~/assets/${$page.post.featuredImage}`)
             "
           ></g-image>
           <article
@@ -44,7 +44,7 @@
             <g-image
               class="h-16 w-auto mx-auto md:h-24 sm:mx-0 lg:h-32 rounded-full"
               :src="
-                require(`!!assets-loader?width=150&height=150&quality=90!@assets/${$page.post.author.image}`)
+                require(`!!assets-loader?width=150&height=150&quality=90!~/assets/${$page.post.author.image}`)
               "
             ></g-image>
             <div class="text-center block sm:text-left lg:text-xl">

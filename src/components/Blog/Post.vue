@@ -15,7 +15,7 @@
             'sm:w-full sm:h-40 md:h-48 xl:h-56': index !== 0,
           }"
           :src="
-            require(`!!assets-loader?width=500&height=500!@assets/${article.node.featuredImage}`)
+            require(`!!assets-loader?width=500&height=500!~/assets/${article.node.featuredImage}`)
           "
           :alt="article.node.title"
         />

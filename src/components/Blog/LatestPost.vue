@@ -25,7 +25,7 @@
         <g-image
           class="hidden flex-none object-cover h-20 w-20 rounded sm:block"
           :src="
-            require(`!!assets-loader?width=100&height=100!@assets/${article.node.featuredImage}`)
+            require(`!!assets-loader?width=100&height=100!~/assets//${article.node.featuredImage}`)
           "
         />
       </li>

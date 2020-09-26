@@ -166,9 +166,6 @@ module.exports = {
       ],
     },
   },
-  chainWebpack: (config) => {
-    config.resolve.alias.set('@assets', '@/assets')
-  },
   configureWebpack: {
     // merged with the internal config
   },

@@ -5,7 +5,7 @@
     <div class="flex-none w-full md:w-2/5 md:py-4 lg:w-1/3">
       <g-image
         :src="
-          require(`!!assets-loader?width=500!@assets/${work.node.featuredImage}`)
+          require(`!!assets-loader?width=500!~/assets/${work.node.featuredImage}`)
         "
         :alt="work.node.title"
       />
