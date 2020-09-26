@@ -131,9 +131,9 @@ module.exports = {
           content: node.content,
           image: node.featuredImage,
           author: {
-            name: node.author.title,
-            email: node.author.email,
-            link: node.author.link,
+            name: 'Ahmad Husen',
+            email: 'hello@husen.id',
+            link: 'https://husen.id',
           },
         }),
       },
