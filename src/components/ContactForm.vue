@@ -4,7 +4,7 @@
       class="mb-4 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2"
     >
       <a
-        :href="$static.profile.linkedin"
+        :href="`https://linkedin.com/in/${$static.profile.linkedin}`"
         target="_blank"
         title="LinkedIn"
         rel="nofollow"
@@ -32,7 +32,7 @@
         </span>
       </a>
       <a
-        :href="$static.profile.github"
+        :href="`https://github.com/${$static.profile.github}`"
         target="_blank"
         title="Gtihub"
         rel="nofollow"
@@ -58,7 +58,7 @@
         </span>
       </a>
       <a
-        :href="$static.profile.twitter"
+        :href="`https://twitter.com/${$static.profile.twitter}`"
         target="_blank"
         title="Twitter"
         rel="nofollow"
