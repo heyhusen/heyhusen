@@ -79,7 +79,7 @@
             </header>
             <div class="p-4 space-x-2">
               <a
-                :href="`https://github.com/${page.post.author.github}`"
+                :href="`https://github.com/${$page.post.author.github}`"
                 target="_blank"
                 title="Gtihub"
                 rel="nofollow"
