@@ -235,6 +235,11 @@ export default {
           content: `${this.$page.metadata.siteUrl}${this.$page.post.og_image}`,
           vmid: 'og:image',
         },
+        {
+          property: 'og:image:alt',
+          content: this.$page.post.title,
+          vmid: 'og:image:alt',
+        },
         // Twitter Card
         {
           name: 'twitter:card',

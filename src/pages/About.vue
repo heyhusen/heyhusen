@@ -199,6 +199,11 @@ export default {
           content: `${this.$page.metadata.siteUrl}/img/About.webp`,
           vmid: 'og:image',
         },
+        {
+          property: 'og:image:alt',
+          content: 'About me',
+          vmid: 'og:image:alt',
+        },
         // Twitter Card
         {
           name: 'twitter:card',

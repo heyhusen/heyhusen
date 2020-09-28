@@ -103,6 +103,11 @@ export default {
           content: `${this.$page.metadata.siteUrl}/img/Work.webp`,
           vmid: 'og:image',
         },
+        {
+          property: 'og:image:alt',
+          content: 'Portfolio',
+          vmid: 'og:image:alt',
+        },
         // Twitter Card
         {
           name: 'twitter:card',
