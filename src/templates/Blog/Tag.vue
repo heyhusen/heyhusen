@@ -52,6 +52,7 @@ query($id: ID) {
   tag: blogTag(id: $id) {
     id
     title
+    path
     og_image
   }
 }
