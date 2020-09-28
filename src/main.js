@@ -5,6 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse'
 import VueFilterDateFormat from '@vuejs-community/vue-filter-date-format'
+import VueSocialSharing from 'vue-social-sharing'
 import VueDisqus from 'vue-disqus'
 
 export default function (Vue, { head }) {
@@ -23,6 +24,7 @@ export default function (Vue, { head }) {
 
   Vue.use(VueFilterDateParse)
   Vue.use(VueFilterDateFormat)
+  Vue.use(VueSocialSharing)
   Vue.use(VueDisqus)
 
   // Set default layout as a global component

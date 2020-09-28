@@ -59,6 +59,11 @@ module.exports = {
           900: '#47461D',
         },
         coffe: '#6F4E37',
+        facebook: '#4267B2',
+        twitter: '#1DA1F2',
+        linkedin: '#2867B2',
+        telegram: '#0088cc',
+        whatsapp: '#25D366',
       },
       spacing: {
         72: '18rem',
