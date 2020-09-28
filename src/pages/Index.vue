@@ -82,6 +82,12 @@
 
 <page-query>
 query {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
+
   gravatar(id: "187660235") {
     id
     hash
@@ -99,11 +105,6 @@ query {
       url
     }
   }
-
-  metadata {
-    siteName
-    siteDescription
-  }
 }
 </page-query>
 
@@ -114,6 +115,44 @@ export default {
     return {
       title: this.$page.metadata.siteName,
       titleTemplate: `%s - ${this.$page.metadata.siteDescription}`,
+      meta: [
+        // Meta Tag
+        {
+          name: 'keywords',
+          content: 'Ahmad Husen, Ahmad, Husen',
+        },
+        // Open Graph
+        {
+          property: 'og:title',
+          content: this.$page.metadata.siteName,
+          vmid: 'og:title',
+        },
+        {
+          property: 'og:url',
+          content: this.$page.metadata.siteUrl,
+          vmid: 'og:url',
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+          vmid: 'og:type',
+        },
+        {
+          property: 'og:description',
+          content: this.$page.metadata.siteDescription,
+          vmid: 'og:description',
+        },
+        {
+          property: 'og:image',
+          content: `${this.$page.metadata.siteUrl}/img/Home.webp`,
+          vmid: 'og:image',
+        },
+        // Twitter Card
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+      ],
     }
   },
   components: {

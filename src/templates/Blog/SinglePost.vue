@@ -141,6 +141,12 @@
 
 <page-query>
 query($id: ID) {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
+
   post: blogPost(id: $id) {
     id
     title
@@ -149,6 +155,7 @@ query($id: ID) {
     excerpt
     content
     featuredImage
+    og_image
     tag {
       id
       title
@@ -170,11 +177,55 @@ query($id: ID) {
 </page-query>
 
 <script>
+import map from 'lodash.map'
+
 export default {
   name: 'BlogPostTemplate',
   metaInfo() {
     return {
       title: this.$page.post.title,
+      meta: [
+        // Meta Tag
+        {
+          name: 'description',
+          content: this.$page.post.excerpt,
+        },
+        {
+          name: 'keywords',
+          content: map(this.$page.post.tag, 'title').join(', '),
+        },
+        // Open Graph
+        {
+          property: 'og:title',
+          content: this.$page.post.title,
+          vmid: 'og:title',
+        },
+        {
+          property: 'og:url',
+          content: `${this.$page.metadata.siteUrl}/${this.$page.post.path}`,
+          vmid: 'og:url',
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+          vmid: 'og:type',
+        },
+        {
+          property: 'og:description',
+          content: this.$page.post.excerpt,
+          vmid: 'og:description',
+        },
+        {
+          property: 'og:image',
+          content: `${this.$page.metadata.siteUrl}${this.$page.post.og_image}`,
+          vmid: 'og:image',
+        },
+        // Twitter Card
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+      ],
     }
   },
   components: {

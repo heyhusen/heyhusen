@@ -31,6 +31,12 @@
 
 <page-query>
 query {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
+
   profile: blogAuthor(id: "1599831417602-hY18hTewn") {
     id
     github
@@ -58,8 +64,52 @@ query {
 <script>
 export default {
   name: 'Portfolio',
-  metaInfo: {
-    title: 'Portfolio',
+  metaInfo() {
+    return {
+      title: 'Portfolio',
+      meta: [
+        // Meta Tag
+        {
+          name: 'description',
+          content: 'My latest portfolio',
+        },
+        {
+          name: 'keywords',
+          content: 'Portfolio, Project, Laravel, Vue',
+        },
+        // Open Graph
+        {
+          property: 'og:title',
+          content: 'Portfolio',
+          vmid: 'og:title',
+        },
+        {
+          property: 'og:url',
+          content: `${this.$page.metadata.siteUrl}/work`,
+          vmid: 'og:url',
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+          vmid: 'og:type',
+        },
+        {
+          property: 'og:description',
+          content: 'My latest portfolio',
+          vmid: 'og:description',
+        },
+        {
+          property: 'og:image',
+          content: `${this.$page.metadata.siteUrl}/img/Work.webp`,
+          vmid: 'og:image',
+        },
+        // Twitter Card
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+      ],
+    }
   },
   components: {
     PortfolioWork: () => import('~/components/Portfolio/Work'),

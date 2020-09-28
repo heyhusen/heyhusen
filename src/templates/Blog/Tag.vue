@@ -25,6 +25,12 @@
 
 <page-query>
 query($id: ID) {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
+
   articles: allBlogPost(filter: { tag: { contains: [$id] } }) {
     edges {
       node {
@@ -46,6 +52,7 @@ query($id: ID) {
   tag: blogTag(id: $id) {
     id
     title
+    og_image
   }
 }
 </page-query>
@@ -56,6 +63,48 @@ export default {
   metaInfo() {
     return {
       title: `Blog Tag: ${this.$page.tag.title}`,
+      meta: [
+        // Meta Tag
+        {
+          name: 'description',
+          content: `All article tagged with ${this.$page.tag.title}`,
+        },
+        {
+          name: 'keywords',
+          content: `Blog, Article, ${this.$page.tag.title}`,
+        },
+        // Open Graph
+        {
+          property: 'og:title',
+          content: `Blog Tag: ${this.$page.tag.title}`,
+          vmid: 'og:title',
+        },
+        {
+          property: 'og:url',
+          content: `${this.$page.metadata.siteUrl}/${this.$page.tag.path}`,
+          vmid: 'og:url',
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+          vmid: 'og:type',
+        },
+        {
+          property: 'og:description',
+          content: `All article tagged with ${this.$page.tag.title}`,
+          vmid: 'og:description',
+        },
+        {
+          property: 'og:image',
+          content: `${this.$page.metadata.siteUrl}${this.$page.tag.og_image}`,
+          vmid: 'og:image',
+        },
+        // Twitter Card
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+      ],
     }
   },
   components: {

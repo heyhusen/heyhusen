@@ -28,6 +28,12 @@
 
 <page-query>
 query {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
+
   articles: allBlogPost {
     edges {
       node {
@@ -52,8 +58,52 @@ query {
 <script>
 export default {
   name: 'Blog',
-  metaInfo: {
-    title: 'Blog',
+  metaInfo() {
+    return {
+      title: 'Blog',
+      meta: [
+        // Meta Tag
+        {
+          name: 'description',
+          content: 'My blog about coding and other stuff',
+        },
+        {
+          name: 'keywords',
+          content: 'Blog, Article, Laravel, Vue',
+        },
+        // Open Graph
+        {
+          property: 'og:title',
+          content: 'Blog',
+          vmid: 'og:title',
+        },
+        {
+          property: 'og:url',
+          content: `${this.$page.metadata.siteUrl}/blog`,
+          vmid: 'og:url',
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+          vmid: 'og:type',
+        },
+        {
+          property: 'og:description',
+          content: 'My latest article',
+          vmid: 'og:description',
+        },
+        {
+          property: 'og:image',
+          content: `${this.$page.metadata.siteUrl}/img/Blog.webp`,
+          vmid: 'og:image',
+        },
+        // Twitter Card
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+      ],
+    }
   },
   components: {
     BlogPost: () => import('~/components/Blog/Post.vue'),

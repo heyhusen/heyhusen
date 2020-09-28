@@ -15,6 +15,12 @@ query {
   metadata {
     siteName
   }
+
+  profile: blogAuthor(id: "1599831417602-hY18hTewn") {
+    id
+    title
+    twitter
+  }
 }
 </static-query>
 
@@ -23,6 +29,22 @@ export default {
   components: {
     Header: () => import('~/components/Header'),
     Footer: () => import('~/components/Footer'),
+  },
+  metaInfo() {
+    return {
+      meta: [
+        // Meta Tag
+        {
+          name: 'author',
+          content: this.$static.profile.title,
+        },
+        // Twitter Card
+        {
+          name: 'twitter:site',
+          content: this.$static.profile.twitter,
+        },
+      ],
+    }
   },
 }
 </script>

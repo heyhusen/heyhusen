@@ -131,12 +131,19 @@
 
 <page-query>
 query {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+  }
+
   gravatar(id: "187660235") {
     id
     hash
     name {
       formatted
       familyName
+      givenName
     }
     currentLocation
     thumbnailUrl
@@ -153,8 +160,52 @@ query {
 <script>
 export default {
   name: 'About',
-  metaInfo: {
-    title: 'About me',
+  metaInfo() {
+    return {
+      title: 'About me',
+      meta: [
+        // Meta Tag
+        {
+          name: 'description',
+          content: 'About Ahmad Husen',
+        },
+        {
+          name: 'keywords',
+          content: 'Profile, About, Husen',
+        },
+        // Open Graph
+        {
+          property: 'og:title',
+          content: 'About me',
+          vmid: 'og:title',
+        },
+        {
+          property: 'og:url',
+          content: `${this.$page.metadata.siteUrl}/about`,
+          vmid: 'og:url',
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+          vmid: 'og:type',
+        },
+        {
+          property: 'og:description',
+          content: 'About me, my history, and my job.',
+          vmid: 'og:description',
+        },
+        {
+          property: 'og:image',
+          content: `${this.$page.metadata.siteUrl}/img/About.webp`,
+          vmid: 'og:image',
+        },
+        // Twitter Card
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+      ],
+    }
   },
 }
 </script>
