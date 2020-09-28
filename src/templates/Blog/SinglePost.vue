@@ -207,8 +207,23 @@ export default {
         },
         {
           property: 'og:type',
-          content: 'website',
+          content: 'article',
           vmid: 'og:type',
+        },
+        {
+          property: 'og:article:published_time ',
+          content: this.$page.post.date,
+          vmid: 'og:article:published_time ',
+        },
+        {
+          property: 'og:article:author',
+          content: this.$page.post.author.title,
+          vmid: 'og:article:author',
+        },
+        {
+          property: 'og:article:tag',
+          content: map(this.$page.post.tag, 'title').join(', '),
+          vmid: 'og:article:tag',
         },
         {
           property: 'og:description',
