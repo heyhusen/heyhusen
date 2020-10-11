@@ -66,9 +66,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-folder
-      
-      - name: Display structure of downloaded files
-        run: ls -R
+          path: dist
       
       - name: Deploy to Netlify Production
         uses: nwtgck/actions-netlify@v1.1
