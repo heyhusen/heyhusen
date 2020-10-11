@@ -54,7 +54,7 @@
       </div>
 
       <div id="contact-form" class="bg-white text-gray-800">
-        <div class="max-w-6xl mx-auto sm:px-10">
+        <div class="max-w-3xl mx-auto sm:px-10">
           <div class="prose max-w-none sm:prose-lg lg:prose-xl">
             <header class="custom flex">
               <h3
@@ -69,9 +69,7 @@
                 want to talk about. I will try to respond as quickly as
                 possible. Either via email or one of my social media accounts.
               </p>
-              <div class="max-w-3xl mx-auto">
-                <ContactForm />
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
