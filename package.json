@@ -22,7 +22,7 @@
     "canvas": "^2.6.1",
     "canvas-text-wrapper": "^0.10.2",
     "gravatar.js": "^1.0.5",
-    "gridsome": "^0.7.0",
+    "gridsome": "^0.7.21",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "lodash.map": "^4.6.0",
     "md5": "^2.3.0",
