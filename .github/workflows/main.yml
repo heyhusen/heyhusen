@@ -37,7 +37,7 @@ jobs:
             ${{ runner.os }}-yarn-
       
       - name: Install dependencies
-        # if: steps.yarn-cache.outputs.cache-hit != 'true'
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
       
       - name: Build
@@ -66,6 +66,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-folder
+      
+      - name: Display structure of downloaded files
+        run: ls -R
       
       - name: Deploy to Netlify Production
         uses: nwtgck/actions-netlify@v1.1
