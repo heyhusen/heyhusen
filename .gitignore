@@ -8,3 +8,10 @@ dist
 .env.*
 !.env.example
 package-lock.json
+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
