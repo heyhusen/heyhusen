@@ -11,7 +11,7 @@ jobs:
     name: Build
     strategy:
       matrix:
-        os: [ubuntu-20.04, ubuntu-18.04, ubuntu-16.04, windows-latest, macos-latest]
+        os: [ubuntu-20.04]
         node: ['12.x', '14.x']
     runs-on: ${{ matrix.os }}
 
@@ -45,8 +45,36 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
       
-      - uses: actions/upload-artifact@v2
+      - name: Upload dist folder
+        uses: actions/upload-artifact@v2
         if: matrix.os == 'ubuntu-20.04' && matrix.node == '12.x'
         with:
           name: build-folder
           path: dist/
+      
+  deploy:
+    name: Deploy
+    needs: [build]
+    if: github.event_name == 'push'
+    runs-on: ubuntu-20.04
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Download dist folder
+        uses: actions/download-artifact@v2
+        with:
+          name: build-folder
+      
+      - name: Deploy to Netlify Production
+        uses: nwtgck/actions-netlify@v1.1
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          publish-dir: './dist'
+          production-branch: master
+          production-deploy: true
+          deploy-message: 'Production: Deploy from GitHub Actions'
+          github-deployment-environment: Production
