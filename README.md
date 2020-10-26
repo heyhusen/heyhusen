@@ -1,6 +1,6 @@
 # Hi there, I'm [Husen](http://husen.id) 👋
 
-![CD](https://github.com/hapakaien/hapakaien/workflows/CD/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/82403f6f-4df7-4120-8aac-5d5befb70ad0/deploy-status)](https://app.netlify.com/sites/husen-id/deploys)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) ![CD](https://github.com/hapakaien/hapakaien/workflows/CD/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/82403f6f-4df7-4120-8aac-5d5befb70ad0/deploy-status)](https://app.netlify.com/sites/husen-id/deploys)
 
 - 🔭 I’m currently working on personal project
 - 🌱 I’m currently learning TypeScript, Deno, Go, Docker
