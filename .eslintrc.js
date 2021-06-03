@@ -1,20 +1,15 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
-    es2020: true,
+    es2021: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/recommended',
-    'plugin:gridsome/recommended',
-    'plugin:prettier/recommended',
-    'prettier/vue',
-  ],
-  parser: 'vue-eslint-parser',
+  extends: ['eslint:recommended', 'airbnb-base', 'plugin:prettier/recommended'],
   parserOptions: {
-    parser: 'babel-eslint',
+    ecmaVersion: 12,
     sourceType: 'module',
   },
-}
+  rules: {
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+  },
+};

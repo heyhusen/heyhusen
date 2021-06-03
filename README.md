@@ -1,12 +1,24 @@
-# Hi there, I'm [Husen](http://husen.id) 👋
+# New Project
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) ![CD](https://github.com/hapakaien/hapakaien/workflows/CD/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/82403f6f-4df7-4120-8aac-5d5befb70ad0/deploy-status)](https://app.netlify.com/sites/husen-id/deploys)
+> ✨ Bootstrapped with Create Snowpack App (CSA).
 
-- 🔭 I’m currently working on personal project
-- 🌱 I’m currently learning TypeScript, Deno, Go, Docker
-- 👯 I’m looking to collaborate on any Laravel, or Vue project.
-- 💬 Ask me anything about coding, motorbike, or MotoGP
-- 📫 How to reach me: [contact form at husen.id](https://husen.id/#contact-form)
-- 😄 Pronouns: he/him
-- ⚡ Fun fact: I obsessed with speed.
+## Available Scripts
 
+### npm start
+
+Runs the app in the development mode.
+Open http://localhost:8080 to view it in the browser.
+
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+### npm run build
+
+Builds a static copy of your site to the `build/` folder.
+Your app is ready to be deployed!
+
+**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
+
+### Q: What about Eject?
+
+No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
