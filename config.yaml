@@ -1,0 +1,6 @@
+baseURL: "https://husen.id/"
+enableRobotsTXT: true
+languageCode: "en-us"
+permalinks:
+  blog: /blog/:year/:month/:day/:slug/
+title: "Ahmad Husen"

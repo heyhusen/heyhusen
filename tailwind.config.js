@@ -1,15 +1,14 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const tailwindcssTypography = require('@tailwindcss/typography');
+const nord = require('tailwind-nord');
+const typography = require('@tailwindcss/typography');
 
 module.exports = {
-  // mode: 'jit',
   purge: {
     mode: 'all',
     preserveHtmlElements: false,
     content: [
-      './*.js',
-      './includes/layouts/**/*.html',
-      './pages/**/*.{html,md}',
+      './layouts/**/*.html',
+      './content/**/*.{html,md}',
     ],
   },
   darkMode: false, // or 'media' or 'class'
@@ -25,5 +24,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [tailwindcssTypography],
-};
+  plugins: [nord, typography],
+}
