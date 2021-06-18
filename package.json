@@ -2,31 +2,30 @@
   "name": "@hapakaien/site",
   "version": "1.0.0",
   "description": "My personal site, portfolio, and blog.",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/hapakaien/husen.id.git"
-  },
   "keywords": [
-    "hugo"
+    "hugo", "husen", "jamstack", "ssg"
   ],
+  "homepage": "https://github.com/hapakaien/husen.id#readme",
+  "bugs": {
+    "url": "https://github.com/hapakaien/husen.id/issues"
+  },
+  "license": "MIT",
   "author": {
     "name": "Ahmad Husen",
     "email": "hi@husen.id",
     "url": "https://husen.id"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hapakaien/husen.id/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hapakaien/husen.id.git"
   },
-  "homepage": "https://github.com/hapakaien/husen.id#readme",
-  "private": "true",
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.2.6",
     "cssnano": "^5.0.6",
     "postcss": "^8.3.5",
-    "postcss-cli": "^8.3.1",
     "tailwind-nord": "^1.2.0",
     "tailwindcss": "^2.1.4"
-  }
+  },
+  "private": "true"
 }
