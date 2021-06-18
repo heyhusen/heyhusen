@@ -1,10 +1,9 @@
 {{ define "main" }}
+  {{ $gravatar := getJSON "https://secure.gravatar.com/14ba128070d3b0f591a24a7c6b0c4854.json" }}
+  {{ $gravatar := index $gravatar.entry 0 }}
 
-{{ $gravatar := getJSON "https://secure.gravatar.com/14ba128070d3b0f591a24a7c6b0c4854.json" }}
-{{ $gravatar := index $gravatar.entry 0 }}
-
-<main class="container mx-auto px-4 py-24">
+  <main class="container mx-auto px-4 py-24">
     <h1>Welcome to Hugo with Tailwind CSS</h1>
     <div class="text-nord9">This is an example site with Tailwind CSS 2</div>
-</main>
+  </main>
 {{ end }}

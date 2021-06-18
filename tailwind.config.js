@@ -6,10 +6,7 @@ module.exports = {
   purge: {
     mode: 'all',
     preserveHtmlElements: false,
-    content: [
-      './layouts/**/*.html',
-      './content/**/*.{html,md}',
-    ],
+    content: ['./layouts/**/*.html', './content/**/*.{html,md}'],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -25,4 +22,4 @@ module.exports = {
     extend: {},
   },
   plugins: [nord, typography],
-}
+};
