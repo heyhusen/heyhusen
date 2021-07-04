@@ -1,6 +1,28 @@
-baseURL: "https://husen.id/"
+baseURL: 'https://husen.id/'
 enableRobotsTXT: true
-languageCode: "en-us"
+languageCode: 'en-us'
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
+    - identifier: work
+      name: Portfolio
+      url: /work/
+      weight: 3
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 4
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 5
 permalinks:
   blog: /blog/:year/:month/:day/:slug/
-title: "Ahmad Husen"
+title: 'Ahmad Husen'
