@@ -6,7 +6,7 @@
   <body
     class="bg-white text-nord3 text-base font-sans antialiased leading-normal tracking-normal"
   >
-    {{ partial "header.html" }}
+    {{ partial "header.html" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}
   </body>
