@@ -9,8 +9,10 @@
         background-position: 0 90%;
         @apply bg-no-repeat text-nord1 p-1;
     }
+}
 
-    a {
+@layer components {
+    .link {
         @apply bg-no-repeat text-nord7 transition-all duration-100 delay-75 ease-in;
         background-image: linear-gradient(120deg, theme('colors.nord7'), theme('colors.nord9'));
         background-position: 0% 100%;
@@ -21,9 +23,5 @@
             background-size: 100% 45%;
             background-position: 0% 90%;
         }
-    }
-
-    nav a {
-        @apply bg-none transition-none;
     }
 }
