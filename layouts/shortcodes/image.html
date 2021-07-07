@@ -1,0 +1,29 @@
+{{- $original := resources.Get (.Get "src") -}}
+{{ $converts := slice (dict "type" "image/webp" "format" "webp") (dict "type" "image/jpeg" "format" "jpg") }}
+{{ $sizes := slice 320 375 425 640 768 1024 1280 1536 }}
+
+<picture {{ with .Get "class" }}class="{{ . }}"{{ end }}>
+  {{ range $convert := $converts }}
+    {{ $resized := slice }}
+    {{ range $size := $sizes }}
+      {{ if le $size $original.Width }}
+        {{ $converted := $original.Resize (print $size "x" " " $convert.format) }}
+        {{ $resized = $resized | append (print $converted.RelPermalink " " $size "w") }}
+      {{ end }}
+    {{ end }}
+    <source
+      sizes="(min-width: 50em) 50vw, 100vw"
+      srcset="{{ delimit $resized ", " }}"
+      type="{{ $convert.type }}"
+    />
+  {{ end }}
+  <img
+    src="{{ $original.RelPermalink | safeURL }}"
+    alt="{{ .Get "alt" }}"
+    width="{{ $original.Width }}"
+    height="{{ $original.Height }}"
+    {{ with .Get "title" }}title="{{ . }}"{{ end }}
+    loading="lazy"
+    decoding="async"
+  />
+</picture>

@@ -1,8 +1,10 @@
 ---
-title: "About me"
+title: 'About me'
 date: 2021-07-04T22:04:55+07:00
 draft: false
 ---
+
+{{< image src="/img/avatar.jpg" alt="Ahmad Husen" title="Ahmad Husen" class="float-right ml-4 h-full w-24 overflow-hidden sm:w-48 lg:w-64" >}}
 
 I am a web developer. I live in a beautiful little town, Klaten, Indonesia. Another scheduled job of mine is watching motorcycle races, especially MotoGP. Yes, I am a MotoGP fan. In my spare time, I like to watch movies, play games, or ride motorcycle. Sometimes, I also write a [blog]({{< relref "blog" >}} "Article").
 
@@ -20,7 +22,7 @@ In 2016, I got my first contract at PT. Mabito Karya, a company based in Bandung
 
 ## Web Development
 
-Since 2016, I have always chosen [PHP](https://www.php.net/ "PHP") as my programming language, and [Laravel](https://laravel.com/ "Laravel") for the framework. I usually build web applications using a monolithic stack with tools like [PHP](https://www.php.net/ "PHP"), HTML, CSS, [jQuery](https://jquery.com/ "jQuery"), and [MySQL](https://www.mysql.com/ "MySQL"). However, to keep up with the existing technology, I now choose [Vue.js](https://vuejs.org/ "Vue.js") and [Tailwind CSS](https://tailwindcss.com/ "TailwindCSS") for the frontend. For future-proof purposes, I also always build APIs for my backend. It will make web applications run faster and easier to maintain.
+Since 2016, I have always chosen [PHP](https://www.php.net/ 'PHP') as my programming language, and [Laravel](https://laravel.com/ 'Laravel') for the framework. I usually build web applications using a monolithic stack with tools like [PHP](https://www.php.net/ 'PHP'), HTML, CSS, [jQuery](https://jquery.com/ 'jQuery'), and [MySQL](https://www.mysql.com/ 'MySQL'). However, to keep up with the existing technology, I now choose [Vue.js](https://vuejs.org/ 'Vue.js') and [Tailwind CSS](https://tailwindcss.com/ 'TailwindCSS') for the frontend. For future-proof purposes, I also always build APIs for my backend. It will make web applications run faster and easier to maintain.
 
 As a developer, I always keep my code clean, easier to read, and uncomplicated. I always thought that automated testing was a must. I'm also still trying to adapt to my TDD habits. To continue improving my skills, I always learn from reading articles and books or watching screencasts related to the latest technology.
 
