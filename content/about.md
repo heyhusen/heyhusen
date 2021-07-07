@@ -6,7 +6,7 @@ draft: false
 
 {{< image src="/img/avatar.jpg" alt="Ahmad Husen" title="Ahmad Husen" class="float-right ml-4 h-full w-24 overflow-hidden sm:w-48 lg:w-64" >}}
 
-I am a web developer. I live in a beautiful little town, Klaten, Indonesia. Another scheduled job of mine is watching motorcycle races, especially MotoGP. Yes, I am a MotoGP fan. In my spare time, I like to watch movies, play games, or ride motorcycle. Sometimes, I also write a [blog]({{< relref "blog" >}} "Article").
+I am a web developer. I live in a beautiful little town, Klaten, Indonesia. My other job in my spare time is watching motorcycle races, especially MotoGP. If I still have free time, I like to watch movies, play games, or ride motorcycle (w/o my friends). Sometimes, I also write a [blog]({{< relref "blog" >}} "Article").
 
 ## Nickname
 
