@@ -11,9 +11,9 @@ menu:
       name: About
       url: /about/
       weight: 2
-    - identifier: work
-      name: Portfolio
-      url: /work/
+    - identifier: project
+      name: Work
+      url: /project/
       weight: 3
     - identifier: blog
       name: Blog
@@ -23,6 +23,8 @@ menu:
       name: Contact
       url: /contact/
       weight: 5
+taxonomies:
+  tag: tag
 permalinks:
   blog: /blog/:year/:month/:day/:slug/
 title: 'Ahmad Husen'
