@@ -47,6 +47,8 @@ module.exports = {
   variants: {
     extend: {
       order: ['odd', 'even'],
+      filter: ['hover', 'group-hover'],
+      hueRotate: ['hover', 'group-hover'],
     },
   },
   plugins: [
