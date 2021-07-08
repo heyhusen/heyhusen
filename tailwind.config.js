@@ -35,6 +35,9 @@ module.exports = {
                 '@apply no-underline bg-none': {},
                 color: 'inherit',
               },
+              'h1, h2, h3, h4, h5, h6': {
+                '@apply m-0': {},
+              },
             },
           },
         },
@@ -42,7 +45,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      order: ['odd', 'even'],
+    },
   },
   plugins: [
     plugin(({ addBase, addComponents, theme }) => {
