@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <main class="max-w-4xl mx-auto py-8 px-4 lg:px-0 space-y-8">
+    <section class="prose md:prose-lg lg:prose-xl xl:prose-2xl max-w-none">
+      <header class="font-serif">
+        <h1>{{ .Title }}</h1>
+      </header>
+      {{ .Content }}
+    </section>
+    <section
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 divide-y divide-nord3 "
+    >
+      {{ range .Pages }}
+        <article
+          class="sm:bg-nord6 flex flex-row sm:flex-col space-x-2 sm:space-x-0 sm:shadow sm:hover:shadow-md rounded transform duration-200 hover:-translate-y-1 group overflow-hidden"
+        >
+          {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "flex-none h-16 sm:h-40 w-16 sm:w-full transition-all filter group-hover:hue-rotate-30 overflow-hidden") }}
+          <header class="sm:p-2 sm:text-lg lg:text-xl">
+            <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="link">
+              <h3>{{ .Title }}</h3>
+            </a>
+            <span class="text-sm"
+              >Husen on {{ .Date.Format "Jan 2 2006" }}</span
+            >
+          </header>
+        </article>
+      {{ end }}
+    </section>
+  </main>
+{{ end }}
