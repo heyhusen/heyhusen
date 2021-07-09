@@ -11,9 +11,9 @@
     >
       {{ range .Pages }}
         <article
-          class="sm:bg-nord6 flex flex-row sm:flex-col space-x-2 sm:space-x-0 sm:shadow sm:hover:shadow-md rounded transform duration-200 hover:-translate-y-1 group overflow-hidden"
+          class="sm:bg-nord6 flex flex-row sm:flex-col space-x-2 sm:space-x-0 sm:shadow sm:hover:shadow-md sm:rounded transform duration-200 hover:-translate-y-1 group overflow-hidden"
         >
-          {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "flex-none h-16 sm:h-40 w-16 sm:w-full transition-all filter group-hover:hue-rotate-30 overflow-hidden") }}
+          {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "flex-none object-cover h-16 sm:h-40 w-16 sm:w-full transition-all filter group-hover:hue-rotate-30 overflow-hidden") }}
           <header class="sm:p-2 sm:text-lg lg:text-xl">
             <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="link">
               <h3>{{ .Title }}</h3>
