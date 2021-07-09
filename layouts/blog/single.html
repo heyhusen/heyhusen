@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <main class="max-w-4xl mx-auto py-4 lg:py-6 px-4 lg:px-0">
+    <article>
+      <div class="lg:mb-2 space-y-1 text-sm">
+        {{ range (.GetTerms "tag") }}
+          <a
+            href="{{ .RelPermalink }}"
+            title="{{ .Title }}"
+            class="bg-nord12 hover:bg-nord11 text-nord6 px-1 inline-block transition hover:underline rounded"
+          >
+            <span class="text-nord6">{{ .Title }}</span>
+          </a>
+        {{ end }}
+      </div>
+      <div class="prose md:prose-lg lg:prose-xl xl:prose-2xl max-w-none">
+        <header class="font-serif pb-2 border-b border-nord4 reset">
+          <h1>{{ .Title }}</h1>
+          <span class="font-sans text-sm md:text-base lg:text-lg">
+            Published on
+            {{ .Date.Format "Jan 2 2006" }}
+          </span>
+        </header>
+        <section>
+          {{ .Content }}
+        </section>
+      </div>
+    </article>
+  </main>
+{{ end }}
