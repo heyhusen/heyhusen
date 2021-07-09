@@ -1,6 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 const nord = require('tailwind-nord');
 const typography = require('@tailwindcss/typography');
+const form = require('@tailwindcss/forms');
 
 module.exports = {
   purge: {
@@ -85,5 +86,6 @@ module.exports = {
     }),
     nord,
     typography,
+    form,
   ],
 };
