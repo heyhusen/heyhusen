@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@tailwindcss/forms': ^0.3.3
   '@tailwindcss/typography': ^0.4.1
+  alpinejs: ^3.2.1
   autoprefixer: ^10.2.6
   browserslist: ^4.16.6
   cssnano: ^5.0.6
@@ -20,6 +21,9 @@ specifiers:
   prettier-plugin-go-template: ^0.0.11-beta.8
   tailwind-nord: ^1.2.0
   tailwindcss: ^2.2.2
+
+dependencies:
+  alpinejs: 3.2.1
 
 devDependencies:
   '@tailwindcss/forms': 0.3.3_tailwindcss@2.2.2
@@ -152,6 +156,16 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
 
+  /@vue/reactivity/3.1.4:
+    resolution: {integrity: sha512-YDlgii2Cr9yAoKVZFzgY4j0mYlVT73986X3e5SPp6ifqckSEoFSUWXZK2Tb53TB/9qO29BEEbspnKD3m3wAwkA==}
+    dependencies:
+      '@vue/shared': 3.1.4
+    dev: false
+
+  /@vue/shared/3.1.4:
+    resolution: {integrity: sha512-6O45kZAmkLvzGLToBxEz4lR2W6kXohCtebV2UxjH9GXjd8X9AhEn68FN9eNanFtWNzvgw1hqd6HkPRVQalqf7Q==}
+    dev: false
+
   /acorn-jsx/5.3.1_acorn@7.4.1:
     resolution: {integrity: sha512-K0Ptm/47OKfQRpNQ2J/oIN/3QYiK6FwW+eJbILhsdxh2WTLdl+30o8aGdTbm5JbffpFFAg/g+zi1E+jvJha5ng==}
     peerDependencies:
@@ -208,6 +222,12 @@ packages:
   /alphanum-sort/1.0.2:
     resolution: {integrity: sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=}
     dev: true
+
+  /alpinejs/3.2.1:
+    resolution: {integrity: sha512-MYYGUmVHNWN27TvgAtUCYXZlfsXoVCrLQT3a0Ak6CQKqf1TCHfQKxmhzJWscW5kPcLlOK2aYmWbV2H+XyfN2FQ==}
+    dependencies:
+      '@vue/reactivity': 3.1.4
+    dev: false
 
   /ansi-colors/4.1.1:
     resolution: {integrity: sha512-JoX0apGbHaUJBNl6yF+p6JAFYZ666/hhCGKN5t9QFjbJQKUU/g8MNbFDbvfrgKXvI1QpZplPOnwIo99lX/AAmA==}
