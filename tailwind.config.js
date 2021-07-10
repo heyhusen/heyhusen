@@ -17,6 +17,12 @@ module.exports = {
       mono: ['Fira Code', 'monospace'],
     },
     extend: {
+      colors: {
+        linkedin: '#2867B2',
+        github: '#333333',
+        gitlab: '#FCA326',
+        twitter: '#1DA1F2',
+      },
       typography: {
         DEFAULT: {
           css: {
