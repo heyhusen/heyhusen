@@ -6,22 +6,32 @@ menu:
     - identifier: home
       name: Home
       url: /
+      params:
+        icon: home
       weight: 1
     - identifier: about
       name: About
       url: /about/
+      params:
+        icon: user
       weight: 2
     - identifier: project
       name: Work
       url: /project/
+      params:
+        icon: code
       weight: 3
     - identifier: blog
       name: Blog
       url: /blog/
+      params:
+        icon: newspaper
       weight: 4
     - identifier: contact
       name: Contact
       url: /contact/
+      params:
+        icon: mail
       weight: 5
 taxonomies:
   tag: tag
