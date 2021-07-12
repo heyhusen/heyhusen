@@ -80,7 +80,6 @@ module.exports = {
           )}, ${theme('colors.nord9')})`,
           backgroundPosition: '0% 100%',
           backgroundSize: '100% 3px',
-
           '&:hover': {
             '@apply text-nord3 transition-all duration-100 delay-75 ease-in':
               {},

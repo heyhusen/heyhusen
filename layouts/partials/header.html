@@ -14,7 +14,7 @@
         {{ partial "svgs/icon.svg" (dict "class" "inline-block stroke-2 transition-colors delay-150 duration-300 text-nord9 hover:text-nord10 h-10 sm:h-16 w-10 sm:w-16") }}
       </a>
       <div
-        class="fixed sm:static z-20 sm:z-0 bottom-0 inset-x-0 flex justify-between sm:justify-start px-4 py-1 sm:p-0 text-xs bg-white border-t sm:border-0 border-solid border-nord4 sm:items-center sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+        class="bg-white text-xs md:text-lg lg:text-xl xl:text-2xl sm:text-base px-4 py-1 sm:p-0 fixed sm:static z-20 sm:z-0 bottom-0 inset-x-0 flex justify-between sm:justify-start sm:items-center border-t sm:border-0 border-nord4"
       >
         {{ $current := . }}
         {{ range .Site.Menus.main }}
@@ -29,7 +29,7 @@
               text-nord8 sm:border-nord8
             {{ else }}
               sm:border-transparent
-            {{ end }} sm:hover:text-nord7 sm:border-b-4 sm:border-solid sm:hover:border-nord8"
+            {{ end }} sm:hover:bg-nord6 sm:border-b-4 duration-200"
           >
             {{ $outline := "block sm:hidden" }}
             {{ if $active }}
@@ -50,7 +50,7 @@
       <a
         href="/contact"
         title="Contact me"
-        class="bg-nord11 hover:bg-nord12 text-nord6 hover:text-nord6 transition py-1 px-2 md:py-2 md:px-3 rounded"
+        class="bg-nord11 hover:bg-nord12 text-nord6 hover:text-nord6 py-1 px-2 md:py-2 md:px-3 transition rounded"
       >
         Contact me
       </a>
