@@ -1,8 +1,8 @@
 {{ define "main" }}
   <main class="max-w-4xl mx-auto pb-4 lg:pb-6 px-4 lg:px-0">
     {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "object-cover w-full h-20 sm:h-80 duration-200 filter hover:hue-rotate-30 overflow-hidden relative") }}
-    <article class="bg-white sm:mx-4 sm:-mt-48 sm:p-4 relative">
-      <div class="lg:mb-2 space-y-1 text-sm">
+    <article class="bg-white sm:mx-4 mt-1 sm:-mt-48 sm:p-4 space-y-1 sm:space-y-0 relative">
+      <div class="space-y-1 text-xs sm:text-sm">
         {{ range (.GetTerms "tag") }}
           <a
             href="{{ .RelPermalink }}"
