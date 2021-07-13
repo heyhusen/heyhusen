@@ -26,21 +26,22 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            color: 'inherit',
+            '@apply text-current': {},
             a: {
               '@apply link no-underline': {},
               '&:hover': {
-                '@apply no-underline': {},
-                color: 'inherit',
+                '@apply text-current no-underline': {},
               },
             },
-            'h1, h2, h3, h4, h5, h6': {
-              color: 'inherit',
+            'h1, h2, h3, h4, h5, h6, blockquote': {
+              '@apply text-current': {},
+            },
+            blockquote: {
+              '@apply opacity-75': {},
             },
             '.reset': {
               a: {
-                '@apply no-underline bg-none': {},
-                color: 'inherit',
+                '@apply text-current bg-none no-underline': {},
               },
               'h1, h2, h3, h4, h5, h6': {
                 '@apply m-0': {},
