@@ -39,7 +39,7 @@ permalinks:
   blog: /blog/:year/:month/:day/:slug/
 markup:
   tableOfContents:
-    endLevel: 3
+    endLevel: 5
     ordered: false
     startLevel: 2
 enableRobotsTXT: true

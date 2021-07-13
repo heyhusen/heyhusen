@@ -6,6 +6,7 @@ tag:
 - Tailwind CSS
 - Vue
 image: uploads/georgie-cobbs-muohbrfgeqy-unsplash.jpg
+toc: false
 date: 2021-07-08T16:00:44+07:00
 draft: false
 ---

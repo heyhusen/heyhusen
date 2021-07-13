@@ -1,30 +1,39 @@
 {{ define "main" }}
-  <main class="max-w-4xl mx-auto pb-4 lg:pb-6 px-4 lg:px-0">
-    {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "object-cover w-full h-20 sm:h-80 duration-200 filter hover:hue-rotate-30 overflow-hidden relative") }}
-    <article class="bg-white sm:mx-4 mt-1 sm:-mt-48 sm:p-4 space-y-1 sm:space-y-0 relative">
-      <div class="space-y-1 text-xs sm:text-sm">
-        {{ range (.GetTerms "tag") }}
-          <a
-            href="{{ .RelPermalink }}"
-            title="{{ .Title }}"
-            class="bg-nord12 hover:bg-nord11 text-nord6 px-1 inline-block transition hover:underline rounded"
-          >
-            <span class="text-nord6">{{ .Title }}</span>
-          </a>
-        {{ end }}
-      </div>
-      <div class="prose md:prose-lg lg:prose-xl max-w-none">
-        <header class="font-serif pb-2 border-b border-nord4 reset">
-          <h1>{{ .Title }}</h1>
-          <span class="font-sans text-sm md:text-base lg:text-lg">
-            Published on
-            {{ .Date.Format "Jan 2 2006" }}
-          </span>
-        </header>
-        <section>
-          {{ .Content }}
-        </section>
-      </div>
-    </article>
+  <main
+    class="max-w-6xl mx-auto pb-4 lg:pb-6 px-4 xl:px-0 flex flex-col md:flex-row md:space-x-4"
+  >
+    <section class="flex-1">
+      {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "object-cover w-full h-20 sm:h-80 duration-200 filter hover:hue-rotate-30 overflow-hidden relative") }}
+      <article
+        class="bg-white sm:mx-4 mt-1 sm:-mt-48 sm:p-4 space-y-1 sm:space-y-0 relative"
+      >
+        <div class="space-y-1 text-xs sm:text-sm">
+          {{ range (.GetTerms "tag") }}
+            <a
+              href="{{ .RelPermalink }}"
+              title="{{ .Title }}"
+              class="bg-nord12 hover:bg-nord11 text-nord6 px-1 inline-block transition hover:underline rounded"
+            >
+              <span class="text-nord6">{{ .Title }}</span>
+            </a>
+          {{ end }}
+        </div>
+        <div class="prose md:prose-lg lg:prose-xl max-w-none">
+          <header class="font-serif pb-2 border-b border-nord4 reset">
+            <h1>{{ .Title }}</h1>
+            <span class="font-sans text-sm md:text-base lg:text-lg">
+              Published on
+              {{ .Date.Format "Jan 2 2006" }}
+            </span>
+          </header>
+          <section>
+            {{ .Content }}
+          </section>
+        </div>
+      </article>
+    </section>
+    <aside class="flex-none md:w-1/4 pt-3">
+      {{- partial "toc.html" . -}}
+    </aside>
   </main>
 {{ end }}
