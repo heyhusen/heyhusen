@@ -1,5 +1,5 @@
+title: 'Ahmad Husen'
 baseURL: 'https://husen.id/'
-enableRobotsTXT: true
 languageCode: 'en-us'
 menu:
   main:
@@ -25,7 +25,7 @@ menu:
       name: Blog
       url: /blog/
       params:
-        icon: newspaper
+        icon: pencil-alt
       weight: 4
     - identifier: contact
       name: Contact
@@ -37,4 +37,9 @@ taxonomies:
   tag: tag
 permalinks:
   blog: /blog/:year/:month/:day/:slug/
-title: 'Ahmad Husen'
+markup:
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+enableRobotsTXT: true
