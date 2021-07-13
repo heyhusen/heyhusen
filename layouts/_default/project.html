@@ -12,7 +12,11 @@
           {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "flex-none object-cover h-full w-full md:w-80 md:py-4 lg:w-96 md:odd:order-last duration-200 filter group-hover:hue-rotate-30") }}
           <div class="p-4 space-y-2">
             <div class="prose md:prose-lg lg:prose-xl">
-              <header class="reset"><h2>{{ .Title }}</h2></header>
+              <header>
+                <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="reset">
+                  <h2>{{ .Title }}</h2>
+                </a>
+              </header>
               {{ .Params.description }}
             </div>
             <p>

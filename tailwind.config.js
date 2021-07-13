@@ -72,6 +72,9 @@ module.exports = {
       });
 
       addComponents({
+        '.scroll-smoth': {
+          scrollBehavior: 'smooth',
+        },
         '.link': {
           '@apply bg-no-repeat text-nord8 transition-all duration-100 delay-75 ease-in':
             {},
@@ -85,6 +88,19 @@ module.exports = {
               {},
             backgroundSize: '100% 45%',
             backgroundPosition: '0% 90%',
+          },
+        },
+        '#TableOfContents': {
+          '@apply text-nord3 text-sm md:text-base md:ml-1 md:pl-1 md:border-l':
+            {},
+          ul: {
+            '@apply ml-2 md:ml-3': {},
+          },
+          a: {
+            '@apply opacity-75 duration-200': {},
+            '&:hover': {
+              '@apply opacity-100 text-nord8': {},
+            },
           },
         },
       });

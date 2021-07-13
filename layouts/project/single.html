@@ -1,0 +1,71 @@
+{{ define "main" }}
+  <main
+    class="max-w-6xl mx-auto py-2 lg:py-4 px-4 xl:px-0 flex flex-col md:flex-row"
+  >
+    <article class="space-y-1 flex-1">
+      <div class="space-y-1 text-xs sm:text-sm reset">
+        {{ range (.GetTerms "tag") }}
+          <a
+            href="{{ .RelPermalink }}"
+            title="{{ .Title }}"
+            class="bg-nord12 hover:bg-nord11 text-nord6 px-1 inline-block transition hover:underline rounded"
+          >
+            <span class="text-nord6">{{ .Title }}</span>
+          </a>
+        {{ end }}
+      </div>
+      <div class="prose md:prose-lg lg:prose-xl max-w-none">
+        <header class="font-serif reset"><h1>{{ .Title }}</h1></header>
+        {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "mx-auto object-cover h-full w-full sm:w-5/6") }}
+        <section>
+          {{ .Content }}
+        </section>
+      </div>
+    </article>
+    <aside class="flex-none md:w-1/4">
+      <section
+        class="fixed md:sticky right-2 bottom-16 md:top-0 space-y-1"
+        x-data="{ open: false }"
+      >
+        <details
+          class="md:block bg-white py-1 pr-1 md:p-0 border md:border-0 rounded-t-lg rounded-bl-lg md:rounded-none"
+          :class=" open ? 'block': 'hidden' "
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 transform scale-90"
+          x-transition:enter-end="opacity-100 transform scale-100"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100 transform scale-100"
+          x-transition:leave-end="opacity-0 transform scale-90"
+          open
+        >
+          <summary
+            class="hidden md:list-item text-lg cursor-pointer select-none"
+          >
+            <strong>Table of Contents</strong>
+          </summary>
+          {{ .TableOfContents }}
+        </details>
+        <button
+          class="md:hidden bg-nord3 bg-opacity-75 p-1 float-right rounded-full focus:outline-none"
+          x-show="! open"
+          x-transition:enter="transition ease-out duration-150"
+          x-transition:enter-start="opacity-0 transform rotate-90"
+          x-transition:enter-end="opacity-100 transform rotate-180"
+          @click="open = ! open"
+        >
+          {{ partial "svgs/menu-outline.svg" (dict "class" "text-nord4 h-6 w-6") }}
+        </button>
+        <button
+          class="md:hidden bg-nord3 bg-opacity-75 p-1 float-right rounded-full focus:outline-none"
+          x-show="open"
+          x-transition:enter="transition ease-out duration-0"
+          x-transition:enter-start="opacity-0 transform rotate-90"
+          x-transition:enter-end="opacity-100 transform rotate-180"
+          @click="open = ! open"
+        >
+          {{ partial "svgs/x-outline.svg" (dict "class" "text-nord4 h-6 w-6") }}
+        </button>
+      </section>
+    </aside>
+  </main>
+{{ end }}
