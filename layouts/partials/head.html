@@ -1,25 +1,100 @@
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ .Title }}</title>
+<head itemscope itemtype="{{ .Site.BaseURL }}">
+  {{ $title := (print .Title " - " .Site.Title) }}
+  {{ if .IsHome }}
+    {{ $title = (print .Site.Title " - " .Site.Params.description) }}
+  {{ end }}
+  {{ $description := .Site.Params.description }}
+  {{ with .Params.description }}
+    {{ $description = . }}
+  {{ end }}
+  {{ with .Summary }}
+    {{ $description = . }}
+  {{ end }}
+  {{ $keywords := "" }}
+  {{ with .Params.keywords }}
+    {{ $keywords = . }}
+  {{ end }}
+  {{ $author := .Site.Params.author }}
+  {{ with .Params.author }}
+    {{ $author = . }}
+  {{ end }}
+  {{ hugo.Generator }}
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Lato:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-  rel="stylesheet"
-/>
+  <base href="{{ .Permalink }}" />
 
-{{ $style := resources.Get "css/main.css" }}
-{{ $style = $style | resources.PostCSS (dict "inlineImports" true) }}
-{{ if hugo.IsProduction }}
-  {{ $style = $style | minify | fingerprint | resources.PostProcess }}
-{{ end }}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta itemprop="name" content="{{ $title }}" />
+  <meta name="application-name" content="{{ $title }}" />
+  <meta name="description" content="{{ $description }}" />
+  <meta itemprop="description" content="{{ $description }}" />
+  <meta name="keywords" content="{{ $keywords }}" />
+  <meta name="url" content="{{ .Permalink }}" />
+  <meta name="author" content="{{ .Site.Params.author }}" />
 
-<link
-  rel="stylesheet"
-  href="{{ $style.RelPermalink }}"
-  integrity="{{ $style.Data.Integrity }}"
-/>
+  <title itemprop="name">{{- $title -}}</title>
 
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:locale" content="{{ .Language.Lang }}" />
+  {{ if .IsPage }}
+    <meta property="og:article:author" content="{{ humanize $author }}" />
+    <meta property="article:author" content="{{ humanize $author }}" />
+  {{ end }}
+  {{ template "_internal/twitter_cards.html" . }}
+  <meta name="twitter:site" content="{{ .Site.Params.twitter }}">
+  <meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
+
+  <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+  <link
+    rel="sitemap"
+    type="application/xml"
+    title="Sitemap"
+    href="{{ .Site.BaseURL }}sitemap.xml"
+  />
+  {{ with .OutputFormats.Get "RSS" }}
+    <link
+      href="{{ .Permalink }}"
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ $.Site.Title }}"
+    />
+    <link
+      href="{{ .Permalink }}"
+      rel="feed"
+      type="application/rss+xml"
+      title="{{ $.Site.Title }}"
+    />
+  {{ end }}
+  {{ if eq .Section "blog" }}
+    {{ $paginator := .Paginate (where .Pages "Section" "blog") }}
+    {{ if $paginator }}
+      <link rel="first" href="{{ $paginator.First.URL }}" />
+      <link rel="last" href="{{ $paginator.Last.URL }}" />
+      {{ if $paginator.HasPrev }}
+        <link rel="prev" href="{{ $paginator.Prev.URL }}" />
+      {{ end }}
+      {{ if $paginator.HasNext }}
+        <link rel="next" href="{{ $paginator.Next.URL }}" />
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Lato:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  {{ $style := resources.Get "css/main.css" }}
+  {{ $style = $style | resources.PostCSS (dict "inlineImports" true) }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | minify | fingerprint | resources.PostProcess }}
+  {{ end }}
+  <link
+    rel="stylesheet"
+    href="{{ $style.RelPermalink }}"
+    integrity="{{ $style.Data.Integrity }}"
+  />
+</head>
