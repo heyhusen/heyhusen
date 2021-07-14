@@ -18,10 +18,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        linkedin: '#2867B2',
         github: '#333333',
         gitlab: '#FCA326',
+        facebook: '#4267B2',
+        linkedin: '#2867B2',
+        telegram: '#0088CC',
         twitter: '#1DA1F2',
+        whatsapp: '#25D366',
       },
       typography: {
         DEFAULT: {
@@ -56,6 +59,7 @@ module.exports = {
     extend: {
       order: ['odd', 'even'],
       filter: ['hover', 'group-hover'],
+      grayscale: ['hover'],
       hueRotate: ['hover', 'group-hover'],
     },
   },
