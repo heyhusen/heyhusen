@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="{{ .Language.Lang }}" class="scroll-smoth">
+<html
+  prefix="og: http://ogp.me/ns#"
+  lang="{{ .Language.Lang }}"
+  class="min-h-screen scroll-smoth"
+>
   {{ partial "head.html" . }}
   <body
-    class="bg-white text-nord3 text-base font-sans antialiased leading-normal tracking-normal"
+    class="bg-white dark:bg-nord0 text-nord3 dark:text-nord6 text-base font-sans antialiased leading-normal tracking-normal min-h-screen"
+    x-data="{ darkMode: localStorage.getItem('dark') === 'true' }"
+    x-init="$watch('darkMode', val => localStorage.setItem('dark', JSON.stringify(val)))"
+    :class="{ 'dark': darkMode }"
   >
-    {{ partial "header.html" . }}
-    {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
-    {{ $js := resources.Get "js/index.js" | js.Build "js/main.js" }}
-    {{ if hugo.IsProduction }}
-      {{ $js = $js | minify | fingerprint }}
-    {{ end }}
-    <script
-      src="{{ $js.RelPermalink }}"
-      integrity="{{ $js.Data.Integrity }}"
-      defer
-    ></script>
+    <div class="dark:bg-nord0 dark:text-nord6 min-h-screen">
+      {{ partial "header.html" . }}
+      {{ block "main" . }}{{ end }}
+      {{ partial "footer.html" . }}
+      {{ $js := resources.Get "js/index.js" | js.Build "js/main.js" }}
+      {{ if hugo.IsProduction }}
+        {{ $js = $js | minify | fingerprint }}
+      {{ end }}
+      <script
+        src="{{ $js.RelPermalink }}"
+        integrity="{{ $js.Data.Integrity }}"
+        defer
+      ></script>
+    </div>
   </body>
 </html>

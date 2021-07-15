@@ -17,7 +17,7 @@
         title="Share on {{ .name }}"
         class="inline-flex"
       >
-        {{ partial (print "svgs/" .icon ".svg") (dict "class" (print "h-6 lg:h-7 xl:h-8 w-6 lg:w-7 xl:w-8 fill-current text-nord3 duration-200 " .class)) }}
+        {{ partial (print "svgs/" .icon ".svg") (dict "class" (print "h-6 lg:h-7 xl:h-8 w-6 lg:w-7 xl:w-8 fill-current text-nord3 dark:text-nord5 duration-200 " .class)) }}
       </a>
     {{ end }}
   </div>

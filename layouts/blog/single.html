@@ -5,7 +5,7 @@
     <section class="flex-1">
       {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "object-cover w-full h-20 sm:h-80 duration-200 filter hover:hue-rotate-30 overflow-hidden relative") }}
       <article
-        class="bg-white sm:mx-4 mt-1 sm:-mt-48 sm:p-4 space-y-1 sm:space-y-0 relative"
+        class="bg-white dark:bg-nord1 sm:mx-4 mt-1 sm:-mt-48 sm:p-4 space-y-1 sm:space-y-0 relative"
       >
         <div class="space-y-1 text-xs sm:text-sm">
           {{ range (.GetTerms "tag") }}
@@ -19,7 +19,7 @@
           {{ end }}
         </div>
         <div class="prose md:prose-lg lg:prose-xl max-w-none">
-          <header class="font-serif pb-2 border-b border-nord4 reset">
+          <header class="font-serif pb-2 border-b border-nord4 dark:border-nord3 reset">
             <h1>{{ .Title }}</h1>
             <span class="font-sans text-sm md:text-base lg:text-lg">
               Published on

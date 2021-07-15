@@ -1,45 +1,43 @@
 {{ if and (.Params.toc) (ne (print .TableOfContents) "") }}
-<section
-  class="fixed md:sticky right-2 bottom-16 md:top-0 space-y-1"
-  x-data="{ open: false }"
->
-  <details
-    class="md:block bg-white py-1 pr-1 md:p-0 border md:border-0 rounded-t-lg rounded-bl-lg md:rounded-none"
-    :class=" open ? 'block': 'hidden' "
-    x-transition:enter="transition ease-out duration-200"
-    x-transition:enter-start="opacity-0 transform scale-90"
-    x-transition:enter-end="opacity-100 transform scale-100"
-    x-transition:leave="transition ease-in duration-200"
-    x-transition:leave-start="opacity-100 transform scale-100"
-    x-transition:leave-end="opacity-0 transform scale-90"
-    open
+  <section
+    class="fixed md:sticky right-2 bottom-16 md:top-0 space-y-1"
+    x-data="{ open: false }"
   >
-    <summary
-      class="hidden md:list-item text-lg cursor-pointer select-none"
+    <details
+      class="md:block bg-white dark:bg-nord0 py-1 pr-1 md:p-0 border md:border-0 rounded-t-lg rounded-bl-lg md:rounded-none"
+      :class=" open ? 'block': 'hidden' "
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 transform scale-90"
+      x-transition:enter-end="opacity-100 transform scale-100"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100 transform scale-100"
+      x-transition:leave-end="opacity-0 transform scale-90"
+      open
     >
-      <strong>Table of Contents</strong>
-    </summary>
-    {{ .TableOfContents }}
-  </details>
-  <button
-    class="md:hidden bg-nord3 bg-opacity-75 p-1 float-right rounded-full focus:outline-none"
-    x-show="! open"
-    x-transition:enter="transition ease-out duration-150"
-    x-transition:enter-start="opacity-0 transform rotate-90"
-    x-transition:enter-end="opacity-100 transform rotate-180"
-    @click="open = ! open"
-  >
-    {{ partial "svgs/menu-outline.svg" (dict "class" "text-nord4 h-6 w-6") }}
-  </button>
-  <button
-    class="md:hidden bg-nord3 bg-opacity-75 p-1 float-right rounded-full focus:outline-none"
-    x-show="open"
-    x-transition:enter="transition ease-out duration-200"
-    x-transition:enter-start="opacity-0 transform rotate-90"
-    x-transition:enter-end="opacity-100 transform rotate-180"
-    @click="open = ! open"
-  >
-    {{ partial "svgs/x-outline.svg" (dict "class" "text-nord4 h-6 w-6") }}
-  </button>
-</section>
+      <summary class="hidden md:list-item text-lg cursor-pointer select-none">
+        <strong>Table of Contents</strong>
+      </summary>
+      {{ .TableOfContents }}
+    </details>
+    <button
+      class="md:hidden bg-nord3 bg-opacity-75 p-1 float-right rounded-full focus:outline-none"
+      x-show="! open"
+      x-transition:enter="transition ease-out duration-150"
+      x-transition:enter-start="opacity-0 transform rotate-90"
+      x-transition:enter-end="opacity-100 transform rotate-180"
+      @click="open = ! open"
+    >
+      {{ partial "svgs/menu-outline.svg" (dict "class" "text-nord4 h-6 w-6") }}
+    </button>
+    <button
+      class="md:hidden bg-nord3 bg-opacity-75 p-1 float-right rounded-full focus:outline-none"
+      x-show="open"
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 transform rotate-90"
+      x-transition:enter-end="opacity-100 transform rotate-180"
+      @click="open = ! open"
+    >
+      {{ partial "svgs/x-outline.svg" (dict "class" "text-nord4 h-6 w-6") }}
+    </button>
+  </section>
 {{ end }}

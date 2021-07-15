@@ -9,7 +9,7 @@ module.exports = {
     preserveHtmlElements: false,
     content: ['./layouts/**/*.html', './content/**/*.{html,md}'],
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
       sans: ['Lato', 'sans-serif'],
@@ -72,7 +72,7 @@ module.exports = {
           )} 0%, ${theme('colors.nord9')} 100%)`,
           backgroundSize: '100% 45%',
           backgroundPosition: '0 90%',
-          '@apply bg-no-repeat text-nord1 p-1': {},
+          '@apply bg-no-repeat text-nord1 dark:text-nord6 p-1': {},
         },
       });
 
@@ -89,14 +89,14 @@ module.exports = {
           backgroundPosition: '0% 100%',
           backgroundSize: '100% 3px',
           '&:hover': {
-            '@apply text-nord3 transition-all duration-100 delay-75 ease-in':
+            '@apply text-nord3 dark:text-nord6 transition-all duration-100 delay-75 ease-in':
               {},
             backgroundSize: '100% 45%',
             backgroundPosition: '0% 90%',
           },
         },
         '#TableOfContents': {
-          '@apply text-nord3 text-sm md:text-base md:ml-1 md:pl-1 md:border-l':
+          '@apply text-nord3 dark:text-nord5 text-sm md:text-base md:ml-1 md:pl-1 md:border-l':
             {},
           ul: {
             '@apply ml-2 md:ml-3': {},
