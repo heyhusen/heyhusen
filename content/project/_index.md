@@ -1,5 +1,7 @@
 ---
 title: 'Project'
+images:
+- img/project.png
 date: 2021-07-07T22:13:21+07:00
 draft: false
 ---

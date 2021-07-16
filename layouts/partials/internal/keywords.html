@@ -1,0 +1,5 @@
+{{ $keywords := "" }}
+{{ with .Params.keywords }}
+  {{ $keywords = . }}
+{{ end }}
+{{ return $keywords }}

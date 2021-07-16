@@ -1,51 +1,33 @@
 <head itemscope itemtype="{{ .Site.BaseURL }}">
-  {{ $title := (print .Title " - " .Site.Title) }}
-  {{ if .IsHome }}
-    {{ $title = (print .Site.Title " - " .Site.Params.description) }}
-  {{ end }}
-  {{ $description := .Site.Params.description }}
-  {{ with .Params.description }}
-    {{ $description = . }}
-  {{ end }}
-  {{ with .Summary }}
-    {{ $description = . }}
-  {{ end }}
-  {{ $keywords := "" }}
-  {{ with .Params.keywords }}
-    {{ $keywords = . }}
-  {{ end }}
-  {{ $author := .Site.Params.author }}
-  {{ with .Params.author }}
-    {{ $author = . }}
-  {{ end }}
   {{ hugo.Generator }}
 
   <base href="{{ .Permalink }}" />
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta itemprop="name" content="{{ $title }}" />
-  <meta name="application-name" content="{{ $title }}" />
-  <meta name="description" content="{{ $description }}" />
-  <meta itemprop="description" content="{{ $description }}" />
-  <meta name="keywords" content="{{ $keywords }}" />
+  <meta itemprop="name" content="{{ partial "internal/title.html" . }}" />
+  <meta
+    name="application-name"
+    content="{{ partial "internal/title.html" . }}"
+  />
+  <meta
+    name="description"
+    content="{{ partial "internal/description.html" . }}"
+  />
+  <meta
+    itemprop="description"
+    content="{{ partial "internal/description.html" . }}"
+  />
+  <meta name="keywords" content="{{ partial "internal/keywords.html" . }}" />
   <meta name="url" content="{{ .Permalink }}" />
-  <meta name="author" content="{{ .Site.Params.author }}" />
+  <meta name="author" content="{{ partial "internal/author.html" . }}" />
   <meta name="msapplication-TileColor" content="#5e81ac" />
   <meta name="theme-color" content="#ffffff" />
 
-  <title itemprop="name">{{- $title -}}</title>
+  <title itemprop="name">{{ partial "internal/title.html" . }}</title>
 
-  {{ template "_internal/opengraph.html" . }}
-  <meta property="og:site_name" content="{{ .Site.Title }}" />
-  <meta property="og:locale" content="{{ .Language.Lang }}" />
-  {{ if .IsPage }}
-    <meta property="og:article:author" content="{{ humanize $author }}" />
-    <meta property="article:author" content="{{ humanize $author }}" />
-  {{ end }}
-  {{ template "_internal/twitter_cards.html" . }}
-  <meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
-  <meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
+  {{ partial "internal/twitter-cards.html" . }}
+  {{ partial "internal/opengraph.html" . }}
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

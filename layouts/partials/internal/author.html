@@ -1,0 +1,5 @@
+{{ $author := .Site.Params.author }}
+{{ with .Params.author }}
+  {{ $author = . }}
+{{ end }}
+{{ return $author }}
