@@ -1,4 +1,4 @@
-<header>
+<header class="bg-white dark:bg-nord0 sticky top-0 z-10">
   <nav
     class="container mx-auto flex justify-between items-center border-b border-nord4 dark:border-nord3"
     aria-labelledby="primary-navigation"
@@ -11,7 +11,7 @@
         title="{{ .Site.Title }}"
         class="text-xl md:text-2xl font-bold"
       >
-        {{ partial "svgs/icon.svg" (dict "class" "inline-block stroke-2 transition-colors delay-150 duration-300 text-nord9 hover:text-nord10 h-10 sm:h-16 w-10 sm:w-16") }}
+        {{ partial "svgs/icon.svg" (dict "class" "inline-block stroke-2 transition-colors delay-150 duration-300 text-nord9 hover:text-nord10 h-10 md:h-12 w-10 md:w-12") }}
       </a>
       <div
         class="bg-white dark:bg-nord1 sm:bg-transparent sm:dark:bg-transparent text-xs md:text-lg lg:text-xl xl:text-2xl sm:text-base px-4 py-1 sm:p-0 fixed sm:static z-10 sm:z-0 bottom-0 inset-x-0 flex justify-between sm:justify-start sm:items-center border-t sm:border-0 border-nord4 dark:border-nord3"
@@ -25,7 +25,7 @@
             title="{{ .Name }}"
             class="inline-block {{ if or (eq .Identifier "home") (eq .Identifier "contact") }}
               sm:hidden
-            {{ end }} sm:px-4 sm:py-6 xl:py-8 {{ if $active }}
+            {{ end }} sm:px-2 md:px-3 sm:py-4 md:py-5 {{ if $active }}
               text-nord8 sm:border-nord8
             {{ else }}
               sm:border-transparent
