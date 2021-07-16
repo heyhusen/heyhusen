@@ -7,14 +7,14 @@
       <article
         class="bg-white dark:bg-nord0 sm:dark:bg-nord1 sm:mx-4 mt-1 sm:-mt-48 sm:p-4 space-y-1 sm:space-y-0 relative"
       >
-        <div class="space-y-1 text-xs sm:text-sm">
+        <div class="space-y-1 text-sm md:text-base">
           {{ range (.GetTerms "tag") }}
             <a
               href="{{ .RelPermalink }}"
               title="{{ .Title }}"
-              class="bg-nord12 hover:bg-nord11 text-nord6 px-1 inline-block transition hover:underline rounded"
+              class="bg-nord12 hover:bg-nord11 text-white px-1 inline-block transition hover:underline rounded"
             >
-              <span class="text-nord6">{{ .Title }}</span>
+              <span>{{ .Title }}</span>
             </a>
           {{ end }}
         </div>
