@@ -96,7 +96,7 @@ module.exports = {
           },
         },
         '#TableOfContents': {
-          '@apply text-nord3 dark:text-nord5 text-sm md:text-base md:ml-1 md:pl-1 md:border-l':
+          '@apply text-nord3 dark:text-nord5 text-sm md:text-base md:ml-1 md:pl-1 md:border-l dark:border-nord3':
             {},
           ul: {
             '@apply ml-2 md:ml-3': {},
