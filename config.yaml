@@ -1,6 +1,6 @@
-title: "Ahmad Husen"
-baseURL: "https://husen.id/"
-languageCode: "en-us"
+title: 'Ahmad Husen'
+baseURL: 'https://husen.id/'
+languageCode: 'en-us'
 menu:
   main:
     - identifier: home
@@ -46,10 +46,10 @@ paginate: 9
 enableRobotsTXT: true
 enableEmoji: true
 params:
-  description: "My personal site, portfolio, and blog."
+  description: 'My personal site, portfolio, and blog.'
   author: Ahmad Husen
   facebook: https://facebook.com/hapakaien
   github: https://github.com/hapakaien
   gitlab: https://gitlab.com/hapakaien
   linkedin: https://linkedin.com/in/ahmadhusen
-  twitter: "@hapakaien"
+  twitter: '@hapakaien'

@@ -1,5 +1,5 @@
 ---
-title: "Gridsome"
+title: 'Gridsome'
 date: 2021-07-09T11:20:26+07:00
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Vue"
+title: 'Vue'
 date: 2021-07-09T11:15:26+07:00
 draft: false
 ---

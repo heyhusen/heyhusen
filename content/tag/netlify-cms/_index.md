@@ -1,5 +1,5 @@
 ---
-title: "Netlify Cms"
+title: 'Netlify Cms'
 date: 2021-07-09T11:22:09+07:00
 draft: false
 ---

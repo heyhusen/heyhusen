@@ -1,5 +1,5 @@
 ---
-title: "Tailwind Css"
+title: 'Tailwind Css'
 date: 2021-07-09T11:24:04+07:00
 draft: false
 ---
