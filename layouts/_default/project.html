@@ -9,7 +9,7 @@
         <article
           class="bg-nord6 dark:bg-nord1 flex flex-col md:flex-row md:items-center shadow hover:shadow-lg rounded group duration-200 ease-in-out transform hover:-translate-y-1 overflow-hidden"
         >
-          {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "flex-none object-cover h-full w-full md:w-80 md:py-4 lg:w-96 md:odd:order-last duration-200 filter group-hover:hue-rotate-30") }}
+          {{ partial "internal/image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "flex-none object-cover h-full w-full md:w-80 md:py-4 lg:w-96 md:odd:order-last duration-200 filter group-hover:hue-rotate-30") }}
           <div class="p-4 space-y-2">
             <div class="prose md:prose-lg lg:prose-xl">
               <header>

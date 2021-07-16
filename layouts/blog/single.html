@@ -3,7 +3,7 @@
     class="max-w-6xl mx-auto pb-4 lg:pb-6 px-4 xl:px-0 flex flex-col md:flex-row md:space-x-4"
   >
     <section class="flex-1">
-      {{ partial "image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "object-cover w-full h-20 sm:h-80 duration-200 filter hover:hue-rotate-30 overflow-hidden relative") }}
+      {{ partial "internal/image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "object-cover w-full h-20 sm:h-80 duration-200 filter hover:hue-rotate-30 overflow-hidden relative") }}
       <article
         class="bg-white dark:bg-nord0 sm:dark:bg-nord1 sm:mx-4 mt-1 sm:-mt-48 sm:p-4 space-y-1 sm:space-y-0 relative"
       >
