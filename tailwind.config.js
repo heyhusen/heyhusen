@@ -72,7 +72,7 @@ module.exports = {
           )} 0%, ${theme('colors.nord9')} 100%)`,
           backgroundSize: '100% 45%',
           backgroundPosition: '0 90%',
-          '@apply bg-no-repeat text-nord1 dark:text-nord6 p-1': {},
+          '@apply bg-no-repeat text-nord1 dark:text-white p-1': {},
         },
       });
 
