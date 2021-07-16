@@ -48,8 +48,9 @@ enableEmoji: true
 params:
   description: 'My personal site, portfolio, and blog.'
   author: Ahmad Husen
-  facebook: https://facebook.com/hapakaien
-  github: https://github.com/hapakaien
-  gitlab: https://gitlab.com/hapakaien
-  linkedin: https://linkedin.com/in/ahmadhusen
-  twitter: '@hapakaien'
+  social:
+    facebook: hapakaien
+    github: hapakaien
+    gitlab: hapakaien
+    linkedin: ahmadhusen
+    twitter: '@hapakaien'

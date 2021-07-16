@@ -5,10 +5,10 @@
       {{ .Content }}
     </article>
     <section>
-      {{ $socialMedias := slice (dict "title" "LinkedIn" "url" "https://linkedin.com/in/ahmadhusen" "icon" "linkedin" "class" "group-hover:text-linkedin") }}
-      {{ $socialMedias = $socialMedias | append (dict "title" "GitHub" "url" "https://github.com/hapakaien" "icon" "github" "class" "group-hover:text-github") }}
-      {{ $socialMedias = $socialMedias | append (dict "title" "GitLab" "url" "https://gitlab.com/hapakaien" "icon" "gitlab" "class" "group-hover:text-gitlab") }}
-      {{ $socialMedias = $socialMedias | append (dict "title" "Twitter" "url" "https://twitter.com/@hapakaien" "icon" "twitter" "class" "group-hover:text-twitter") }}
+      {{ $socialMedias := slice (dict "title" "LinkedIn" "url" (print "https://linkedin.com/in/" .Site.Params.Social.linkedin ) "icon" "linkedin" "class" "group-hover:text-linkedin") }}
+      {{ $socialMedias = $socialMedias | append (dict "title" "GitHub" "url" (print "https://github.com/" .Site.Params.Social.github ) "icon" "github" "class" "group-hover:text-github") }}
+      {{ $socialMedias = $socialMedias | append (dict "title" "GitLab" "url" (print "https://gitlab.com/" .Site.Params.Social.gitlab ) "icon" "gitlab" "class" "group-hover:text-gitlab") }}
+      {{ $socialMedias = $socialMedias | append (dict "title" "Twitter" "url" (print "https://twitter.com/" .Site.Params.Social.twitter ) "icon" "twitter" "class" "group-hover:text-twitter") }}
       {{ range $socialMedias }}
         <a
           href="{{ .url }}"
