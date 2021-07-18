@@ -50,12 +50,12 @@
       <button
         aria-label="Dark Mode"
         class="hover:bg-nord6 dark:hover:bg-nord3 p-0.5 focus:outline-none rounded"
-        @click="darkMode = ! darkMode"
+        @click="toggle"
       >
-        <span x-show="! darkMode">
+        <span x-show="! dark">
           {{ partial "svgs/moon-solid.svg" (dict "class" "h-6 md:h-7 w-6 md:w-7") }}
         </span>
-        <span x-show="darkMode">
+        <span x-show="dark">
           {{ partial "svgs/sun-solid.svg" (dict "class" "h-6 md:h-7 w-6 md:w-7") }}
         </span>
       </button>

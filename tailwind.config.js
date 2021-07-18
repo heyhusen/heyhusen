@@ -61,6 +61,7 @@ module.exports = {
       filter: ['hover', 'group-hover'],
       grayscale: ['hover'],
       hueRotate: ['hover', 'group-hover'],
+      borderWidth: ['dark'],
     },
   },
   plugins: [
