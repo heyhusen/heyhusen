@@ -21,5 +21,25 @@
       integrity="{{ $js.Data.Integrity }}"
       defer
     ></script>
+    <script>
+      function theme() {
+        return {
+          dark:
+            localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches),
+
+          toggle() {
+            this.dark = !this.dark;
+
+            if (this.dark) {
+              localStorage.theme = 'dark';
+            } else {
+              localStorage.theme = 'light';
+            }
+          },
+        };
+      }
+    </script>
   </body>
 </html>
