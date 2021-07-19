@@ -1,13 +1,15 @@
-<script
-  src="https://giscus.app/client.js"
-  data-repo="hapakaien/husen.id"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkyNzI4NjI0NTg="
-  data-category="Comment"
-  data-category-id="DIC_kwDOEEOM-s4B-W1k"
-  data-mapping="pathname"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  :data-theme="dark ? 'dark_dimmed' : 'light'"
-  crossorigin="anonymous"
-  async
-></script>
+<template x-if="typeof dark !== 'undefined'">
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="hapakaien/husen.id"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkyNzI4NjI0NTg="
+    data-category="Comment"
+    data-category-id="DIC_kwDOEEOM-s4B-W1k"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    :data-theme="dark ? 'dark_dimmed' : 'light'"
+    crossorigin="anonymous"
+    async
+  ></script>
+</template>
