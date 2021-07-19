@@ -21,23 +21,24 @@
     </details>
     <button
       class="md:hidden bg-nord3 bg-opacity-75 p-1 float-right rounded-full focus:outline-none"
-      x-show="! open"
-      x-transition:enter="transition ease-out duration-150"
-      x-transition:enter-start="opacity-0 transform rotate-90"
-      x-transition:enter-end="opacity-100 transform rotate-180"
       @click="open = ! open"
     >
-      {{ partial "svgs/menu-outline.svg" (dict "class" "text-nord4 h-6 w-6") }}
-    </button>
-    <button
-      class="md:hidden bg-nord3 bg-opacity-75 p-1 float-right rounded-full focus:outline-none"
-      x-show="open"
-      x-transition:enter="transition ease-out duration-200"
-      x-transition:enter-start="opacity-0 transform rotate-90"
-      x-transition:enter-end="opacity-100 transform rotate-180"
-      @click="open = ! open"
-    >
-      {{ partial "svgs/x-outline.svg" (dict "class" "text-nord4 h-6 w-6") }}
+      <span
+        x-show="! open"
+        x-transition:enter="transition ease-out duration-150"
+        x-transition:enter-start="opacity-0 transform rotate-90"
+        x-transition:enter-end="opacity-100 transform rotate-180"
+      >
+        {{ partial "svgs/menu-outline.svg" (dict "class" "text-nord4 h-7 w-7") }}
+      </span>
+      <span
+        x-show="open"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 transform rotate-90"
+        x-transition:enter-end="opacity-100 transform rotate-180"
+      >
+        {{ partial "svgs/x-outline.svg" (dict "class" "text-nord4 h-7 w-7") }}
+      </span>
     </button>
   </section>
 {{ end }}
