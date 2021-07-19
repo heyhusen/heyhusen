@@ -7,18 +7,7 @@
   data-mapping="pathname"
   data-reactions-enabled="1"
   data-emit-metadata="0"
-  data-theme="light"
+  :data-theme="dark ? 'dark_dimmed' : 'light'"
   crossorigin="anonymous"
   async
 ></script>
-<!--<script>
-  this.$watch('dark', (value) => {
-    document.querySelector('iframe.giscus-frame').contentWindow.postMessage({
-      giscus: {
-        setConfig: {
-          theme: value ? 'dark_dimmed' : 'light',
-        },
-      },
-    });
-  });
-</script>-->

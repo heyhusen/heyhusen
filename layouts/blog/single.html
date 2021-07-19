@@ -34,15 +34,15 @@
         </div>
       </article>
       <section
-        x-init="$watch('dark', (value) => {
+        x-init="$watch('dark', (value) =>
           document.querySelector('iframe.giscus-frame').contentWindow.postMessage({
             giscus: {
               setConfig: {
                 theme: value ? 'dark_dimmed' : 'light',
               },
             },
-          });
-        });"
+          }, 'https://giscus.app'),
+        );"
         class="px-4 pt-4 border-t dark:border-0"
       >
         {{ partial "theme/comment/giscus.html" . }}
