@@ -5,8 +5,6 @@ const form = require('@tailwindcss/forms');
 
 module.exports = {
   purge: {
-    mode: 'all',
-    preserveHtmlElements: false,
     content: ['./layouts/**/*.html', './content/**/*.{html,md}'],
   },
   darkMode: 'class', // or 'media' or 'class'
