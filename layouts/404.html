@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <main class="max-w-4xl mx-auto py-8 px-4 lg:px-0">
+    <section
+      class="flex flex-col py-8 sm:py-16 md:py-32 space-y-4 sm:space-y-8 md:space-y-16"
+    >
+      <div class="inline-flex items-center justify-center text-nord11">
+        <span class="text-8xl sm:text-9xl">4</span>
+        {{ partial "svgs/emoji-sad-outline.svg" (dict "class" "h-20 sm:h-36 w-20 sm:w-36") }}
+        <span class="text-8xl sm:text-9xl">4</span>
+      </div>
+      <div class="prose md:prose-lg lg:prose-xl max-w-none text-center">
+        <h1>
+          Page not found, back to
+          <a class="link" href="{{ "/" | relURL }}" title="Homepage">home</a>?
+        </h1>
+      </div>
+    </section>
+  </main>
+{{ end }}
