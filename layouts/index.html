@@ -1,7 +1,4 @@
 {{ define "main" }}
-  {{ $gravatar := getJSON "https://gravatar.com/14ba128070d3b0f591a24a7c6b0c4854.json" }}
-  {{ $gravatar := index $gravatar.entry 0 }}
-
   <main
     class="max-w-6xl mx-auto px-4 py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 space-y-10"
   >
@@ -10,7 +7,8 @@
         Hello! My name is Ahmad <mark>Husen</mark>.
       </h2>
       <h2 class="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
-        I am a <mark>Web Developer</mark> from {{ $gravatar.currentLocation }}.
+        I am a <mark>Web Developer</mark> from
+        {{ partial "internal/gravatar.html" (dict "key" "currentLocation") }}.
       </h2>
       <h3
         class="font-bold font-sans text-lg sm:text-xl lg:text-2xl xl:text-3xl"
@@ -20,9 +18,9 @@
         things run fast.
       </h3>
     </header>
-    <p class="prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
-      {{ $gravatar.aboutMe }}
-    </p>
+    <section class="prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
+      {{ .Content }}
+    </section>
     <div class="flex justify-center sm:justify-start">
       <a
         href="/about"
