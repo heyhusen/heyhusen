@@ -1,0 +1,3 @@
+{{ $gravatar := getJSON "https://gravatar.com/14ba128070d3b0f591a24a7c6b0c4854.json" }}
+{{ $gravatar = index $gravatar.entry 0 }}
+{{ return index $gravatar .key }}
