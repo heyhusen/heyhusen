@@ -5,31 +5,31 @@ menu:
   main:
     - identifier: home
       name: Home
-      url: /
+      pageRef: /
       params:
         icon: home
       weight: 1
     - identifier: about
       name: About
-      url: /about/
+      pageRef: about
       params:
         icon: user
       weight: 2
     - identifier: project
       name: Work
-      url: /project/
+      pageRef: project
       params:
         icon: code
       weight: 3
     - identifier: blog
       name: Blog
-      url: /blog/
+      pageRef: blog
       params:
         icon: pencil-alt
       weight: 4
     - identifier: contact
       name: Contact
-      url: /contact/
+      pageRef: contact
       params:
         icon: mail
       weight: 5

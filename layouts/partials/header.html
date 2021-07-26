@@ -19,7 +19,6 @@
         {{ $current := . }}
         {{ range .Site.Menus.main }}
           {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-          {{ $active = or $active (and (in (print "/" (index (split $current.RelPermalink "/") 1)) (print "/" (index (split .URL "/") 1))) (ne .URL "/")) }}
           <a
             href="{{ .URL }}"
             title="{{ .Name }}"
