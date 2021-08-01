@@ -1,0 +1,3 @@
+<div class="flex justify-center {{ with .class }}{{ . }}{{ end }}">
+  {{ partial "theme/link.html" (dict "href" .href "title" .title "text" .text "class" "bg-nord8 hover:bg-opacity-80 text-black dark:text-black md:text-lg lg:text-xl py-2 px-3 xl:py-3 xl:px-4 rounded transition duration-200 ease-in-out transform hover:-translate-y-1") }}
+</div>
