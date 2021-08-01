@@ -71,7 +71,7 @@ module.exports = {
           )} 0%, ${theme('colors.nord9')} 100%)`,
           backgroundSize: '100% 45%',
           backgroundPosition: '0 90%',
-          '@apply bg-no-repeat text-nord1 dark:text-white p-1': {},
+          '@apply bg-no-repeat text-black dark:text-white p-1': {},
         },
       });
 
@@ -80,15 +80,15 @@ module.exports = {
           scrollBehavior: 'smooth',
         },
         '.link': {
-          '@apply bg-no-repeat text-nord8 transition-all duration-100 delay-75 ease-in':
+          '@apply bg-no-repeat text-current dark:text-current transition-all duration-100 delay-75 ease-in':
             {},
           backgroundImage: `linear-gradient(120deg, ${theme(
             'colors.nord7',
-          )}, ${theme('colors.nord9')})`,
+          )}, ${theme('colors.nord8')})`,
           backgroundPosition: '0% 100%',
           backgroundSize: '100% 3px',
           '&:hover': {
-            '@apply text-nord3 dark:text-nord6 transition-all duration-100 delay-75 ease-in':
+            '@apply text-nord0 dark:text-nord6 transition-all duration-100 delay-75 ease-in':
               {},
             backgroundSize: '100% 45%',
             backgroundPosition: '0% 90%',

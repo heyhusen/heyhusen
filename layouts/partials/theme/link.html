@@ -1,0 +1,14 @@
+<a
+  href="{{ .href | safeURL }}"
+  {{ with .title }}
+    title="{{ . }}"
+  {{ end }}
+  {{ if strings.HasPrefix .href "http" }}
+    target="_blank" rel="noopener"
+  {{ end }}
+  {{ with .class }}
+    class="{{ . }}"
+  {{ end }}
+>
+  {{ .text | safeHTML }}
+</a>

@@ -4,5 +4,8 @@
       <header class="font-serif"><h1>{{ .Title }}</h1></header>
       {{ .Content }}
     </article>
+    {{ if eq .Type "about" }}
+      {{ partial "theme/button-link.html" (dict "href" "/contact" "title" "Contact me" "text" "More question?" "class" "mt-8") }}
+    {{ end }}
   </main>
 {{ end }}

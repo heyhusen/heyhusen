@@ -21,14 +21,6 @@
     <section class="prose max-w-none sm:prose-lg lg:prose-xl xl:prose-2xl">
       {{ .Content }}
     </section>
-    <div class="flex justify-center sm:justify-start">
-      <a
-        href="/about"
-        title="About me"
-        class="bg-nord9 hover:bg-nord10 text-white md:text-lg lg:text-xl py-2 px-3 xl:py-3 xl:px-4 rounded transition duration-200 ease-in-out transform hover:-translate-y-1"
-      >
-        More about me
-      </a>
-    </div>
+    {{ partial "theme/button-link.html" (dict "href" "/about" "title" "About me" "text" "More about me" "class" "sm:justify-start") }}
   </main>
 {{ end }}

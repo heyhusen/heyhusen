@@ -27,5 +27,3 @@ In 2016, I got my first contract at PT. Mabito Karya, a company based in Bandung
 Since 2016, I have always chosen [PHP](https://www.php.net/ 'PHP') as my programming language, and [Laravel](https://laravel.com/ 'Laravel') for the framework. I usually build web applications using a monolithic stack with tools like [PHP](https://www.php.net/ 'PHP'), HTML, CSS, [jQuery](https://jquery.com/ 'jQuery'), and [MySQL](https://www.mysql.com/ 'MySQL'). However, to keep up with the existing technology, I now choose [Vue.js](https://vuejs.org/ 'Vue.js') and [Tailwind CSS](https://tailwindcss.com/ 'TailwindCSS') for the frontend. For future-proof purposes, I also always build APIs for my backend. It will make web applications run faster and easier to maintain.
 
 As a developer, I always keep my code clean, easier to read, and uncomplicated. I always thought that automated testing was a must. I'm also still trying to adapt to my TDD habits. To continue improving my skills, I always learn from reading articles and books or watching screencasts related to the latest technology.
-
-{{< buttonref href="/contact" title="More question?" >}}

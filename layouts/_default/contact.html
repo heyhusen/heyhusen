@@ -15,10 +15,10 @@
           title="{{ .title }}"
           target="_blank"
           rel="noopener"
-          class="bg-nord5 dark:bg-nord2 hover:bg-nord4 dark:hover:bg-nord1 inline-flex items-center py-1 px-2 hover:underline transform duration-200 hover:-translate-y-1 rounded group"
+          class="bg-nord5 dark:bg-nord2 hover:bg-nord4 dark:hover:bg-nord1 inline-flex items-center py-1 px-2 hover:underline duration-200 rounded group"
         >
           <span class="mr-1">
-            {{ partial (print "svgs/" .icon ".svg") (dict "class" (print "h-4 w-4 fill-current " .class)) }}
+            {{ partial (print "svgs/" .icon ".svg") (dict "class" (print "h-4 w-4 fill-current duration-200 " .class)) }}
           </span>
           {{ .title }}
         </a>
@@ -69,7 +69,7 @@
         <input
           type="submit"
           value="Submit"
-          class="bg-nord9 hover:bg-nord10 text-white py-2 px-3 w-full duration-200 rounded cursor-pointer"
+          class="bg-nord8 hover:bg-opacity-80 text-black py-2 px-3 w-full duration-200 rounded cursor-pointer"
         />
       </form>
     </section>
