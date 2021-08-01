@@ -1,4 +1,6 @@
-<header class="bg-white dark:bg-nord0 sticky top-0 z-10">
+<header
+  class="bg-white dark:bg-nord0 text-nord2 dark:text-nord5 sticky top-0 z-10"
+>
   <nav
     class="container mx-auto flex justify-between items-center border-b border-nord4 dark:border-nord3"
     aria-label="Main"
@@ -25,10 +27,10 @@
             class="inline-block {{ if or (eq .Identifier "home") (eq .Identifier "contact") }}
               sm:hidden
             {{ end }} sm:px-2 md:px-3 sm:py-4 md:py-5 {{ if $active }}
-              text-nord8 sm:border-nord8
+              text-nord0 dark:text-white sm:border-nord8
             {{ else }}
               sm:border-transparent
-            {{ end }} sm:hover:bg-nord6 sm:dark:hover:bg-nord3 sm:border-b-4 duration-200"
+            {{ end }} sm:hover:bg-nord6 sm:dark:hover:bg-nord1 sm:hover:text-nord1 sm:dark:hover:text-nord6 sm:border-b-4 duration-200"
           >
             {{ $outline := "block sm:hidden" }}
             {{ if $active }}
@@ -49,7 +51,7 @@
       <template x-if="typeof dark !== 'undefined'">
         <button
           aria-label="Dark Mode"
-          class="hover:bg-nord6 dark:hover:bg-nord3 p-0.5 focus:outline-none rounded"
+          class="hover:bg-nord6 dark:hover:bg-nord3 text-nord3 dark:text-nord4 p-0.5 focus:outline-none rounded"
           @click="toggle"
         >
           <span x-show="! dark">
@@ -63,7 +65,7 @@
       <a
         href="/contact"
         title="Contact me"
-        class="bg-nord11 hover:bg-nord12 text-white py-1 px-2 md:py-2 md:px-3 transition rounded"
+        class="bg-nord7 hover:bg-opacity-90 text-black py-1 px-2 md:py-2 md:px-3 duration-200 rounded"
       >
         Contact me
       </a>

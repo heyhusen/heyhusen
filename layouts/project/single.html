@@ -3,14 +3,14 @@
     class="max-w-6xl mx-auto py-2 lg:py-4 px-4 xl:px-0 flex flex-col md:flex-row"
   >
     <article class="space-y-1 flex-1">
-      <div class="space-y-1 text-xs sm:text-sm reset">
+      <div class="space-y-1 text-sm md:text-base">
         {{ range (.GetTerms "tag") }}
           <a
             href="{{ .RelPermalink }}"
             title="{{ .Title }}"
-            class="bg-nord12 hover:bg-nord11 text-white px-1 inline-block transition hover:underline rounded"
+            class="bg-nord6 hover:bg-opacity-80 text-nord1 px-1 inline-block duration-200 hover:underline rounded"
           >
-            <span class="text-nord6">{{ .Title }}</span>
+            {{ .Title }}
           </a>
         {{ end }}
       </div>
