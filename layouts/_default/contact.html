@@ -4,26 +4,6 @@
       <header class="font-serif"><h1>{{ .Title }}</h1></header>
       {{ .Content }}
     </article>
-    <section>
-      {{ $socialMedias := slice (dict "title" "LinkedIn" "url" (print "https://linkedin.com/in/" .Site.Params.Social.linkedin ) "icon" "linkedin" "class" "group-hover:text-linkedin") }}
-      {{ $socialMedias = $socialMedias | append (dict "title" "GitHub" "url" (print "https://github.com/" .Site.Params.Social.github ) "icon" "github" "class" "group-hover:text-github") }}
-      {{ $socialMedias = $socialMedias | append (dict "title" "GitLab" "url" (print "https://gitlab.com/" .Site.Params.Social.gitlab ) "icon" "gitlab" "class" "group-hover:text-gitlab") }}
-      {{ $socialMedias = $socialMedias | append (dict "title" "Twitter" "url" (print "https://twitter.com/" .Site.Params.Social.twitter ) "icon" "twitter" "class" "group-hover:text-twitter") }}
-      {{ range $socialMedias }}
-        <a
-          href="{{ .url }}"
-          title="{{ .title }}"
-          target="_blank"
-          rel="noopener"
-          class="bg-nord5 dark:bg-nord2 hover:bg-nord4 dark:hover:bg-nord1 inline-flex items-center py-1 px-2 hover:underline duration-200 rounded group"
-        >
-          <span class="mr-1">
-            {{ partial (print "svgs/" .icon ".svg") (dict "class" (print "h-4 w-4 fill-current duration-200 " .class)) }}
-          </span>
-          {{ .title }}
-        </a>
-      {{ end }}
-    </section>
     <section class="max-w-2xl mx-auto">
       <form
         class="space-y-4"
