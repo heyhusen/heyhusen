@@ -1,5 +1,4 @@
 const plugin = require('tailwindcss/plugin');
-const nord = require('tailwind-nord');
 const typography = require('@tailwindcss/typography');
 const form = require('@tailwindcss/forms');
 
@@ -16,23 +15,31 @@ module.exports = {
     },
     extend: {
       colors: {
+        brand1: '#1B435D',
+        brand2: '#78BBE6',
+        brand3: '#D5EEFF',
+        brand4: '#FF895D',
+        facebook: '#4267B2',
         github: '#333333',
         gitlab: '#FCA326',
-        facebook: '#4267B2',
         linkedin: '#2867B2',
         telegram: '#0088CC',
         twitter: '#1DA1F2',
         whatsapp: '#25D366',
+      },
+      backgroundSize: (theme) => ({
+        'full-1': `100% ${theme('spacing.1')}`,
+        'full-9/20': '100% 45%',
+      }),
+      backgroundPosition: {
+        'bottom-9/10': '0 90%',
       },
       typography: {
         DEFAULT: {
           css: {
             '@apply text-current': {},
             a: {
-              '@apply link no-underline': {},
-              '&:hover': {
-                '@apply text-current no-underline': {},
-              },
+              '@apply link': {},
             },
             'h1, h2, h3, h4, h5, h6, blockquote': {
               '@apply text-current': {},
@@ -40,12 +47,20 @@ module.exports = {
             blockquote: {
               '@apply opacity-75': {},
             },
-            '.reset': {
-              a: {
-                '@apply text-current bg-none no-underline': {},
+            ol: {
+              '>': {
+                li: {
+                  '&::before': {
+                    '@apply text-current opacity-80': {},
+                  },
+                },
               },
-              'h1, h2, h3, h4, h5, h6': {
-                '@apply m-0': {},
+            },
+            '.prose': {
+              '&__m-0': {
+                '*': {
+                  '@apply m-0': {},
+                },
               },
             },
           },
@@ -61,18 +76,17 @@ module.exports = {
       hueRotate: ['hover', 'group-hover'],
       borderWidth: ['dark'],
       backgroundImage: ['dark'],
+      backgroundSize: ['hover', 'dark'],
+      backgroundPosition: ['hover', 'dark'],
     },
   },
   plugins: [
-    plugin(({ addBase, addComponents, theme }) => {
+    plugin(({ addBase, addComponents }) => {
       addBase({
         mark: {
-          background: `linear-gradient(120deg, ${theme(
-            'colors.nord7',
-          )} 0%, ${theme('colors.nord9')} 100%)`,
-          backgroundSize: '100% 45%',
-          backgroundPosition: '0 90%',
-          '@apply bg-no-repeat text-black dark:text-white p-1': {},
+          '@apply bg-transparent bg-gradient-to-r from-brand3 to-brand2': {},
+          '@apply dark:from-brand2 dark:to-brand1 bg-no-repeat': {},
+          '@apply bg-full-9/20 bg-bottom-9/10 text-current p-0.5': {},
         },
       });
 
@@ -81,36 +95,24 @@ module.exports = {
           scrollBehavior: 'smooth',
         },
         '.link': {
-          '@apply bg-no-repeat text-current dark:text-current transition-all duration-100 delay-75 ease-in':
-            {},
-          backgroundImage: `linear-gradient(120deg, ${theme(
-            'colors.nord7',
-          )}, ${theme('colors.nord8')})`,
-          backgroundPosition: '0% 100%',
-          backgroundSize: '100% 3px',
-          '&:hover': {
-            '@apply text-nord0 dark:text-nord6 transition-all duration-100 delay-75 ease-in':
-              {},
-            backgroundSize: '100% 45%',
-            backgroundPosition: '0% 90%',
-          },
+          '@apply bg-gradient-to-r from-brand2 to-brand3 bg-no-repeat': {},
+          '@apply dark:to-brand1 bg-full-1 hover:bg-full-9/20 bg-bottom': {},
+          '@apply hover:bg-bottom-9/10 dark:text-current duration-100': {},
+          '@apply delay-75 ease-in no-underline': {},
         },
         '#TableOfContents': {
-          '@apply text-nord3 dark:text-nord5 md:ml-1 md:pl-1 md:border-l dark:border-nord3':
-            {},
+          '@apply text-gray-500 dark:text-gray-200 md:ml-1 md:pl-1': {},
+          '@apply md:border-l dark:border-gray-400': {},
           ul: {
             '@apply ml-2 md:ml-3': {},
           },
           a: {
-            '@apply opacity-75 duration-200': {},
-            '&:hover': {
-              '@apply opacity-100 text-nord8': {},
-            },
+            '@apply hover:text-brand4 opacity-75 hover:opacity-100': {},
+            '@apply duration-200': {},
           },
         },
       });
     }),
-    nord,
     typography,
     form,
   ],

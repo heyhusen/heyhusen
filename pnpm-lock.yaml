@@ -19,7 +19,6 @@ specifiers:
   postcss-cli: ^8.3.1
   prettier: 2.3.1
   prettier-plugin-go-template: ^0.0.11
-  tailwind-nord: ^1.2.0
   tailwindcss: ^2.2.7
 
 dependencies:
@@ -43,7 +42,6 @@ devDependencies:
   postcss-cli: 8.3.1_postcss@8.3.6
   prettier: 2.3.1
   prettier-plugin-go-template: 0.0.11_prettier@2.3.1
-  tailwind-nord: 1.2.0
   tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
 
 packages:
@@ -2841,10 +2839,6 @@ packages:
       slice-ansi: 4.0.0
       string-width: 4.2.2
       strip-ansi: 6.0.0
-    dev: true
-
-  /tailwind-nord/1.2.0:
-    resolution: {integrity: sha512-8CsntjXDV0P+5jGhr5l5fbFPwEzxODebitSn2kQi8hW4jGYISh2WiIUkz+PRJgboaMgij9SUdI6uaWFHRNoNmw==}
     dev: true
 
   /tailwindcss/2.2.7_7b69a43ec4689fa7484dee35f79a7806:
