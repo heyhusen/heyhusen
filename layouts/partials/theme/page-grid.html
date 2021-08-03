@@ -1,9 +1,9 @@
 <section
-  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 divide-y divide-nord3 "
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 divide-y divide-gray-600"
 >
   {{ range .Pages }}
     <article
-      class="sm:bg-nord6 sm:dark:bg-nord1 flex flex-row sm:flex-col space-x-2 sm:space-x-0 sm:shadow sm:hover:shadow-md sm:rounded transform duration-200 hover:-translate-y-1 group overflow-hidden"
+      class="sm:bg-gray-50 sm:dark:bg-gray-700 flex flex-row sm:flex-col space-x-2 sm:space-x-0 sm:shadow sm:hover:shadow-md sm:rounded transform duration-200 hover:-translate-y-1 group overflow-hidden"
     >
       <a href="{{ .RelPermalink }}" title="{{ .Title }}">
         {{ partial "internal/image.html" (dict "src" .Params.image "alt" .Title "title" .Title "class" "flex-none object-cover h-16 sm:h-40 w-16 sm:w-full duration-200 filter group-hover:hue-rotate-30 overflow-hidden") }}
