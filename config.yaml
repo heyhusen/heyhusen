@@ -43,6 +43,7 @@ markup:
     ordered: false
     startLevel: 2
 paginate: 9
+summaryLength: 25
 enableRobotsTXT: true
 enableEmoji: true
 params:
