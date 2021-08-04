@@ -30,12 +30,10 @@
       content="{{ (partial "internal/opengraph-image.html" (dict "src" $featured)) | absURL }}"
     />
   {{- else -}}
-    {{- with .Site.Params.images }}
-      <meta
-        property="og:image"
-        content="{{ (partial "internal/opengraph-image.html" (dict "src" (index . 0))) | absURL }}"
-      />
-    {{ end -}}
+    <meta
+      property="og:image"
+      content="https://og-image.husen.id/{{ .Title }}.png?md=1&fontSize=75px&image=https%3A%2F%2Fgithub.com%2Fhapakaien%2Fassets%2Fraw%2Fmain%2Fhusen.id%2FIcon%2Fbase-optimized.svg"
+    />
   {{- end -}}
 {{- end -}}
 {{- if .IsPage }}

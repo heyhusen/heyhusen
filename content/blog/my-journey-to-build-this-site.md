@@ -7,8 +7,7 @@ tag:
   - Vue
 image: uploads/georgie-cobbs-muohbrfgeqy-unsplash.jpg
 toc: false
-images: 
-- uploads/georgie-cobbs-muohbrfgeqy-unsplash.jpg
+images: []
 date: 2021-07-08T16:00:44+07:00
 draft: false
 ---
