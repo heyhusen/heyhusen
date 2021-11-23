@@ -28,7 +28,7 @@ jobs:
           extended: true
 
       - name: Cache pnpm modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-pnpm-modules
         with:
