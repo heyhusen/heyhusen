@@ -1,0 +1,84 @@
+{{ $pages := where (where .Site.Pages "Section" "project") "Params.featured" true }}
+{{ if eq .Type "project" }}
+	{{ $pages = .Pages }}
+{{ end }}
+
+<div class="project-list">
+	{{ range $i, $project := .Site.Data.project }}
+		{{ with getJSON $project.url (dict "Accept" "application/vnd.github.v3+json") }}
+			<article
+				style="background-color: {{ $project.accent }};"
+			>
+				<header>
+					<h2>{{ .name | humanize }}</h2>
+
+					<div class="project-list__description">
+						{{ .description }}
+					</div>
+
+					<div class="project-list__button">
+						<a
+							href="{{ .html_url }}"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn"
+						>
+							{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/github.svg" }}
+								{{ .Content | replaceRE "<svg" "<svg class=\"btn__icon\"" | safeHTML }}
+							{{ end }}
+
+							<span>View on GitHub</span>
+						</a>
+					</div>
+				</header>
+
+				<div class="project-list__cover">
+					{{ partial "components/image.html" (dict "src" $project.image "alt" ( .name | humanize ) "raw" true) }}
+				</div>
+			</article>
+		{{ end }}
+	{{ end }}
+
+	{{ range $pages }}
+		<article
+			style="background-color: {{ .Params.accent }};"
+		>
+			<header>
+				<h2>{{ .Title | humanize }}</h2>
+
+				<div class="project-list__description">
+					{{ .Params.description }}
+				</div>
+
+				<div class="project-list__button">
+					<a href="{{ .RelPermalink }}" class="btn">
+						{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/code.svg" }}
+							{{ .Content | replaceRE "<svg" "<svg class=\"btn__icon\"" | safeHTML }}
+						{{ end }}
+
+						<span>View project</span>
+					</a>
+
+					{{ with .Params.preview }}
+						<a
+							href="{{ . }}"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn"
+						>
+							{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/eye.svg" }}
+								{{ .Content | replaceRE "<svg" "<svg class=\"btn__icon\"" | safeHTML }}
+							{{ end }}
+
+							<span>Live preview</span>
+						</a>
+					{{ end }}
+				</div>
+			</header>
+
+			<div class="project-list__cover">
+				{{ partial "components/image.html" (dict "context" . "src" .Params.cover "alt" .Title "raw" true) }}
+			</div>
+		</article>
+	{{ end }}
+</div>

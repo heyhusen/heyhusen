@@ -1,0 +1,23 @@
+{{ define "main" }}
+	<section class="hero">
+		<h1>Hi, I'm Husen.</h1>
+
+		<h2>I build things that live on the web from Indonesia.</h2>
+
+		<div class="hero__button">
+			<a href="#projects" class="btn btn--cta btn--accent">
+				See projects
+			</a>
+
+			<a href="/contact" class="btn btn--cta btn--accent btn--inverted">
+				Contact me
+			</a>
+		</div>
+	</section>
+
+	<section id="projects" class="wrapper wrapper--page wrapper--project-list">
+		<h3 class="wrapper__title">Here are some of my projects...</h3>
+
+		{{ partial "components/project-list.html" . }}
+	</section>
+{{ end }}

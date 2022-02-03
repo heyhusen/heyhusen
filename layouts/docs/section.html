@@ -1,0 +1,31 @@
+{{ define "main" }}
+	<article class="docs">
+		<div class="docs-content">
+			<header>
+				<h1>{{ .Title }}</h1>
+
+				<p>{{ .Summary }}</p>
+			</header>
+
+			<div class="article article--docs">
+				{{ .Content }}
+			</div>
+
+			{{ if gt (len .Pages) 0 }}
+				<div class="docs-pages">
+					{{ range .Pages }}
+						<article>
+							<a href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2></a>
+
+							<p>{{ .Summary }}</p>
+						</article>
+					{{ end }}
+				</div>
+			{{ end }}
+		</div>
+
+		{{ partial "components/docs-sidebar.html" . }}
+	</article>
+
+	{{ partial "components/docs-navbar.html" . }}
+{{ end }}

@@ -1,0 +1,67 @@
+{{ $original := resources.Get .src }}
+
+{{ if not $original }}
+	{{ with .context }}
+		{{ $original = .Resources.GetMatch $.src }}
+	{{ end }}
+{{ end }}
+
+{{ if not $original }}
+	{{ $original = resources.GetRemote .src }}
+{{ end }}
+
+{{ $mediaTypes := newScratch }}
+{{ $mediaTypes.Add "webp" "image/webp" }}
+{{ $mediaTypes.Add "jpeg" "image/jpeg" }}
+{{ $mediaTypes.Add "jpg" "image/jpeg" }}
+{{ $mediaTypes.Add "png" "image/png" }}
+
+{{ $supportedFormat := slice "bmp" "gif" "jpeg" "jpg" "png" "tif" "tiff" "webp" }}
+{{ $formats := slice "webp" "png" "jpg" "jpeg" }}
+{{ $widths := slice 240 320 360 480 640 768 960 }}
+
+{{ with .limit }}
+	{{ $original = $original.Resize (print . "x") }}
+{{ end }}
+
+{{ $q := 80 }}
+{{ with .q }}
+	{{ $q = . }}
+{{ end }}
+
+{{ $sourceFormat := strings.TrimPrefix "." (path.Ext $original) }}
+
+<picture>
+	{{ if and (in $formats $sourceFormat) (ne .raw true) }}
+		{{ $formats = slice "webp" | append $sourceFormat | uniq }}
+
+		{{ range $format := $formats }}
+			{{ $optimized := slice }}
+
+			{{ range $width := $widths }}
+				{{ if le $width $original.Width }}
+					{{ $optimized = $optimized | append (print ($original.Resize (print $width "x q" $q " " $format)).RelPermalink " " $width "w") }}
+				{{ end }}
+			{{ end }}
+
+			{{ if not (in $widths $original.Width) }}
+				{{ $optimized = $optimized | append (print ($original.Resize (print $original.Width "x q" $q " " $format)).RelPermalink " " $original.Width "w") }}
+			{{ end }}
+
+			<source
+				sizes="(min-width: 640px) 50vw, 100vw"
+				srcset="{{ delimit $optimized ", " }}"
+				type="{{ $mediaTypes.Get $format }}"
+			/>
+		{{ end }}
+	{{ end }}
+
+	<img
+		src="{{ $original.RelPermalink | safeURL }}"
+		alt="{{ .alt }}"
+		{{ if in $supportedFormat $sourceFormat }} width="{{ $original.Width }}" height="{{ $original.Height }}"{{ end }}
+		loading="lazy"
+		decoding="async"
+		{{ with .class }}class="{{ . }}"{{ end }}
+	/>
+</picture>

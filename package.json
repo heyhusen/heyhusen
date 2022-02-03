@@ -1,69 +1,23 @@
 {
-    "name": "@hapakaien/site",
-    "version": "1.0.0",
-    "description": "My personal site, portfolio, and blog.",
-    "keywords": [
-        "hugo",
-        "husen",
-        "jamstack",
-        "ssg"
-    ],
-    "homepage": "https://github.com/hapakaien/husen.id#readme",
-    "bugs": {
-        "url": "https://github.com/hapakaien/husen.id/issues"
-    },
-    "license": "MIT",
-    "author": {
-        "name": "Ahmad Husen",
-        "email": "hi@husen.id",
-        "url": "https://husen.id"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/hapakaien/husen.id.git"
-    },
-    "engines": {
-        "node": ">=12.x.x"
-    },
-    "scripts": {
-        "dev": "hugo server",
-        "build": "NODE_ENV=production hugo --minify",
-        "format": "run-s format:*",
-        "format:eslint": "eslint --ext .js ./ --fix",
-        "format:prettier": "prettier --write .",
-        "prepare": "husky install"
-    },
-    "devDependencies": {
-        "@tailwindcss/forms": "^0.3.3",
-        "@tailwindcss/typography": "^0.4.1",
-        "autoprefixer": "^10.3.1",
-        "browserslist": "^4.16.6",
-        "cssnano": "^5.0.7",
-        "eslint": "^7.30.0",
-        "eslint-config-airbnb-base": "^14.2.1",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.23.4",
-        "eslint-plugin-prettier": "^3.4.0",
-        "husky": "^6.0.0",
-        "lint-staged": "^11.0.1",
-        "npm-run-all": "^4.1.5",
-        "postcss": "^8.3.6",
-        "postcss-cli": "^8.3.1",
-        "prettier": "2.3.1",
-        "prettier-plugin-go-template": "^0.0.11",
-        "tailwindcss": "^2.2.7"
-    },
-    "dependencies": {
-        "alpinejs": "^3.2.2"
-    },
-    "private": "true",
-    "browserslist": [
-        "defaults",
-        "maintained node versions",
-        "> 5%"
-    ],
-    "lint-staged": {
-        "*.js": "eslint --fix",
-        "*.{js,html}": "prettier --write"
-    }
+	"private": "true",
+	"scripts": {
+		"dev": "hugo --config hugo.yaml server -p 3000",
+		"build": "hugo --config hugo.yaml --minify",
+		"start": "serve dist"
+	},
+	"dependencies": {
+		"@tailwindcss/forms": "^0.3.3",
+		"@tailwindcss/typography": "^0.4.1",
+		"autoprefixer": "^10.4.2",
+		"cssnano": "^5.0.16",
+		"tailwindcss": "2.2.19"
+	},
+	"devDependencies": {
+		"postcss": "^8.3.6",
+		"postcss-cli": "^8.3.1",
+		"serve": "^13.0.2"
+	},
+	"engines": {
+		"node": ">=16.x.x"
+	}
 }

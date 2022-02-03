@@ -1,4 +1,7 @@
-/node_modules
-/public
-/resources/_gen/
+node_modules
+dist
+resources/_gen/
 hugo_stats.json
+.hugo_build.lock
+go.sum
+*.sublime-workspace

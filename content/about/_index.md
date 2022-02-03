@@ -1,29 +1,16 @@
 ---
-title: 'About me'
-images:
-- img/about.png
+title: "About me"
+image: "https://ogigen.husen.id/api?layout=page&fontSize=12rem&text=About%20me%3F"
+weight: 1
 date: 2021-07-14T22:48:49+07:00
 draft: false
 ---
 
-{{< image src="/img/avatar.jpg" alt="Ahmad Husen" title="Ahmad Husen" class="float-right ml-4 h-full w-24 overflow-hidden sm:w-48 lg:w-64" >}}
+My name is Ahmad Husen. But, you can call me Husen. I am a self-taught web
+developer from Klaten, Indonesia. I've started coding since I was in high
+school, and love it to this day. I enjoy working with languages/syntax like
+JavaScript (TypeScript), SQL, HTML and CSS, sometimes PHP too. And yes, I work
+in back-end and front-end development.
 
-I am a web developer. I live in a beautiful little town, Klaten, Indonesia. My other job in my spare time is watching motorcycle races, especially MotoGP. If I still have free time, I like to watch movies, play games, or ride motorcycle (w/o my friends). Sometimes, I also write a [blog]({{< relref "blog" >}} "Article").
-
-## Nickname
-
-As you know from my [homepage]({{< relref "/" >}} "Ahmad Husen"), my name is Ahmad Husen. My real nickname is Husen. Many people often call me Ahmad because of my name. Though Ahmad is only my first name. If I am with my brother in the same place, and someone calls me Ahmad, it will be confusing. Because we have the same first name, Ahmad. I just don't want this to become a habit. I would really appreciate it if I am called by my (real) nickname, Husen. Only Husen, not Husein, especially Husain.
-
-## History
-
-When I was in junior high school, I started my first blog on MyWapBlog. A mobile blogging platforms were very popular back then, at least in Indonesia. Until one day when I got bored with my blog theme, I found that MyWapBlog allows its users to customize their blog using CSS. From then on, I started learning CSS and fell in love with web development.
-
-Then, I created a new blog on Blogger and learned HTML syntax and simple JavaScript. My 'blogging journey' ended when I met WordPress. A very popular CMS which is used for most of the websites out there. In WordPress, I finally learned my first programming language, PHP. I even learned jQuery and simple SEO tricks while creating a WordPress theme for my blog.
-
-In 2016, I got my first contract at PT. Mabito Karya, a company based in Bandung, Indonesia. Then, I started my freelance career in 2018, while still working as a staff at this company.
-
-## Web Development
-
-Since 2016, I have always chosen [PHP](https://www.php.net/ 'PHP') as my programming language, and [Laravel](https://laravel.com/ 'Laravel') for the framework. I usually build web applications using a monolithic stack with tools like [PHP](https://www.php.net/ 'PHP'), HTML, CSS, [jQuery](https://jquery.com/ 'jQuery'), and [MySQL](https://www.mysql.com/ 'MySQL'). However, to keep up with the existing technology, I now choose [Vue.js](https://vuejs.org/ 'Vue.js') and [Tailwind CSS](https://tailwindcss.com/ 'TailwindCSS') for the frontend. For future-proof purposes, I also always build APIs for my backend. It will make web applications run faster and easier to maintain.
-
-As a developer, I always keep my code clean, easier to read, and uncomplicated. I always thought that automated testing was a must. I'm also still trying to adapt to my TDD habits. To continue improving my skills, I always learn from reading articles and books or watching screencasts related to the latest technology.
+I'm currently focusing on Node, Express, Fastify, Nest, PostgreSQL, Redis,
+Vue, Svelte, Hugo, and TailwindCSS/WindiCSS.
