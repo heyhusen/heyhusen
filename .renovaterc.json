@@ -1,4 +1,18 @@
 {
 	"extends": ["config:base"],
-	"enabledManagers": ["npm"]
+	"enabledManagers": ["npm"],
+	"packageRules": [
+		{
+			"matchPackageNames": ["tailwindcss"],
+			"allowedVersions": "<3.0.0"
+		},
+		{
+			"matchPackageNames": ["@tailwindcss/forms"],
+			"allowedVersions": "<=0.3.4"
+		},
+		{
+			"matchPackageNames": ["@tailwindcss/typography"],
+			"allowedVersions": "<=0.4.1"
+		}
+	]
 }
