@@ -1,0 +1,25 @@
+{{ define "main" }}
+	<section class="article">
+		<h1>{{ .Title }}</h1>
+
+		{{ .Content }}
+	</section>
+
+	{{ if eq .Type "contact" }}
+		{{ partial "components/contact-form.html" . }}
+	{{ end }}
+
+	{{ if gt (len .Pages) 0 }}
+		{{ if eq .Kind "taxonomy" }}
+			{{ partial "components/term-list.html" . }}
+		{{ else if eq .Kind "term" }}
+			{{ partial "components/post-list.html" . }}
+		{{ end }}
+
+		{{ if eq .Type "project" }}
+			{{ partial "components/project-list.html" . }}
+		{{ else if eq .Type "article" }}
+			{{ partial "components/post-list.html" . }}
+		{{ end }}
+	{{ end }}
+{{ end }}

@@ -1,0 +1,51 @@
+<div class="social-icon">
+	{{ with .Site.Author.social.linkedin }}
+		<a
+			href="http://linkedin.com/in/{{ . }}"
+			rel="noopener noreferrer"
+			target="_blank"
+			aria-label="LinkedIn"
+		>
+			{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/linkedin.svg" }}
+				{{ .Content | replaceRE "<svg" "<svg aria-hidden=\"true\"" | safeHTML }}
+			{{ end }}
+		</a>
+	{{ end }}
+
+	{{ with .Site.Author.social.github }}
+		<a
+			href="http://github.com/{{ . }}"
+			rel="noopener noreferrer"
+			target="_blank"
+			aria-label="GitHub"
+		>
+			{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/github.svg" }}
+				{{ .Content | replaceRE "<svg" "<svg aria-hidden=\"true\"" | safeHTML }}
+			{{ end }}
+		</a>
+	{{ end }}
+
+	{{ with .Site.Author.social.twitter }}
+		<a
+			href="http://twitter.com/{{ . }}"
+			rel="noopener noreferrer"
+			target="_blank"
+			aria-label="Twitter"
+		>
+			{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/twitter.svg" }}
+				{{ .Content | replaceRE "<svg" "<svg aria-hidden=\"true\"" | safeHTML }}
+			{{ end }}
+		</a>
+	{{ end }}
+
+	{{ with .OutputFormats.Get "rss" }}
+		<a
+			href="{{ .RelPermalink }}"
+			aria-label="RSS"
+		>
+			{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/rss.svg" }}
+				{{ .Content | replaceRE "<svg" "<svg aria-hidden=\"true\"" | safeHTML }}
+			{{ end }}
+		</a>
+	{{ end }}
+</div>

@@ -1,0 +1,42 @@
+{{ define "main" }}
+	<article class="about">
+		<div class="wrapper wrapper--page">
+			{{ partial "components/avatar.html" (dict "context" .) }}
+
+			<div class="article">
+				<h1>Hai, as we say here.</h1>
+
+				{{- .Content -}}
+			</div>
+		</div>
+	</article>
+
+	<article class="about about--even">
+		<div class="wrapper wrapper--page">
+			{{ partial "components/image.html" (dict "context" . "src" "IMG_20190804_070042.jpg" "alt" .Title ) }}
+
+			<div class="article">
+				<h2>Everything about two wheels...</h2>
+
+				<p>
+					When I'm not coding, I'll stay as far away from my laptop as possible.
+					One thing that has always been able to help me do that is my
+					motorcycle. I usually ride it around town or even take long trips if I
+					have the time. I also like motorsport in general. But I've always
+					loved MotoGP and been a fan of it since I was in 5th grade.
+				</p>
+			</div>
+		</div>
+	</article>
+
+	<article class="about">
+		<div class="wrapper wrapper--page">
+			<div class="article">
+				<h2>My other hobbies?</h2>
+
+				<p>I don't have many other hobbies, but when I have free time, I usually
+					blog about something I've just learned, and sometimes watch movies too.</p>
+			</div>
+		</div>
+	</article>
+{{ end }}

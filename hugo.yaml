@@ -1,0 +1,62 @@
+title: "Ahmad Husen"
+baseURL: "/"
+languageCode: "en-US"
+paginate: 9
+summaryLength: 25
+enableRobotsTXT: true
+enableEmoji: true
+sectionPagesMenu: "main"
+publishDir: "dist"
+menu:
+  main:
+    - identifier: home
+      name: Home
+      pageRef: /
+      weight: -1
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 1
+    - identifier: contact
+      name: Contact
+      pageRef: /contact
+      weight: 4
+taxonomies:
+  tag: tags
+author:
+  name: Ahmad Husen
+  email: hi@husen.id
+  social:
+    github: hapakaien
+    gitlab: hapakaien
+    linkedin: hapakaien
+    twitter: hapakaien
+params:
+  description: "My personal site, portfolio, and blog."
+  image: "https://ogigen.husen.id/api?layout=home"
+  formspree: "xqkylyoz"
+permalinks:
+  article: /article/:year/:month/:day/:slug/
+markup:
+  highlight:
+    style: xcode-dark
+  tableOfContents:
+    endLevel: 5
+    ordered: false
+    startLevel: 2
+minify:
+  tdewolff:
+    html:
+      keepQuotes: true
+      keepWhitespace: false
+module:
+  imports:
+    - path: github.com/hapakaien/hugo-themes/basajan
+      ignoreConfig: true
+      mounts:
+        - source: docs
+          target: content/project/basajan
+        - source: assets/img/cover.png
+          target: content/project/basajan/cover.png
+        - source: assets/img/cover.jpg
+          target: assets/basajan/cover.jpg

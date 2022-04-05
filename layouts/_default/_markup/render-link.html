@@ -1,1 +1,6 @@
-{{ partial "theme/link.html" (dict "href" .Destination "title" .Title "text" .Text) }}
+<a
+	href="{{ .Destination | safeURL }}"
+	{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener noreferrer" {{ end }}
+>
+	{{ .Text | safeHTML }}
+</a>

@@ -1,0 +1,7 @@
+{{ if gt .Level 1 }}
+	<h{{ .Level }}
+		id="{{ .Anchor | safeURL }}"
+	>
+		{{ .Text | safeHTML }}
+	</h{{ .Level }}>
+{{ end }}

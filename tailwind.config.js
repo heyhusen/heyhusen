@@ -1,119 +1,120 @@
-const plugin = require('tailwindcss/plugin');
+const colors = require('tailwindcss/colors');
 const typography = require('@tailwindcss/typography');
 const form = require('@tailwindcss/forms');
 
 module.exports = {
-  purge: {
-    content: ['./layouts/**/*.html', './content/**/*.{html,md}'],
-  },
-  darkMode: 'class', // or 'media' or 'class'
-  theme: {
-    fontFamily: {
-      sans: ['Lato', 'sans-serif'],
-      serif: ['Playfair Display', 'serif'],
-      mono: ['Fira Code', 'monospace'],
-    },
-    extend: {
-      colors: {
-        brand1: '#1B435D',
-        brand2: '#78BBE6',
-        brand3: '#D5EEFF',
-        brand4: '#FF895D',
-        facebook: '#4267B2',
-        github: '#333333',
-        gitlab: '#FCA326',
-        linkedin: '#2867B2',
-        telegram: '#0088CC',
-        twitter: '#1DA1F2',
-        whatsapp: '#25D366',
-      },
-      backgroundSize: (theme) => ({
-        'full-1': `100% ${theme('spacing.1')}`,
-        'full-9/20': '100% 45%',
-      }),
-      backgroundPosition: {
-        'bottom-9/10': '0 90%',
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            '@apply text-current': {},
-            a: {
-              '@apply link': {},
-            },
-            'h1, h2, h3, h4, h5, h6, blockquote': {
-              '@apply text-current': {},
-            },
-            blockquote: {
-              '@apply opacity-75': {},
-            },
-            ol: {
-              '>': {
-                li: {
-                  '&::before': {
-                    '@apply text-current opacity-80': {},
-                  },
-                },
-              },
-            },
-            '.prose': {
-              '&__m-0': {
-                '*': {
-                  '@apply m-0': {},
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  variants: {
-    extend: {
-      order: ['odd', 'even'],
-      filter: ['hover', 'group-hover'],
-      grayscale: ['hover'],
-      hueRotate: ['hover', 'group-hover'],
-      borderWidth: ['dark'],
-      backgroundImage: ['dark'],
-      backgroundSize: ['hover', 'dark'],
-      backgroundPosition: ['hover', 'dark'],
-    },
-  },
-  plugins: [
-    plugin(({ addBase, addComponents }) => {
-      addBase({
-        mark: {
-          '@apply bg-transparent bg-gradient-to-r from-brand3 to-brand2': {},
-          '@apply dark:from-brand2 dark:to-brand1 bg-no-repeat': {},
-          '@apply bg-full-9/20 bg-bottom-9/10 text-current p-0.5': {},
-        },
-      });
-
-      addComponents({
-        '.scroll-smoth': {
-          scrollBehavior: 'smooth',
-        },
-        '.link': {
-          '@apply bg-gradient-to-r from-brand2 to-brand3 bg-no-repeat': {},
-          '@apply dark:to-brand1 bg-full-1 hover:bg-full-9/20 bg-bottom': {},
-          '@apply hover:bg-bottom-9/10 dark:text-current duration-100': {},
-          '@apply delay-75 ease-in no-underline': {},
-        },
-        '#TableOfContents': {
-          '@apply text-gray-500 dark:text-gray-200 md:ml-1 md:pl-1': {},
-          '@apply md:border-l dark:border-gray-400': {},
-          ul: {
-            '@apply ml-2 md:ml-3': {},
-          },
-          a: {
-            '@apply hover:text-brand4 opacity-75 hover:opacity-100': {},
-            '@apply duration-200': {},
-          },
-        },
-      });
-    }),
-    typography,
-    form,
-  ],
+	purge: {
+		enabled: process.env.HUGO_ENVIRONMENT === 'production',
+		content: [
+			'./assets/**/*.js',
+			'./layouts/**/*.html',
+			'./content/**/*.{html,md}',
+		],
+	},
+	theme: {
+		fontFamily: {
+			sans: ['Lexend Deca', 'sans-serif'],
+			mono: ['JetBrains Mono', 'monospace'],
+		},
+		colors: {
+			transparent: 'transparent',
+			current: 'currentColor',
+			gray: colors.blueGray,
+			success: colors.emerald['200'],
+			error: colors.red['200'],
+			primary: colors.white,
+			secondary: colors.blueGray['800'],
+			accent: colors.blue['600'],
+		},
+		screens: {},
+		fontSize: {
+			'xs': [
+				'0.75rem', {
+					lineHeight: 1.5,
+				},
+			],
+			'sm': [
+				'0.875rem', {
+					lineHeight: 1.5,
+				},
+			],
+			'base': [
+				'1rem', {
+					lineHeight: 1.5,
+				},
+			],
+			'lg': [
+				'1.125rem', {
+					lineHeight: 1.5,
+				},
+			],
+			'xl': [
+				'1.25rem', {
+					lineHeight: 1.375,
+				}
+			],
+			'2xl': [
+				'1.5rem', {
+					lineHeight: 1.375,
+				},
+			],
+			'3xl': [
+				'1.875rem', {
+					lineHeight: 1.25,
+				},
+			],
+			'4xl': [
+				'2.25rem', {
+					lineHeight: 1.25,
+				},
+			],
+			'5xl': [
+				'3rem', {
+					lineHeight: 1.25,
+				},
+			],
+			'6xl': [
+				'3.75rem', {
+					lineHeight: 1.25,
+				},
+			],
+			'7xl': [
+				'4.5rem', {
+					lineHeight: 1.25,
+				},
+			],
+			'8xl': [
+				'6rem', {
+					lineHeight: 1.25,
+				},
+			],
+			'9xl': [
+				'8rem', {
+					lineHeight: 1.25,
+				},
+			],
+		},
+		extend: {
+			spacing: {
+				4.5: '1.125rem',
+				13: '3.25rem',
+				15: '3.75rem',
+				17: '4.25rem',
+				18: '4.5rem',
+				19: '4.75rem',
+				21: '5.25rem',
+				22: '5.5rem',
+				25: '6.125rem',
+				26: '6.5rem',
+				29: '7.25rem',
+				30: '7.5rem',
+				34: '8.5rem',
+				42: '10.5rem',
+			},
+			borderWidth: {
+				'0.5': '0.5px',
+			}
+		}
+	},
+	plugins: [typography, form],
 };

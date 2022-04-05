@@ -1,0 +1,9 @@
+{{ $description := .Site.Params.description }}
+{{ with .Params.description }}
+  {{ $description = . }}
+{{ else }}
+  {{ with .Summary }}
+    {{ $description = . | truncate 150 }}
+  {{ end }}
+{{ end }}
+{{ return $description }}

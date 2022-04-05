@@ -1,0 +1,7 @@
+{{ if and (ne .Params.toc false) (ne (print (.TableOfContents | replaceRE "<nav id=\"TableOfContents\"" "<nav")) "<nav></nav>") }}
+	<div class="toc{{ if eq .Type "docs" }} toc--docs{{ end }}">
+		<h3>On this page</h3>
+
+		{{ .TableOfContents | replaceRE "<nav id=\"TableOfContents\"" "<nav" | safeHTML }}
+	</div>
+{{ end }}

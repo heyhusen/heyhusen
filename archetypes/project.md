@@ -1,11 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 description: ""
-link: ""
-tag: []
+preview: ""
+cover: ""
 image: ""
-toc: true
-images: []
+accent: ""
 date: {{ .Date }}
 draft: true
 ---

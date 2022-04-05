@@ -1,0 +1,3 @@
+- url: "https://api.github.com/repos/hapakaien/portpoliwo"
+  image: "https://github.com/hapakaien/portpoliwo/raw/main/images/cover.png"
+  accent: "#C7D2FE"

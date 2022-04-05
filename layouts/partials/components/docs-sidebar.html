@@ -1,0 +1,33 @@
+<aside class="docs-sidebar">
+	{{ partial "components/toc.html" . }}
+
+	<div class="docs-info">
+		<h3>More</h3>
+
+		<div class="docs-info__links">
+			<a
+				href="{{- .Params.edit_url -}}/{{ strings.TrimPrefix (strings.TrimPrefix "/" (index (.Site.Menus.docs) 0).URL ) .File.Path }}"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/edit.svg" }}
+					{{ .Content | replaceRE "<svg" "<svg aria-hidden=\"true\"" | safeHTML }}
+				{{ end }}
+
+				<span>Edit this page</span>
+			</a>
+
+			<a
+				href="{{- .Params.issue_url -}}"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/github.svg" }}
+					{{ .Content | replaceRE "<svg" "<svg aria-hidden=\"true\"" | safeHTML }}
+				{{ end }}
+
+				<span>Create GitHub issue</span>
+			</a>
+		</div>
+	</div>
+</aside>

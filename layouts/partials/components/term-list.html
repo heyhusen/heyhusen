@@ -1,0 +1,12 @@
+<ul class="term-list">
+	{{ range .Pages.ByTitle }}
+		<li>
+			<a
+				href="{{ .RelPermalink }}"
+				title="{{ .Title }}"
+			>
+				#{{ .Title }}
+			</a>
+		</li>
+	{{ end }}
+</ul>

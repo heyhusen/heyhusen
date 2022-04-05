@@ -1,85 +1,63 @@
-<head itemscope itemtype="{{ .Site.BaseURL }}">
+<head>
   {{ hugo.Generator }}
 
-  <base href="{{ .Permalink }}" />
+  <base href="{{ .Site.BaseURL }}" />
 
+  <!-- Meta tags -->
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta itemprop="name" content="{{ partial "internal/title.html" . }}" />
-  <meta
-    name="application-name"
-    content="{{ partial "internal/title.html" . }}"
-  />
-  <meta
-    name="description"
-    content="{{ partial "internal/description.html" . }}"
-  />
-  <meta
-    itemprop="description"
-    content="{{ partial "internal/description.html" . }}"
-  />
-  <meta name="keywords" content="{{ partial "internal/keywords.html" . }}" />
   <meta name="url" content="{{ .Permalink }}" />
-  <meta name="author" content="{{ partial "internal/author.html" . }}" />
-  <meta name="msapplication-TileColor" content="#5e81ac" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta
+  	name="description"
+  	content="{{ partial "metadata/description.html" . }}"
+  />
+  <meta
+    name="author"
+    content="{{ partial "metadata/author.html" . }}"
+  />
 
-  <title itemprop="name">{{ partial "internal/title.html" . }}</title>
+  <!-- Open Graph -->
+	{{ partial "head/open-graph.html" . }}
 
-  {{ partial "internal/twitter-cards.html" . }}
-  {{ partial "internal/opengraph.html" . }}
+	<!-- Twitter Card -->
+	{{ partial "head/twitter-card.html" . }}
 
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5e81ac" />
-
-  <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
-  <link
+  <!-- Sitemap -->
+	<link
     rel="sitemap"
     type="application/xml"
     title="Sitemap"
     href="{{ .Site.BaseURL }}sitemap.xml"
   />
-  {{ with .OutputFormats.Get "RSS" }}
-    <link
-      href="{{ .Permalink }}"
-      rel="alternate"
-      type="application/rss+xml"
-      title="{{ $.Site.Title }}"
-    />
-    <link
-      href="{{ .Permalink }}"
-      rel="feed"
-      type="application/rss+xml"
-      title="{{ $.Site.Title }}"
-    />
-  {{ end }}
-  {{ if eq .Section "blog" }}
-    {{ $paginator := .Paginate (where .Pages "Section" "blog") }}
-    {{ if $paginator }}
-      <link rel="first" href="{{ $paginator.First.URL }}" />
-      <link rel="last" href="{{ $paginator.Last.URL }}" />
-      {{ if $paginator.HasPrev }}
-        <link rel="prev" href="{{ $paginator.Prev.URL }}" />
-      {{ end }}
-      {{ if $paginator.HasNext }}
-        <link rel="next" href="{{ $paginator.Next.URL }}" />
-      {{ end }}
-    {{ end }}
-  {{ end }}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Lato:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet"
-  />
+	<!-- RSS -->
+  {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
 
+	<!-- Favicon -->
+	{{ with resources.Get "favicon.ico" }}
+		<link rel="icon" href="{{ .RelPermalink }}" sizes="any">
+	{{ end }}
+	{{ with resources.Get "favicon.svg" }}
+		<link rel="icon" href="{{ .RelPermalink }}" type="image/svg+xml">
+	{{ end }}
+	{{ with resources.Get "apple-touch-icon.png" }}
+		<link rel="apple-touch-icon" href="{{ .RelPermalink }}"/>
+	{{ end }}
+	{{ with resources.Get "manifest.webmanifest" }}
+		<link rel="manifest" href="{{ .RelPermalink }}">
+	{{ end }}
+
+	<!-- Web fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lexend+Deca:wght@200;400;600;700&display=swap" rel="stylesheet">
+
+	<!-- Stylesheet -->
   {{ $style := resources.Get "css/main.css" }}
-  {{ $style = $style | resources.PostCSS (dict "inlineImports" true) }}
+  {{ $style = $style | resources.PostCSS }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | minify | fingerprint | resources.PostProcess }}
   {{ end }}
@@ -88,4 +66,6 @@
     href="{{ $style.RelPermalink }}"
     integrity="{{ $style.Data.Integrity }}"
   />
+
+  <title>{{ partial "metadata/title.html" . }}</title>
 </head>
