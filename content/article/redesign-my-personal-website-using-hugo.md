@@ -58,7 +58,7 @@ I've had no problems.
 
 I'm currently using only non-variable fonts. I'm still studying this topic which
 I find difficult, especially regarding compatibility with older web browsers.
-But in the future I will definitely use font variables on this website to make
+But in the future I will definitely use variable fonts on this website to make
 it faster and improve the user experience.
 
 ## I need design inspiration
@@ -72,10 +72,11 @@ savvy, but can still design well. Besides that, I'm also looking for an example
 of a developer portfolio as a reference. Below is a website that gave me
 inspiration.
 
-1. <https://reinink.ca/>
-2. <https://www.joshwcomeau.com/>
-3. <https://cherupil.com/>
-4. <https://ghstcode.com/>
+1. <https://reinink.ca>
+2. <https://www.joshwcomeau.com>
+3. <https://cherupil.com>
+4. <https://ghstcode.com>
+5. <https://www.krollstudio.com>
 
 ## I need your opinion
 

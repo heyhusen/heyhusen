@@ -32,7 +32,7 @@ author:
     linkedin: hapakaien
     twitter: hapakaien
 params:
-  description: "My personal site, portfolio, and blog."
+  description: "My personal website, portfolio, and blog."
   image: "https://ogigen.husen.id/api?layout=home"
   formspree: "xqkylyoz"
 permalinks:
