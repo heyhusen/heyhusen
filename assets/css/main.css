@@ -363,14 +363,14 @@
 		}
 
 		h1 {
-			@apply text-xl;
+			@apply text-2xl;
 
 			@media (min-width: 768px) {
-				@apply text-2xl;
+				@apply text-3xl;
 			}
 
 			@media (min-width: 1024px) {
-				@apply text-3xl;
+				@apply text-4xl;
 			}
 		}
 
