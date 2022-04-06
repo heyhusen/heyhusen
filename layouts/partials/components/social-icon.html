@@ -38,7 +38,7 @@
 		</a>
 	{{ end }}
 
-	{{ with .OutputFormats.Get "rss" }}
+	{{ with (.Site.GetPage "/article").OutputFormats.Get "rss" }}
 		<a
 			href="{{ .RelPermalink }}"
 			aria-label="RSS"
