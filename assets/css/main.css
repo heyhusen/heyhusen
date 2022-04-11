@@ -182,7 +182,7 @@
 			@apply gap-0;
 
 			@media (min-width: 550px) {
-				@apply flex-row justify-between items-end;
+				@apply flex-row justify-between items-center;
 			}
 		}
 
@@ -516,7 +516,7 @@
 		}
 
 		.article {
-			@apply flex-1;
+			@apply flex-1 max-w-none;
 		}
 
 		&--even {
