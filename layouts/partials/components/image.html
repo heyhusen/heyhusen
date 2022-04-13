@@ -60,8 +60,6 @@
 		src="{{ $original.RelPermalink | safeURL }}"
 		alt="{{ .alt }}"
 		{{ if in $supportedFormat $sourceFormat }} width="{{ $original.Width }}" height="{{ $original.Height }}"{{ end }}
-		loading="lazy"
-		decoding="async"
 		{{ with .class }}class="{{ . }}"{{ end }}
 	/>
 </picture>
