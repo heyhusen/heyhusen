@@ -20,6 +20,7 @@ module.exports = {
 			transparent: 'transparent',
 			current: 'currentColor',
 			gray: colors.blueGray,
+			blue: colors.blue,
 			success: colors.emerald['200'],
 			error: colors.red['200'],
 			primary: colors.white,
