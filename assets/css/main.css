@@ -12,8 +12,9 @@
 	}
 
 	body {
-		@apply bg-primary text-secondary text-base font-sans antialiased;
-		@apply tracking-normal min-h-screen flex flex-col justify-between;
+		@apply bg-gradient-to-tr from-primary to-blue-50 text-secondary;
+		@apply text-base font-sans antialiased tracking-normal min-h-screen;
+		@apply flex flex-col justify-between;
 	}
 }
 
@@ -205,7 +206,7 @@
 		}
 
 		svg {
-			@apply h-6 fill-current;
+			@apply h-8 fill-current;
 
 			@media (min-width: 320px) {
 				@apply h-9;
@@ -356,42 +357,38 @@
 	}
 
 	.hero {
-		@apply flex flex-col py-20 gap-3;
-
-		@media (min-width: 320px) {
-			@apply py-22;
-		}
+		@apply flex flex-col py-4 gap-3;
 
 		@media (min-width: 768px) {
-			@apply py-28 gap-4;
+			@apply py-6 gap-4;
 		}
 
 		@media (min-width: 1024px) {
-			@apply py-34 gap-5;
+			@apply py-8 gap-5;
 		}
 
 		h1 {
-			@apply text-2xl;
+			@apply text-xl text-secondary text-opacity-75;
 
 			@media (min-width: 768px) {
-				@apply text-3xl;
+				@apply text-2xl;
 			}
 
 			@media (min-width: 1024px) {
-				@apply text-4xl;
+				@apply text-3xl;
 			}
 		}
 
 		h2 {
-			@apply font-semibold text-4xl;
-			max-width: 18ch;
+			@apply font-semibold text-3xl;
+			max-width: 25ch;
 
 			@media (min-width: 768px) {
-				@apply text-5xl;
+				@apply text-4xl;
 			}
 
 			@media (min-width: 1024px) {
-				@apply text-6xl;
+				@apply text-5xl;
 			}
 		}
 
@@ -520,7 +517,7 @@
 		}
 
 		&--even {
-			@apply bg-gray-100 py-13;
+			@apply bg-gray-200 py-13;
 
 			@media (min-width: 768px) {
 				@apply py-15;
