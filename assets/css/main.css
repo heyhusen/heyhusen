@@ -12,9 +12,8 @@
 	}
 
 	body {
-		@apply bg-gradient-to-tr from-primary to-blue-50 text-secondary;
-		@apply text-base font-sans antialiased tracking-normal min-h-screen;
-		@apply flex flex-col justify-between;
+		@apply bg-primary text-secondary text-base font-sans antialiased;
+		@apply tracking-normal min-h-screen flex flex-col justify-between;
 	}
 }
 
@@ -517,7 +516,7 @@
 		}
 
 		&--even {
-			@apply bg-gray-200 py-13;
+			@apply bg-gray-100 py-13;
 
 			@media (min-width: 768px) {
 				@apply py-15;
