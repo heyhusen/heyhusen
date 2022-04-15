@@ -1,3 +1,4 @@
+
 const colors = require('tailwindcss/colors');
 const typography = require('@tailwindcss/typography');
 const form = require('@tailwindcss/forms');
@@ -20,7 +21,6 @@ module.exports = {
 			transparent: 'transparent',
 			current: 'currentColor',
 			gray: colors.blueGray,
-			blue: colors.blue,
 			success: colors.emerald['200'],
 			error: colors.red['200'],
 			primary: colors.white,
