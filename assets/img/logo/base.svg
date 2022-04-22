@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1001.9149"
-   height="331.84625"
-   viewBox="0 0 265.08996 87.800986"
+   width="903.33368"
+   height="258.61926"
+   viewBox="0 0 239.00701 68.426346"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
@@ -22,17 +22,17 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
-     showgrid="false"
+     showgrid="true"
      units="px"
      inkscape:zoom="0.58781078"
-     inkscape:cx="522.27691"
-     inkscape:cy="188.83628"
+     inkscape:cx="506.96586"
+     inkscape:cy="178.62891"
      inkscape:window-width="1920"
      inkscape:window-height="1021"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="text1845"
+     inkscape:current-layer="layer1"
      lock-margins="true"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -41,8 +41,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid67257"
-       originx="34.90913"
-       originy="-107.31179" />
+       originx="8.8261836"
+       originy="-117.59025" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
@@ -51,13 +51,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline"
-     transform="translate(34.909133,-107.31179)"
+     transform="translate(8.8261894,-117.59024)"
      sodipodi:insensitive="true">
     <g
        aria-label="husen."
        id="text2382"
        style="font-size:99.2188px;line-height:1.25;font-family:'Lexend Deca';-inkscape-font-specification:'Lexend Deca';stroke-width:0.264583"
-       transform="matrix(0.73389615,0,0,0.73389615,8.8791774,40.238171)">
+       transform="matrix(0.5719506,0,0,0.5719506,25.299552,65.317449)">
       <path
          fill="none"
          stroke="#2563eb"
@@ -70,11 +70,14 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Text"
+     style="display:inline"
+     transform="translate(-26.082944,-10.278441)"
      sodipodi:insensitive="true">
     <g
        aria-label="husen"
        id="text1845"
-       style="font-size:71.4029px;line-height:1.25;font-family:'Lexend Deca';-inkscape-font-specification:'Lexend Deca';stroke-width:0.238009">
+       style="font-size:71.4029px;line-height:1.25;font-family:'Lexend Deca';-inkscape-font-specification:'Lexend Deca';stroke-width:0.238009"
+       transform="translate(0,0.59111699)">
       <path
          id="path20143"
          style="font-weight:600;font-family:Outfit;-inkscape-font-specification:'Outfit Semi-Bold';stroke-width:0.210273"
