@@ -212,11 +212,11 @@
 			}
 
 			@media (min-width: 768px) {
-				@apply h-11;
+				@apply h-9.5;
 			}
 
 			@media (min-width: 1024px) {
-				@apply h-13;
+				@apply h-10;
 			}
 		}
 	}
@@ -369,12 +369,16 @@
 		h1 {
 			@apply text-xl text-secondary text-opacity-75;
 
-			@media (min-width: 768px) {
+			@media (min-width: 640px) {
 				@apply text-2xl;
 			}
 
-			@media (min-width: 1024px) {
+			@media (min-width: 768px) {
 				@apply text-3xl;
+			}
+
+			@media (min-width: 1024px) {
+				@apply text-4xl;
 			}
 		}
 
@@ -382,12 +386,16 @@
 			@apply font-semibold text-3xl;
 			max-width: 25ch;
 
-			@media (min-width: 768px) {
+			@media (min-width: 640px) {
 				@apply text-4xl;
 			}
 
-			@media (min-width: 1024px) {
+			@media (min-width: 767px) {
 				@apply text-5xl;
+			}
+
+			@media (min-width: 1024px) {
+				@apply text-6xl;
 			}
 		}
 
