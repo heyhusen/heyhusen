@@ -369,16 +369,12 @@
 		h1 {
 			@apply text-xl text-secondary text-opacity-75;
 
-			@media (min-width: 640px) {
+			@media (min-width: 768px) {
 				@apply text-2xl;
 			}
 
-			@media (min-width: 768px) {
-				@apply text-3xl;
-			}
-
 			@media (min-width: 1024px) {
-				@apply text-4xl;
+				@apply text-3xl;
 			}
 		}
 
@@ -386,16 +382,12 @@
 			@apply font-semibold text-3xl;
 			max-width: 25ch;
 
-			@media (min-width: 640px) {
+			@media (min-width: 768px) {
 				@apply text-4xl;
 			}
 
-			@media (min-width: 767px) {
-				@apply text-5xl;
-			}
-
 			@media (min-width: 1024px) {
-				@apply text-6xl;
+				@apply text-5xl;
 			}
 		}
 
