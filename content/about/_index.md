@@ -13,4 +13,4 @@ JavaScript (TypeScript), SQL, HTML and CSS, sometimes PHP too. And yes, I work
 in back-end and front-end development.
 
 I'm currently focusing on Node, Express, Fastify, Nest, PostgreSQL, Redis,
-Vue, Svelte, Hugo, and TailwindCSS/WindiCSS.
+Vue, Svelte, Hugo, and TailwindCSS.
