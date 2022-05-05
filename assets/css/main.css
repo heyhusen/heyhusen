@@ -12,7 +12,7 @@
 	}
 
 	body {
-		@apply bg-primary text-secondary text-base font-sans antialiased;
+		@apply bg-gradient-to-tr from-primary to-blue-50 text-secondary text-base font-sans antialiased;
 		@apply tracking-normal min-h-screen flex flex-col justify-between;
 	}
 }
@@ -390,18 +390,6 @@
 				@apply text-5xl;
 			}
 		}
-
-		&__button {
-			@apply flex flex-wrap items-center gap-4 mt-6;
-
-			@media (min-width: 768px) {
-				@apply gap-5 mt-10;
-			}
-
-			@media (min-width: 1024px) {
-				@apply gap-6 mt-14;
-			}
-		}
 	}
 
 	.article {
@@ -483,69 +471,18 @@
 		}
 
 		.wrapper {
-			@apply max-w-3xl gap-10 p-0;
-
-			@media (min-width: 640px) {
-				@apply flex-row-reverse justify-between;
-			}
-
-			@media (min-width: 1024px) {
-				@apply gap-12;
-			}
-
-			img {
-				@apply flex-none w-full mx-auto object-cover rounded-md duration-200;
-				max-width: 12rem;
-
-				@media (min-width: 640px) {
-					@apply mx-0;
-				}
-
-				@media (min-width: 1024px) {
-					max-width: 14rem;
-				}
-
-				&:hover {
-					@apply filter grayscale;
-				}
-			}
+			@apply max-w-3xl p-0;
 		}
 
 		.article {
 			@apply flex-1 max-w-none;
 		}
 
-		&--even {
-			@apply bg-gray-100 py-13;
+		img {
+			@apply mx-auto duration-200;
 
-			@media (min-width: 768px) {
-				@apply py-15;
-			}
-
-			@media (min-width: 1024px) {
-				@apply py-17;
-			}
-
-			.wrapper {
-				@media (min-width: 640px) {
-					@apply flex-row;
-				}
-
-				img {
-					@apply max-w-none;
-
-					@media (min-width: 640px) {
-						max-width: 16rem;
-					}
-
-					@media (min-width: 768px) {
-						max-width: 18rem;
-					}
-
-					@media (min-width: 768px) {
-						@apply max-w-xs;
-					}
-				}
+			&:hover {
+				@apply filter grayscale;
 			}
 		}
 	}
