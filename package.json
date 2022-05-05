@@ -3,7 +3,7 @@
 	"scripts": {
 		"dev": "hugo --config hugo.yaml server -p 3000",
 		"build": "hugo --config hugo.yaml --minify",
-		"start": "serve dist"
+		"preview": "serve dist"
 	},
 	"dependencies": {
 		"@tailwindcss/forms": "0.3.4",
