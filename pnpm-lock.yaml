@@ -7,7 +7,7 @@ specifiers:
   cssnano: 5.1.12
   postcss: 8.4.14
   postcss-cli: 10.0.0
-  rimraf: ^3.0.2
+  rimraf: 3.0.2
   serve: 13.0.2
   tailwindcss: 2.2.19
 
@@ -412,7 +412,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   /content-disposition/0.5.2:
     resolution: {integrity: sha1-DPaLud318r55YcOoUXjLhdunjLQ=}
