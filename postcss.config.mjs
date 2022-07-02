@@ -1,12 +1,12 @@
-const tailwindcss = require('tailwindcss');
-const autoprefixer = require('autoprefixer');
-const nesting = require('tailwindcss/nesting');
-const cssnano = require('cssnano');
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
+import nesting from 'tailwindcss/nesting';
+import cssnano from 'cssnano';
 
 const mode = process.env.HUGO_ENVIRONMENT;
 const prod = mode === 'production';
 
-module.exports = {
+const config = {
 	plugins: [
 		nesting(),
 		tailwindcss(),
@@ -25,3 +25,5 @@ module.exports = {
 			}),
 	],
 };
+
+export default config;

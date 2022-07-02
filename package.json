@@ -2,7 +2,7 @@
 	"private": "true",
 	"scripts": {
 		"dev": "hugo --config hugo.yaml server -p 3000",
-		"build": "hugo --config hugo.yaml --minify",
+		"build": "rimraf dist && hugo --config hugo.yaml --minify",
 		"preview": "serve dist"
 	},
 	"dependencies": {
@@ -15,6 +15,7 @@
 	"devDependencies": {
 		"postcss": "8.4.14",
 		"postcss-cli": "10.0.0",
+		"rimraf": "^3.0.2",
 		"serve": "13.0.2"
 	},
 	"engines": {
