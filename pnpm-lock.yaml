@@ -4,7 +4,7 @@ specifiers:
   '@tailwindcss/forms': 0.3.4
   '@tailwindcss/typography': 0.4.1
   autoprefixer: 10.4.8
-  cssnano: 5.1.12
+  cssnano: 5.1.13
   postcss: 8.4.16
   postcss-cli: 10.0.0
   rimraf: 3.0.2
@@ -15,7 +15,7 @@ dependencies:
   '@tailwindcss/forms': 0.3.4_tailwindcss@2.2.19
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
   autoprefixer: 10.4.8_postcss@8.4.16
-  cssnano: 5.1.12_postcss@8.4.16
+  cssnano: 5.1.13_postcss@8.4.16
   tailwindcss: 2.2.19_25hquoklqeoqwmt7fwvvcyxm5e
 
 devDependencies:
@@ -547,14 +547,14 @@ packages:
       postcss: 8.4.16
     dev: false
 
-  /cssnano/5.1.12_postcss@8.4.16:
-    resolution: {integrity: sha512-TgvArbEZu0lk/dvg2ja+B7kYoD7BBCmn3+k58xD0qjrGHsFzXY/wKTo9M5egcUCabPol05e/PVoIu79s2JN4WQ==}
+  /cssnano/5.1.13_postcss@8.4.16:
+    resolution: {integrity: sha512-S2SL2ekdEz6w6a2epXn4CmMKU4K3KpcyXLKfAYc9UQQqJRkD/2eLUG0vJ3Db/9OvO5GuAdgXw3pFbR6abqghDQ==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
       cssnano-preset-default: 5.2.12_postcss@8.4.16
-      lilconfig: 2.0.3
+      lilconfig: 2.0.5
       postcss: 8.4.16
       yaml: 1.10.2
     dev: false
@@ -975,11 +975,6 @@ packages:
       universalify: 2.0.0
     optionalDependencies:
       graceful-fs: 4.2.6
-
-  /lilconfig/2.0.3:
-    resolution: {integrity: sha512-EHKqr/+ZvdKCifpNrJCKxBTgk5XupZA3y/aCPY9mxfgBzmgh93Mt/WqjjQ38oMxXuvDokaKiM3lAgvSH2sjtHg==}
-    engines: {node: '>=10'}
-    dev: false
 
   /lilconfig/2.0.5:
     resolution: {integrity: sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==}
@@ -1834,6 +1829,7 @@ packages:
 
   /stable/0.1.8:
     resolution: {integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==}
+    deprecated: 'Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility'
     dev: false
 
   /string-width/4.2.3:
