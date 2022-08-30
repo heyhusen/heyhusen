@@ -1,9 +1,9 @@
 let isNavMenuOpen = false;
 
 const navMenu = document.querySelector('.navbar');
-const navMenuButton = document.querySelector('.site-header button');
-const navMenuIcon = document.querySelector('.site-header button svg:first-child');
-const navCloseIcon = document.querySelector('.site-header button svg:last-child');
+const navMenuButton = document.querySelector('.header button');
+const navMenuIcon = document.querySelector('.header button svg:first-child');
+const navCloseIcon = document.querySelector('.header button svg:last-child');
 
 navMenuButton.addEventListener('click', () => {
 	isNavMenuOpen = !isNavMenuOpen;

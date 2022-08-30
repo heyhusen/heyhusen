@@ -6,17 +6,15 @@
 	<body>
 		{{ partial "header.html" . }}
 
-		{{ $classes := slice "wrapper" "wrapper--page" "wrapper--page-container" }}
+		{{ $classes := slice "page-container" }}
 		{{ if .IsHome }}
-			{{ $classes = $classes | append "wrapper--page-home" }}
-		{{ else if eq .Type "about" }}
-			{{ $classes = $classes | append "wrapper--page-about" }}
+			{{ $classes = $classes | append "page-container--home" }}
 		{{ else if eq .Type "docs" }}
-			{{ $classes = $classes | append "wrapper--page-docs" }}
+			{{ $classes = $classes | append "page-container--docs" }}
 		{{ else if and (eq .Kind "page") (eq .Type "article") }}
-			{{ $classes = $classes | append "wrapper--page-article" }}
+			{{ $classes = $classes | append "page-container--article" }}
 		{{ else if eq .Kind "404" }}
-			{{ $classes = $classes | append "wrapper--page-404" }}
+			{{ $classes = $classes | append "page-container--404" }}
 		{{ end }}
 
 		<main class="{{ delimit $classes " " }}">

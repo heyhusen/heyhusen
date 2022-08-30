@@ -7,7 +7,7 @@ The fifth iteration of [husen.id](https://husen.id), built with
 [Hugo](https://gohugo.io/) and hosted using
 [Cloudflare Pages](https://pages.cloudflare.com/).
 
-![Screenshot](assets/img/screenshot.jpeg)
+![Screenshot](assets/img/screenshot.png)
 
 To better understand why I redesigned my website this time, you can read the
 article [here](https://husen.id/article/2022/04/02/redesign-my-personal-website-using-hugo/).
