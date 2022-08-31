@@ -1,8 +1,8 @@
-<header class="site-header">
+<header class="header">
 	<div
-		class="wrapper wrapper--page"
+		class="container header__container"
 	>
-		<div class="site-header__identity">
+		<div class="header__identity">
 			<a href="/" aria-label="{{ .Site.Title }}" class="logo">
 				{{ with resources.Get "img/logo/optimized.svg" }}
 					{{ .Content | safeHTML }}
@@ -10,11 +10,11 @@
 			</a>
 
 			<button aria-label="Open navigation menu" class="btn btn--menu">
-				{{ with resources.GetRemote "https://github.com/tailwindlabs/heroicons/raw/master/optimized/outline/menu-alt-3.svg" }}
+				{{ with resources.GetRemote "https://github.com/tailwindlabs/heroicons/raw/master/optimized/24/outline/bars-3-bottom-right.svg" }}
 					{{ .Content | replaceRE "<svg" "<svg class=\"btn__icon btn__icon--menu btn__icon--show\"" | safeHTML }}
 				{{ end }}
 
-				{{ with resources.GetRemote "https://github.com/tailwindlabs/heroicons/raw/master/optimized/outline/x.svg" }}
+				{{ with resources.GetRemote "https://github.com/tailwindlabs/heroicons/raw/master/optimized/24/outline/x-mark.svg" }}
 					{{ .Content | replaceRE "<svg" "<svg class=\"btn__icon btn__icon--menu btn__icon--hidden\"" | safeHTML }}
 				{{ end }}
 			</button>

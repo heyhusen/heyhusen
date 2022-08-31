@@ -2,7 +2,7 @@
 	name="contact"
 	action="https://formspree.io/{{ .Site.Params.formspree }}"
 	method="post"
-	class="contact-form"
+	class="contact-form{{ if not .IsHome }} contact-form--fluid{{ end }}"
 >
 	<div class="alert alert--hidden"></div>
 

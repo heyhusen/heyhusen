@@ -12,21 +12,22 @@ module.exports = {
 			'./content/**/*.{html,md}',
 		],
 	},
+	corePlugins: {
+		container: false,
+	},
 	theme: {
 		fontFamily: {
 			sans: ['Lexend Deca', 'sans-serif'],
 			mono: ['JetBrains Mono', 'monospace'],
 		},
 		colors: {
+			primary: colors.white,
+			secondary: colors.coolGray['900'],
+			accent: colors.blue['700'],
 			transparent: 'transparent',
-			current: 'currentColor',
 			gray: colors.coolGray,
-			blue: colors.blue,
 			success: colors.emerald['200'],
 			error: colors.red['200'],
-			primary: colors.white,
-			secondary: colors.coolGray['800'],
-			accent: colors.blue['600'],
 		},
 		screens: {},
 		fontSize: {
@@ -62,17 +63,17 @@ module.exports = {
 			],
 			'3xl': [
 				'1.875rem', {
-					lineHeight: 1.25,
+					lineHeight: 1.375,
 				},
 			],
 			'4xl': [
 				'2.25rem', {
-					lineHeight: 1.25,
+					lineHeight: 1.375,
 				},
 			],
 			'5xl': [
 				'3rem', {
-					lineHeight: 1.25,
+					lineHeight: 1.375,
 				},
 			],
 			'6xl': [

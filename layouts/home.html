@@ -1,13 +1,47 @@
 {{ define "main" }}
 	<section class="hero">
-		<h1>Hi, I'm Husen.</h1>
+		<h1 class="hero__title">Hi, I'm Husen.</h1>
 
-		<h2>I build things that live on the web from Indonesia.</h2>
+		<h2 class="hero__subtitle">I build things that live on the web from Indonesia.</h2>
+
+		<p class="hero__description">I'm a web developer with a main focus on simplicity, stability and performance to give you the best web experience possible.</p>
+
+		<div class="hero__button">
+			<a href="#projects" class="btn btn--cta btn--accent">
+				See projects
+			</a>
+
+			<a href="#contact-me" class="btn btn--cta btn--accent btn--inverted">
+				Contact me
+			</a>
+		</div>
 	</section>
 
-	<section id="projects" class="wrapper wrapper--page wrapper--project-list">
-		<h3 class="wrapper__title">Here are some of my projects...</h3>
+	<section id="projects" class="container featured-project">
+		<h3 class="container__title">Featured Projects</h3>
 
-		{{ partial "components/project-list.html" . }}
+		{{ partial "components/featured-project-list.html" . }}
 	</section>
+
+	<div id="contact-me" class="container contact-me">
+		<section class="contact-me__info">
+			<header class="contact-me__header">
+				<span class="contact-me__title">Should we chat?</span>
+
+				<h3 class="container__title">Let's talk</h3>
+			</header>
+
+			<div class="article">
+				<p>Have cool idea for new project? Or just want to say hello?<br>
+					Just write me a message!</p>
+
+				<p>You can also send an e-mail to: <a href="mailto:hi@husen.id">
+					hi@husen.id
+				</a>
+				.</p>
+			</div>
+		</section>
+
+		{{ partial "components/contact-form.html" . }}
+	</div>
 {{ end }}
