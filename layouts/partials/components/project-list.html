@@ -1,0 +1,30 @@
+<h2 class="container__title">Featured</h2>
+
+{{ partial "components/featured-project-list.html" . }}
+
+
+<section class="container container--child other-project">
+	<h3 class="container__title">Others</h3>
+
+	<div class="other-project__list">
+		{{ range $i, $project := where .Site.Data.project "image" "==" "" }}
+			{{ with getJSON $project.url (dict "Accept" "application/vnd.github.v3+json") }}
+				<article class="other-project__content">
+					<h2 class="other-project__title">
+						{{ .name }}
+
+						<a href="{{ .html_url }}">
+							{{ with resources.GetRemote "https://github.com/tailwindlabs/heroicons/raw/master/optimized/24/outline/arrow-top-right-on-square.svg" }}
+								{{ .Content | replaceRE "<svg" "<svg class=\"other-project__icon\"" | safeHTML }}
+							{{ end }}
+						</a>
+					</h2>
+
+					<div class="other-project__description">
+						{{ .description }}
+					</div>
+				</article>
+			{{ end }}
+		{{ end }}
+	</div>
+</section>
