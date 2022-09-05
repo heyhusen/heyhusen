@@ -4,7 +4,7 @@
 {{ end }}
 
 <div class="container container--child featured-project__list">
-	{{ range $i, $project := .Site.Data.project }}
+	{{ range $i, $project := where .Site.Data.project "image" "!=" "" }}
 		{{ with getJSON $project.url (dict "Accept" "application/vnd.github.v3+json") }}
 			<article
 				class="featured-project__content"
@@ -20,8 +20,6 @@
 					<div class="featured-project__button">
 						<a
 							href="{{ .html_url }}"
-							target="_blank"
-							rel="noopener noreferrer"
 							class="btn"
 						>
 							{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/github.svg" }}
@@ -64,8 +62,6 @@
 					{{ with .Params.preview }}
 						<a
 							href="{{ . }}"
-							target="_blank"
-							rel="noopener noreferrer"
 							class="btn"
 						>
 							{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/eye.svg" }}
