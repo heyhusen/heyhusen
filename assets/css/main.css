@@ -209,7 +209,7 @@
 		&__container {
 			@apply gap-0;
 
-			@media (min-width: 550px) {
+			@media (min-width: 640px) {
 				@apply flex-row justify-between items-center;
 			}
 		}
@@ -219,7 +219,7 @@
 		}
 
 		button {
-			@media (min-width: 550px) {
+			@media (min-width: 640px) {
 				@apply hidden;
 			}
 		}
@@ -321,61 +321,66 @@
 	}
 
 	.navbar {
-		@apply text-lg mt-6 pt-4 border-t border-gray-200;
+		@apply flex flex-col items-start gap-3 text-lg mt-6 pt-4 border-t;
+		@apply border-gray-200;
 
-		@media (max-width: 499px) {
+		@media (max-width: 639px) {
 			@apply hidden;
 
 			&--show {
-				display: revert;
+				@apply flex;
 			}
 		}
 
-		@media (min-width: 550px) {
-			@apply mt-0 pt-0 border-none;
+		@media (min-width: 640px) {
+			@apply flex-row items-center mt-0 pt-0 border-none;
 		}
 
 		@media (min-width: 768px) {
-			@apply text-xl;
+			@apply gap-5 text-xl;
+		}
+
+		@media (min-width: 768px) {
+			@apply gap-7;
 		}
 
 		ul {
 			@apply flex flex-col;
 
-			@media (min-width: 550px) {
-				@apply flex-row items-center gap-4;
+			@media (min-width: 640px) {
+				@apply flex-row items-center gap-3;
 			}
 
 			@media (min-width: 768px) {
-				@apply gap-6;
+				@apply gap-5;
 			}
 
 			@media (min-width: 1024px) {
-				@apply gap-8;
-			}
-		}
-
-		a {
-			@apply block text-secondary text-opacity-70 py-0.5 duration-200;
-
-			@media (min-width: 550px) {
-				@apply px-0.5;
+				@apply gap-7;
 			}
 
-			&[aria-current="page"] {
-				@apply font-bold text-opacity-100;
+			a {
+				@apply block text-secondary text-opacity-70 py-0.5 duration-200;
+
+				@media (min-width: 640px) {
+					@apply px-0.5;
+				}
+
+				&[aria-current="page"] {
+					@apply font-bold text-opacity-100;
+
+					&:hover {
+						@apply text-opacity-100;
+					}
+
+					@media (min-width: 640px) {
+						@apply border-b border-secondary;
+					}
+				}
 
 				&:hover {
 					@apply text-opacity-100;
 				}
-
-				@media (min-width: 550px) {
-					@apply border-b border-secondary;
-				}
-			}
-
-			&:hover {
-				@apply text-opacity-100;
 			}
 		}
 

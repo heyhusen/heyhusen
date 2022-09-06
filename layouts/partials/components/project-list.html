@@ -13,7 +13,7 @@
 					<h2 class="other-project__title">
 						{{ .name }}
 
-						<a href="{{ .html_url }}">
+						<a href="{{ .html_url }}" target="_blank" rel="noopener noreferrer">
 							{{ with resources.GetRemote "https://github.com/tailwindlabs/heroicons/raw/master/optimized/24/outline/arrow-top-right-on-square.svg" }}
 								{{ .Content | replaceRE "<svg" "<svg class=\"other-project__icon\"" | safeHTML }}
 							{{ end }}

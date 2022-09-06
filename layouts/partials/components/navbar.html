@@ -17,4 +17,11 @@
 			</li>
 		{{ end }}
 	</ul>
+
+	<a
+		href="{{ with resources.Get "resume-husen-en.pdf" }}{{ .RelPermalink }}{{ end }}"
+		class="btn btn--accent btn--inverted"
+	>
+		Resume
+	</a>
 </nav>
