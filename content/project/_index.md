@@ -5,10 +5,10 @@ weight: 2
 cascade:
   - _target:
       path: /project/basajan/_index.md
-    description: "Basajan is a very simple and clean blog theme for Hugo, with 0kb JavaScript shipped by default."
+    description: "A very simple and clean blog theme for Hugo, with 0kb JavaScript shipped by default."
     preview: "https://basajan.netlify.app"
     cover: "cover.png"
-    accent: "#E5E7EB"
+    accent: "#F3F4F6"
     featured: true
     menu:
       docs:
