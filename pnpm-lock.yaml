@@ -6,7 +6,7 @@ specifiers:
   autoprefixer: 10.4.11
   cssnano: 5.1.13
   postcss: 8.4.16
-  postcss-cli: 10.0.0
+  postcss-cli: 10.1.0
   rimraf: 3.0.2
   serve: 14.0.1
   tailwindcss: 2.2.19
@@ -20,7 +20,7 @@ dependencies:
 
 devDependencies:
   postcss: 8.4.16
-  postcss-cli: 10.0.0_postcss@8.4.16
+  postcss-cli: 10.1.0_postcss@8.4.16
   rimraf: 3.0.2
   serve: 14.0.1
 
@@ -735,6 +735,16 @@ packages:
       graceful-fs: 4.2.6
       jsonfile: 6.1.0
       universalify: 2.0.0
+    dev: false
+
+  /fs-extra/11.1.0:
+    resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
+    engines: {node: '>=14.14'}
+    dependencies:
+      graceful-fs: 4.2.6
+      jsonfile: 6.1.0
+      universalify: 2.0.0
+    dev: true
 
   /fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -1235,8 +1245,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: false
 
-  /postcss-cli/10.0.0_postcss@8.4.16:
-    resolution: {integrity: sha512-Wjy/00wBBEgQqnSToznxLWDnATznokFGXsHtF/3G8glRZpz5KYlfHcBW/VMJmWAeF2x49zjgy4izjM3/Wx1dKA==}
+  /postcss-cli/10.1.0_postcss@8.4.16:
+    resolution: {integrity: sha512-Zu7PLORkE9YwNdvOeOVKPmWghprOtjFQU3srMUGbdz3pHJiFh7yZ4geiZFMkjMfB0mtTFR3h8RemR62rPkbOPA==}
     engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
@@ -1244,7 +1254,7 @@ packages:
     dependencies:
       chokidar: 3.5.2
       dependency-graph: 0.11.0
-      fs-extra: 10.0.0
+      fs-extra: 11.1.0
       get-stdin: 9.0.0
       globby: 13.1.2
       picocolors: 1.0.0
@@ -1253,7 +1263,7 @@ packages:
       postcss-reporter: 7.0.2_postcss@8.4.16
       pretty-hrtime: 1.0.3
       read-cache: 1.0.0
-      slash: 4.0.0
+      slash: 5.0.0
       yargs: 17.4.0
     transitivePeerDependencies:
       - ts-node
@@ -1816,6 +1826,11 @@ packages:
   /slash/4.0.0:
     resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
     engines: {node: '>=12'}
+    dev: true
+
+  /slash/5.0.0:
+    resolution: {integrity: sha512-n6KkmvKS0623igEVj3FF0OZs1gYYJ0o0Hj939yc1fyxl2xt+xYpLnzJB6xBSqOfV9ZFLEWodBBN/heZJahuIJQ==}
+    engines: {node: '>=14.16'}
     dev: true
 
   /source-map-js/1.0.2:
