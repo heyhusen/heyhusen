@@ -27,10 +27,10 @@ author:
   name: Ahmad Husen
   email: hi@husen.id
   social:
-    github: hapakaien
-    gitlab: hapakaien
-    linkedin: hapakaien
-    twitter: hapakaien
+    github: heyhusen
+    gitlab: heyhusen
+    linkedin: heyhusen
+    twitter: heyhusen
 params:
   description: "My personal website, portfolio, and blog."
   image: "https://ogigen.husen.id/api?layout=home"

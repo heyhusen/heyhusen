@@ -22,7 +22,7 @@
 							href="{{ .html_url }}"
 							class="btn"
 						>
-							{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/github.svg" }}
+							{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/v4.29.1/icons/github.svg" }}
 								{{ .Content | replaceRE "<svg" "<svg class=\"btn__icon\"" | safeHTML }}
 							{{ end }}
 
@@ -52,7 +52,7 @@
 
 				<div class="featured-project__button">
 					<a href="{{ .RelPermalink }}" class="btn">
-						{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/code.svg" }}
+						{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/v4.29.1/icons/code.svg" }}
 							{{ .Content | replaceRE "<svg" "<svg class=\"btn__icon\"" | safeHTML }}
 						{{ end }}
 
@@ -64,7 +64,7 @@
 							href="{{ . }}"
 							class="btn"
 						>
-							{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/master/icons/eye.svg" }}
+							{{ with resources.GetRemote "https://github.com/feathericons/feather/raw/v4.29.1/icons/eye.svg" }}
 								{{ .Content | replaceRE "<svg" "<svg class=\"btn__icon\"" | safeHTML }}
 							{{ end }}
 
