@@ -19,6 +19,6 @@
 		"serve": "14.2.3"
 	},
 	"engines": {
-		"node": "16.x.x"
+		"node": "22.x"
 	}
 }
