@@ -1,0 +1,16 @@
+{
+	"site": {
+		"title": "Ahmad Husen",
+		"description": "My personal website, portfolio, and blog",
+		"formspree": "xqkylyoz"
+	},
+	"author": {
+		"name": "Ahmad Husen",
+		"email": "hi@husen.id",
+		"social": {
+			"linkedin": "http://linkedin.com/in/heyhusen",
+			"github": "http://github.com/heyhusen",
+			"twitter": "http://twitter.com/heyhusen"
+		}
+	}
+}

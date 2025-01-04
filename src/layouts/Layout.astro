@@ -1,0 +1,200 @@
+---
+import "@fontsource/jetbrains-mono/200.css";
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/600.css";
+import "@fontsource/jetbrains-mono/700.css";
+import "@fontsource/lexend-deca/200.css";
+import "@fontsource/lexend-deca/400.css";
+import "@fontsource/lexend-deca/600.css";
+import "@fontsource/lexend-deca/700.css";
+import { SEO } from "astro-seo";
+import { getCollection, getEntry } from "astro:content";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import type { Menu } from "../entities";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+const { pathname } = Astro.url;
+const { site } = Astro;
+
+function getOpenGraphSlug(): string {
+	if (pathname === "/") {
+		return "page/home.png";
+	}
+
+	const slug = pathname.endsWith("/")
+		? pathname.substring(pathname.length - 1, 1)
+		: pathname.substring(1);
+
+	if (slug.startsWith("article/")) {
+		return `article/${slug.substring(19)}.png`;
+	}
+
+	if (slug.startsWith("tags/")) {
+		return `${slug}.png`;
+	}
+
+	return `page/${slug}.png`;
+}
+
+const configs = await getEntry("configurations", "main");
+if (!configs) {
+	throw new Error("Config is not found!");
+}
+
+const { data: config } = configs;
+const allMenus = await getCollection("menus");
+
+const menus = allMenus.map<Menu>(({ data }) => data);
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<SEO
+			charset="UTF-8"
+			,
+			title={pathname === "/"
+				? `${config.site.title} - ${config.site.description}`
+				: `${title} - ${config.site.title}`}
+			.
+			description={pathname === "/" ? config.site.description : description}
+			openGraph={{
+				basic: {
+					title: pathname === "/" ? config.site.title : title,
+					type: pathname.startsWith("/article") ? "article" : "website",
+					image: `${site}og/${getOpenGraphSlug()}`,
+				},
+				optional: {
+					description: pathname === "/" ? config.site.description : description,
+					siteName: config.site.title,
+				},
+				image: {
+					width: 1200,
+					height: 630,
+				},
+			}}
+			,
+			twitter={{
+				card: "summary_large_image",
+				creator: `@${config.author.social.twitter}`,
+			}}
+			,
+			extend={{
+				link: [
+					{
+						rel: "icon",
+						sizes: "any",
+						href: "/favicon.ico",
+					},
+					{
+						rel: "icon",
+						type: "image/svg+xml",
+						href: "/favicon.svg",
+					},
+					{
+						rel: "apple-touch-icon",
+						href: "/apple-touch-icon.png",
+					},
+					{
+						rel: "manifest",
+						href: "/site.webmanifest",
+					},
+					{
+						rel: "alternate",
+						type: "application/rss+xml",
+						title: config.site.title,
+						href: "/article.xml",
+					},
+					{
+						rel: "sitemap",
+						href: "/sitemap-index.xml",
+					},
+				],
+				meta: [
+					{
+						name: "viewport",
+						content: "width=device-width, initial-scale=1.0",
+					},
+					{
+						name: "generator",
+						content: Astro.generator,
+					},
+				],
+			}}
+		/>
+
+		<script is:inline>
+			function setTheme() {
+				const theme = (() => {
+					if (
+						typeof localStorage !== "undefined" &&
+						localStorage.getItem("theme")
+					) {
+						return localStorage.getItem("theme");
+					}
+
+					if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+						return "dark";
+					}
+
+					return "light";
+				})();
+
+				if (theme === "light") {
+					document.documentElement.classList.remove("dark");
+				} else {
+					document.documentElement.classList.add("dark");
+				}
+			}
+
+			setTheme();
+
+			document.addEventListener("astro:after-swap", setTheme);
+		</script>
+	</head>
+
+	<body
+		class="bg-primary dark:bg-dark-secondary text-secondary dark:text-dark-primary text-base font-sans antialiased tracking-normal min-h-screen flex flex-col"
+	>
+		<Header {pathname} {menus} siteTitle={config.site.title} />
+
+		<slot />
+
+		<Footer {config} />
+	</body>
+</html>
+
+<style is:global>
+	::selection {
+		@apply bg-accent text-primary;
+	}
+
+	.article {
+		h1 {
+			@apply leading-snug md:leading-tight;
+		}
+
+		h2 {
+			@apply leading-normal lg:leading-snug;
+		}
+
+		a {
+			@apply text-accent dark:text-dark-accent;
+			text-decoration-thickness: 0.125rem;
+
+			&:hover {
+				@apply bg-accent text-primary no-underline;
+			}
+
+			& > *:hover {
+				@apply text-primary;
+			}
+		}
+	}
+</style>

@@ -1,0 +1,104 @@
+---
+import type { MarkdownHeading } from "astro";
+import type { TocItem } from "../entities";
+import TableOfContentHeading from "./TableOfContentHeading.astro";
+
+interface Props {
+	headings: MarkdownHeading[];
+}
+
+function generateToc(headings: MarkdownHeading[]): TocItem[] {
+	const toc: TocItem[] = [];
+	const parentHeadings = new Map<number, TocItem>();
+
+	for (const h of headings) {
+		const heading = { ...h, subheadings: [] };
+		parentHeadings.set(heading.depth, heading);
+
+		// Change 2 to 1 if your markdown includes your <h1>
+		if (heading.depth === 2) {
+			toc.push(heading);
+
+			continue;
+		}
+
+		parentHeadings.get(heading.depth - 1)?.subheadings.push(heading);
+	}
+
+	return toc;
+}
+
+const { headings } = Astro.props;
+const tableOfContents = generateToc(headings);
+---
+
+<div class="space-y-3 font-extralight md:sticky md:top-6 lg:top-8">
+	<h3 class="font-normal text-lg">On this page</h3>
+
+	<nav class="toc">
+		<ul class="space-y-1">
+			{tableOfContents.map((toc) => <TableOfContentHeading heading={toc} />)}
+		</ul>
+	</nav>
+</div>
+
+<script>
+	const observer = new IntersectionObserver(
+		(entries) => {
+			for (const entry of entries) {
+				const headingFragment = `#${entry.target.id}`;
+				const tocItem = document.querySelector(`a[href="${headingFragment}"]`);
+
+				if (entry.isIntersecting) {
+					const previouslyActivatedItem =
+						document.querySelector(".active-toc-item");
+
+					previouslyActivatedItem?.classList.remove(
+						"active-toc-item",
+						"font-normal",
+						"bg-accent",
+						"bg-opacity-10",
+						"text-accent",
+						"dark:text-dark-accent"
+					);
+					tocItem?.classList.add(
+						"active-toc-item",
+						"font-normal",
+						"bg-accent",
+						"bg-opacity-10",
+						"text-accent",
+						"dark:text-dark-accent"
+					);
+				} else {
+					const isAnyOtherEntryIntersecting = entries.some(
+						(e) => e.target.id !== entry.target.id && e.isIntersecting
+					);
+
+					if (isAnyOtherEntryIntersecting) {
+						tocItem?.classList.remove(
+							"active-toc-item",
+							"font-normal",
+							"bg-accent",
+							"bg-opacity-10",
+							"text-accent",
+							"dark:text-dark-accent"
+						);
+					}
+				}
+			}
+		},
+		{
+			root: null,
+			rootMargin: "0px",
+			threshold: [1],
+		}
+	);
+
+	const sectionHeadings = document.querySelectorAll(
+		".article h2, .article h3, .article h4, .article h5, article h6"
+	);
+
+	for (const heading of sectionHeadings) {
+		observer.observe(heading);
+	}
+</script>

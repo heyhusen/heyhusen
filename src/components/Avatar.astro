@@ -1,0 +1,30 @@
+---
+import { Picture } from "astro:assets";
+import { getEntry } from "astro:content";
+import { createHash } from "node:crypto";
+
+interface Props {
+	className: string;
+	limit?: number;
+}
+
+const { className, limit } = Astro.props;
+const config = await getEntry("configurations", "main");
+if (!config) {
+	throw new Error("Config is not found!");
+}
+
+const {
+	data: { author },
+} = config;
+const gravatar: string = `https://gravatar.com/avatar/${createHash("md5").update(author.email).digest("hex")}?s=${limit ? limit : "256"}`;
+---
+
+<Picture
+	src={gravatar}
+	alt={author.name}
+	class={className}
+	inferSize={true}
+	formats={["avif", "webp"]}
+	sizes="(min-width: 640px) 50vw, 100vw"
+/>

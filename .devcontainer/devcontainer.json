@@ -1,0 +1,17 @@
+{
+	"name": "Website",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:22-bookworm",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EditorConfig.EditorConfig",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"astro-build.astro-vscode",
+				"ionutvmi.path-autocomplete",
+				"bradlc.vscode-tailwindcss",
+				"svelte.svelte-vscode"
+			]
+		}
+	}
+}

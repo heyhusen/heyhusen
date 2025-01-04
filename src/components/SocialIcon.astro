@@ -1,0 +1,70 @@
+---
+import { GithubIcon, LinkedinIcon, RssIcon, TwitterIcon } from "astro-feather";
+import { getEntry } from "astro:content";
+
+enum SocialEnum {
+	LINKEDIN = "linkedin",
+	GITHUB = "github",
+	TWITTER = "twitter",
+}
+
+interface Social {
+	name: string;
+	icon: SocialEnum;
+}
+
+const configs = await getEntry("configurations", "main");
+if (!configs) {
+	throw new Error("Config is not found!");
+}
+const { data: config } = configs;
+
+const socials: Social[] = [
+	{
+		name: "LinkedIn",
+		icon: SocialEnum.LINKEDIN,
+	},
+	{
+		name: "GitHub",
+		icon: SocialEnum.GITHUB,
+	},
+	{
+		name: "Twitter",
+		icon: SocialEnum.TWITTER,
+	},
+];
+---
+
+<div class="flex gap-4 justify-center items-center 4sm:gap-6 md:gap-8">
+	{
+		socials.map((social) => (
+			<a
+				href={config.author.social[social.icon]}
+				rel="noopener noreferrer"
+				target="_blank"
+				aria-label={social.name}
+				class="bg-gray-100 dark:bg-gray-800 duration-200 p-2.5 rounded-full hover:bg-secondary dark:hover:bg-primary hover:text-primary dark:hover:text-secondary focus:bg-secondary dark:focus:bg-primary focus:text-primary dark:focus:text-secondary focus:outline-none focus:ring focus:ring-secondary dark:focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-secondary 4sm:gap-6 md:gap-8"
+			>
+				{social.icon === SocialEnum.LINKEDIN && (
+					<LinkedinIcon customClasses="w-5 h-5 4sm:w-6 4sm:h-6 md:w-7 md:h-7" />
+				)}
+				{social.icon === SocialEnum.GITHUB && (
+					<GithubIcon customClasses="w-5 h-5 4sm:w-6 4sm:h-6 md:w-7 md:h-7" />
+				)}
+				{social.icon === SocialEnum.TWITTER && (
+					<TwitterIcon customClasses="w-5 h-5 4sm:w-6 4sm:h-6 md:w-7 md:h-7" />
+				)}
+			</a>
+		))
+	}
+
+	<a
+		href="/article.xml"
+		rel="noopener noreferrer"
+		target="_blank"
+		aria-label="RSS"
+		class="bg-gray-100 dark:bg-gray-800 duration-200 p-2.5 rounded-full hover:bg-secondary dark:hover:bg-primary hover:text-primary dark:hover:text-secondary focus:bg-secondary dark:focus:bg-primary focus:text-primary dark:focus:text-secondary focus:outline-none focus:ring focus:ring-secondary dark:focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-secondary 4sm:gap-6 md:gap-8"
+	>
+		<RssIcon customClasses="w-5 h-5 4sm:w-6 4sm:h-6 md:w-7 md:h-7" />
+	</a>
+</div>

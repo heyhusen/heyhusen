@@ -1,0 +1,45 @@
+<div class="giscus-comment"></div>
+
+<script>
+	const theme = (() => {
+		if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+			return localStorage.getItem("theme");
+		}
+
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+			return "dark";
+		}
+
+		return "light";
+	})();
+
+	if (theme === "light") {
+		document.documentElement.classList.remove("dark");
+	} else {
+		document.documentElement.classList.add("dark");
+	}
+
+	const giscusAttributes = {
+		src: "https://giscus.app/client.js",
+		"data-repo": "heyhusen/website",
+		"data-repo-id": "MDEwOlJlcG9zaXRvcnkyNzI4NjI0NTg=",
+		"data-category": "Comments",
+		"data-category-id": "DIC_kwDOEEOM-s4B-W1k",
+		"data-mapping": "pathname",
+		"data-strict": "0",
+		"data-reactions-enabled": "1",
+		"data-emit-metadata": "0",
+		"data-input-position": "top",
+		"data-theme": theme,
+		"data-lang": "en",
+		"data-loading": "lazy",
+		crossorigin: "anonymous",
+		async: "",
+	};
+
+	const giscusScript = document.createElement("script");
+	Object.entries(giscusAttributes).forEach(([key, value]) =>
+		giscusScript.setAttribute(key, value!)
+	);
+	document.querySelector(".giscus-comment")?.appendChild(giscusScript);
+</script>

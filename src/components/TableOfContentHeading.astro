@@ -1,0 +1,29 @@
+---
+import type { TocItem } from "../entities";
+
+interface Props {
+	heading: TocItem;
+}
+
+const { heading } = Astro.props;
+---
+
+<li>
+	<a
+		href={`#${heading.slug}`}
+		class="duration-200 hover:bg-accent hover:bg-opacity-10 hover:text-accent dark:hover:text-dark-accent"
+	>
+		{heading.text}
+	</a>
+
+	{
+		heading.subheadings.length > 0 && (
+			<ul class="pl-6 mt-1 border-l border-gray-300">
+				{heading.subheadings.map((subheading) => (
+					<Astro.self heading={subheading} />
+				))}
+			</ul>
+		)
+	}
+</li>
+
