@@ -39,4 +39,6 @@ jobs:
               args: [--frozen-lockfile]
 
       - name: Run build
+        env:
+          GTIHUB_PERSONAL_TOKEN: ${{ secrets.GTIHUB_PERSONAL_TOKEN }}
         run: pnpm run build
