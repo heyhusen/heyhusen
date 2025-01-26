@@ -160,7 +160,7 @@ const menus = allMenus.map<Menu>(({ data }) => data);
 	</head>
 
 	<body
-		class="bg-primary dark:bg-dark-secondary text-secondary dark:text-dark-primary text-base font-sans antialiased tracking-normal min-h-screen flex flex-col"
+		class="bg-primary dark:bg-dark-secondary text-secondary dark:text-dark-primary text-base font-sans antialiased tracking-normal min-h-screen flex flex-col font-normal"
 	>
 		<Header {pathname} {menus} siteTitle={config.site.title} />
 
@@ -185,11 +185,11 @@ const menus = allMenus.map<Menu>(({ data }) => data);
 		}
 
 		a {
-			@apply text-accent dark:text-dark-accent;
+			@apply font-semibold border-b border-accent no-underline;
 			text-decoration-thickness: 0.125rem;
 
 			&:hover {
-				@apply bg-accent text-primary no-underline;
+				@apply bg-accent text-primary border-0;
 			}
 
 			& > *:hover {

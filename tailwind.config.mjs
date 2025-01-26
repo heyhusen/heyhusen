@@ -17,7 +17,6 @@ export default {
 			secondary: colors.gray["900"],
 			'dark-secondary': colors.gray["950"],
 			accent: colors.blue["700"],
-			'dark-accent': colors.blue["500"],
 			transparent: "transparent",
 			gray: colors.gray,
 			success: colors.emerald["200"],
