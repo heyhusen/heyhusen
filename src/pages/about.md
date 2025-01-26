@@ -6,39 +6,156 @@ date: 2021-07-14T22:48:49+07:00
 
 # Hai, as we say here.
 
-My name is Ahmad Husen, but most people call me Husen. I am a self-taught web
-developer from Klaten, Indonesia.  
+My name is Ahmad Husen, but most people call me Husen. I am a self-taught software
+developer from Klaten, Indonesia. A small town located between Yogyakarta and 
+Surakarta.
 
-From a young age, I have always been interested in technology. My introduction
-to web development was when I was in junior high school wanting to change the
-theme of my mobile blog which could only be done via CSS. I did it using
-[my first phone](https://en.wikipedia.org/wiki/Nokia_7610). It turned out to be
-fun for me to do this. From that moment on, I could immediately imagine what I
-would be like in 5 years.
+I started my journey in software development back in junior high, when I wrote 
+CSS to customize my blog. What began as a hobby soon turned into a professional 
+pursuit, and since 2016, I’ve been focused on building high-quality software 
+with an emphasis on **simplicity**, **stability**, and **performance** to create 
+the **best software experience** possible.
 
-My main focus in web development is **simplicity**, **stability** and
-**performance**. The code I wrote is easy to maintain and scale. I did that
-because I wanted to create the **best web experience** possible.
+Throughout my career, I’ve worked on various projects, always striving to create 
+user-friendly, scalable, and maintainable solutions. I believe great software 
+balances functionality and ease of use, and I’ve adapted to new challenges 
+across different technologies and industries.
+
+In my current role as a Technical Lead Assistant, I help guide my team’s 
+technical decisions and contribute to the overall direction of projects. I enjoy 
+collaborating with others, supporting team growth, and ensuring we deliver 
+efficient, high-quality solutions. I’m always looking for opportunities to 
+improve both as a developer and a team player.
 
 ## Experience
 
-Since I finished my education in vocational high school in 2016, I have worked
-on several projects. For over 3 years, I have been using web technologies to
-help companies increase productivity which leads to increased profits. Along
-with that, I have also worked on several freelance and side projects to date.
+Since 2016, I have worked on several projects. For over 8 years, I have been 
+using software technologies to help companies increase productivity which leads 
+to increased profits. Along with that, I have also worked on several freelance 
+and side projects to date.
+
+<details open>
+  <summary> 
+    <strong>Tech Lead Assistant</strong> at Eigen Tri Mathema - Bandung, 
+    Indonesia (2024 - present)
+  </summary>
+
+  <ul>
+    <li>
+      Assisted in selecting technologies and supporting the team to ensure optimal 
+      performance and scalability of the ERP software.
+    </li>
+    <li>
+      Collaborated with cross-functional teams to add new features, ensuring 
+      seamless integration and performance.
+    </li>
+    <li>
+      Conducted performance reviews, optimized the software, and mentored junior 
+      developers for team growth.
+    </li>
+  </ul>
+</details>
+
+<details>
+  <summary> 
+    <strong>Back-end Developer</strong> at Eigen Tri Mathema - Bandung, 
+    Indonesia (2022 - 2024)
+  </summary>
+
+  <ul>
+    <li>
+      Designed and implemented a scalable microservices architecture for ERP 
+      software, ensuring flexibility and performance.
+    </li>
+    <li>
+      Built and optimized RESTful APIs for seamless data exchange and improved 
+      application efficiency.
+    </li>
+    <li>
+      Collaborated with cross-functional teams to integrate systems, enhance 
+      performance, and ensure reliability.
+    </li>
+  </ul>
+</details>
+
+<details>
+  <summary> 
+    <strong>Freelance Web Developer</strong> Remote (2018 - 2022)
+  </summary>
+
+  <ul>
+    <li>
+      Collaborated with clients to define project requirements and build 
+      responsive, user-friendly web solutions.
+    </li>
+    <li>
+      Developed clean, maintainable code with thorough documentation for 
+      long-term project sustainability.
+    </li>
+    <li>
+      Continuously improved web systems, optimizing performance, user 
+      experience, and device/browser compatibility.
+    </li>
+  </ul>
+</details>
+
+<details>
+  <summary> 
+    <strong>Web Developer</strong> at Mabito Karya - Bandung, Indonesia 
+    (2016 - 2019)
+  </summary>
+
+  <ul>
+    <li>
+      Developed and maintained web applications to automate tasks, improving 
+      productivity and cross-departmental collaboration.
+    </li>
+    <li>
+      Designed and implemented secure data transfer systems, ensuring accurate 
+      communication between teams.
+    </li>
+    <li>
+      Continuously improved web systems, optimizing performance, user experience, 
+      and device/browser compatibility.
+    </li>
+  </ul>
+</details>
+
+<!-- - **Tech Lead Assistant** at Eigen Tri Mathema - Bandung, Indonesia  
+  2024 - present
+  - Assisted in selecting technologies and supporting the team to ensure optimal 
+  performance and scalability of the ERP software.
+  - Collaborated with cross-functional teams to add new features, ensuring 
+  seamless integration and performance.
+  - Conducted performance reviews, optimized the software, and mentored junior 
+  developers for team growth.
+
+- **Back-end Developer** at Eigen Tri Mathema - Bandung, Indonesia  
+  2022 - 2024
+  - Designed and implemented a scalable microservices architecture for ERP 
+  software, ensuring flexibility and performance.
+  - Built and optimized RESTful APIs for seamless data exchange and improved 
+  application efficiency.
+  - Collaborated with cross-functional teams to integrate systems, enhance 
+  performance, and ensure reliability.
+
+- **Freelance Web Developer** - Remote  
+  2018 - 2022  
+  - Collaborated with clients to define project requirements and build 
+  responsive, user-friendly web solutions.
+  - Developed clean, maintainable code with thorough documentation for long-term 
+  project sustainability.
+  - Delivered regular updates, ensured client satisfaction, and provided ongoing 
+  support after project completion.
 
 - **Web Developer** at Mabito Karya - Bandung, Indonesia  
   2016 - 2019  
-  - Maintainance a company's Virtual Private Server (VPS)
-  - Manage Learning Management System for company's clients
-  - Create internal web-based information system for company
-  - Ensure data transfer between divisions is seamless
-
-- **Freelance Web Developer** - Remote  
-  2018 - present  
-  - Create web based projects to meet client satisfaction
-  - Make sure the project is easy to maintain
-  - Maintenance project for a limited time (for agreed)
+  - Developed and maintained web applications to automate tasks, improving 
+  productivity and cross-departmental collaboration.
+  - Designed and implemented secure data transfer systems, ensuring accurate 
+  communication between teams.
+  - Continuously improved web systems, optimizing performance, user experience, 
+  and device/browser compatibility. -->
 
 Apart from that, I also create and contribute to several
 [open source projects](/project). I do it to learn new things,
@@ -51,13 +168,13 @@ in software development. The truth is there is always the right tools for the
 job. And as a curious person, I am always up to date and open to new
 technologies.
 
-But, most of the time, I'm comfortable working with TypeScript (or JavaScript),
-SQL, HTML, and CSS, sometimes PHP too. I'm currently focusing on
-[Node.js](https://nodejs.org/), [Express](https://expressjs.com/),
-[Fastify](https://www.fastify.io/), [NestJS](https://nestjs.com/),
-[PostgreSQL](https://www.postgresql.org/), [Redis](https://redis.io/),
-[Vue.js](https://vuejs.org/), [Svelte](https://svelte.dev/),
-[Hugo](https://gohugo.io/), [Tailwind CSS](https://tailwindcss.com/), and more...
+But, most of the time, I'm comfortable working with Go, 
+TypeScript (or JavaScript), SQL, HTML, and CSS, sometimes Rust too. I'm 
+currently focusing on [Go](https://go.dev/), [Node.js](https://nodejs.org/), 
+[Express](https://expressjs.com/), [NestJS](https://nestjs.com/), 
+[PostgreSQL](https://www.postgresql.org/), [Redis](https://redis.io/), 
+[Svelte](https://svelte.dev/), [Tailwind CSS](https://tailwindcss.com/), and 
+more...
 
 ## I have a few hobbies
 
