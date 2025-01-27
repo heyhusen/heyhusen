@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+
+const allArticles = await getCollection("articles");
+const tags = [
+	...new Set(allArticles.map((aritcle) => aritcle.data.tags).flat()),
+].map((item) => {
+	return {
+		slug: item.toLowerCase().replaceAll(" ", "-"),
+		title: item
+	};
+});
+---
+
+<ul class="flex flex-wrap gap-4">
+	{
+		tags.map((tag) => (
+			<li>
+				<a
+					href={`/tags/${tag.slug}`}
+					title={tag.title}
+					class="py-1 px-2 rounded-full border border-gray-300 dark:border-gray-600 duration-200 block 4sm:py-1.5 4sm:px-3 md:py-2 md:px-4 hover:bg-secondary dark:hover:bg-dark-primary hover:border-secondary dark:hover:border-dark-primary hover:text-primary dark:hover:text-dark-secondary focus:bg-secondary dark:focus:bg-dark-primary focus:border-secondary dark:focus:border-dark-primary focus:text-primary dark:focus:text-dark-secondary focus:outline-none focus:ring focus:ring-secondary dark:focus:ring-dark-primary focus:ring-offset-2 dark:focus:ring-offset-dark-secondary"
+				>
+					#{tag.title}
+				</a>
+			</li>
+		))
+	}
+</ul>

@@ -1,5 +1,0 @@
-{{ $author := .Site.Author.name }}
-{{ with .Params.author }}
-  {{ $author = . }}
-{{ end }}
-{{ return $author }}

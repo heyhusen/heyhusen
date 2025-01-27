@@ -1,0 +1,62 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import { getEntry } from "astro:content";
+import ArticleList from "../components/ArticleList.astro";
+import ContactForm from "../components/ContactForm.astro";
+import ProjectList from "../components/ProjectList.astro";
+import TagList from "../components/TagList.astro";
+import Layout from "./Layout.astro";
+
+type Props = MarkdownLayoutProps<{
+	title: string;
+	date: Date;
+}>;
+
+const { frontmatter, rawContent } = Astro.props;
+const { pathname } = Astro.url;
+
+const description = rawContent()
+	.trim()
+	.substring(0, Math.min(150, rawContent().length));
+const configs = await getEntry("configurations", "main");
+if (!configs) {
+	throw new Error('Config is not found!')
+}
+
+const {
+	data: config,
+} = configs
+---
+
+<Layout
+	title={frontmatter.title}
+	description={description}
+>
+	<main
+		class="w-full max-w-5xl mx-auto flex flex-col px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0 py-14 gap-14 md:py-16 md:gap-16 lg:py-18 lg:gap-18"
+	>
+		<section
+			class="article prose dark:prose-invert w-full md:prose-lg lg:prose-xl"
+		>
+			<h1>{frontmatter.title}</h1>
+
+			<slot />
+		</section>
+
+		<div
+			class="w-full max-w-5xl mx-auto flex flex-col gap-12 md:gap-14 lg:gap-16 py-4 sm:py-6 md:py-8 lg:py-10"
+		>
+			{pathname.startsWith("/project") && <ProjectList />}
+
+			{
+				pathname.startsWith("/contact") && (
+					<ContactForm formspree={config.site.formspree} isFluid={true} />
+				)
+			}
+
+			{pathname.startsWith("/article") && <ArticleList />}
+
+			{pathname.startsWith("/tags") && <TagList />}
+		</div>
+	</main>
+</Layout>

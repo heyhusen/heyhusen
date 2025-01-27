@@ -1,5 +1,0 @@
-{{ with .context }}
-	{{ $avatar := print "https://gravatar.com/avatar/" (md5 .Site.Author.email) "?s=256" }}
-
-	{{ partial "components/image.html" (dict "src" $avatar "alt" .Site.Author.name "limit" $.limit) }}
-{{ end }}

@@ -1,0 +1,77 @@
+---
+import { getCollection } from "astro:content";
+import DinamicPicture from "./DynamicPicture.astro";
+import { format } from "date-fns";
+import ArticleTagList from "./ArticleTagList.astro";
+
+interface Props {
+	tag?: string;
+}
+const { tag } = Astro.props;
+
+const allArticles = await getCollection("articles");
+const articles = allArticles
+	.filter((item) => {
+		if (
+			tag &&
+			!item.data.tags.some(
+				(item) => item.toLowerCase().replaceAll(" ", "-") === tag
+			)
+		) {
+			return false;
+		}
+
+		return true;
+	})
+	.map((item) => {
+		return {
+			...item,
+			data: {
+				...item.data,
+				slug: `${format(item.data.date, "yyyy/MM/dd")}/${item.slug}`,
+			},
+		};
+	});
+---
+
+<section
+	class="grid grid-cols-1 gap-4 4sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8"
+>
+	{
+		articles.map((item) => (
+			<article class="flex flex-col gap-3 border-b border-gray-300 4sm:border-none md:gap-4 last:border-none">
+				<a href={`/article/${item.data.slug}`} aria-hidden="true">
+					<DinamicPicture
+						src={item.data.image}
+						alt={item.data.title}
+						className="w-full object-cover rounded-md shadow-md aspect-video"
+					/>
+				</a>
+
+				<header class="flex flex-col gap-0.5 md:gap-1">
+					<time
+						datetime={item.data.date.toISOString()}
+						class="text-xs md:text-sm"
+					>
+						{item.data.date.toLocaleString("en-US", {
+							year: "numeric",
+							month: "long",
+							day: "numeric",
+						})}
+					</time>
+
+					<a
+						href={`/article/${item.data.slug}`}
+						class="text-secondary dark:text-dark-primary hover:text-accent hover:underline"
+					>
+						<h2 class="font-bold text-xl md:text-2xl lg:text-3xl">
+							{item.data.title}
+						</h2>
+					</a>
+
+					<ArticleTagList tags={item.data.tags} />
+				</header>
+			</article>
+		))
+	}
+</section>

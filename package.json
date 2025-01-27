@@ -1,24 +1,39 @@
 {
-	"private": "true",
+	"private": true,
+	"type": "module",
+	"version": "6.0.0",
 	"scripts": {
-		"dev": "hugo --config hugo.yaml server -p 3000",
-		"build": "rimraf dist && hugo --config hugo.yaml --minify",
-		"preview": "serve dist"
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
 	},
 	"dependencies": {
-		"@tailwindcss/forms": "0.3.4",
-		"@tailwindcss/typography": "0.4.1",
-		"autoprefixer": "10.4.11",
-		"cssnano": "5.1.13",
-		"tailwindcss": "2.2.19"
+		"@astrojs/check": "^0.9.4",
+		"@astrojs/rss": "^4.0.10",
+		"@astrojs/sitemap": "^3.2.1",
+		"@astrojs/tailwind": "^5.1.4",
+		"@fontsource/barlow": "^5.1.0",
+		"@fontsource/jetbrains-mono": "^5.1.0",
+		"@fontsource/lexend-deca": "^5.1.0",
+		"@fontsource/outfit": "^5.1.0",
+		"@types/react": "^19.0.2",
+		"@types/react-dom": "^19.0.2",
+		"astro": "^5.1.1",
+		"astro-seo": "^0.8.4",
+		"date-fns": "^4.1.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"satori": "^0.11.2",
+		"sharp": "^0.33.5",
+		"tailwindcss": "^3.4.11",
+		"typescript": "^5.6.2"
 	},
 	"devDependencies": {
-		"postcss": "8.4.16",
-		"postcss-cli": "10.0.0",
-		"rimraf": "3.0.2",
-		"serve": "14.2.3"
-	},
-	"engines": {
-		"node": "16.x.x"
+		"@tailwindcss/forms": "^0.5.9",
+		"@tailwindcss/typography": "^0.5.15",
+		"astro-feather": "^1.0.0",
+		"astro-heroicons": "2.1.5-1"
 	}
 }

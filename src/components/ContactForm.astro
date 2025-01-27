@@ -1,0 +1,139 @@
+---
+interface Props {
+	formspree: string;
+	isFluid: boolean;
+}
+
+enum FormInputType {
+	INPUT = "input",
+	EMAIL = "email",
+	TEXTAREA = "textarea",
+}
+
+interface FormElement {
+	title: string;
+	name: string;
+	inputType: FormInputType;
+}
+
+const { formspree, isFluid } = Astro.props;
+const formElements: FormElement[] = [
+	{
+		title: "Name",
+		name: "name",
+		inputType: FormInputType.INPUT,
+	},
+	{
+		title: "E-Mail",
+		name: "email",
+		inputType: FormInputType.EMAIL,
+	},
+	{
+		title: "Message",
+		name: "message",
+		inputType: FormInputType.TEXTAREA,
+	},
+];
+const formResponses: string[] = ["bg-success", "bg-error"];
+---
+
+<form
+	name="contact-me"
+	action={`https://formspree.io/${formspree}`}
+	method="post"
+	class={`w-full max-w-3xl flex flex-col gap-4 4sm:gap-6 md:gap-8 ${isFluid ? "flex-none" : "flex-1"}`}
+>
+	{
+		formResponses.map((item) => (
+			<div
+				class={`${item} hidden dark:text-secondary text-base py-1.5 px-3 rounded-md 4sm:py-2 4sm:px-4 md:text-lg md:py-2.5 md:px-5`}
+			/>
+		))
+	}
+
+	{
+		formElements.map((item) => (
+			<label class="block space-y-1 text-base 4sm:space-y-1.5 md:space-y-2">
+				<span class="text-secondary dark:text-dark-primary">{item.title}:</span>
+
+				{[FormInputType.INPUT, FormInputType.EMAIL].includes(
+					item.inputType
+				) && (
+					<input
+						type={item.inputType === FormInputType.INPUT ? "text" : "email"}
+						name={item.name}
+						class={`dark:bg-dark-secondary block w-full border-gray-400 dark:border-gray-700 text-base focus:border-accent focus:ring-accent ${isFluid ? "max-w-sm" : ""}`}
+						required
+					/>
+				)}
+
+				{item.inputType === FormInputType.TEXTAREA && (
+					<textarea
+						name={item.name}
+						rows="5"
+						class="dark:bg-dark-secondary block w-full border-gray-400 dark:border-gray-700 text-base focus:border-accent focus:ring-accent"
+					/>
+				)}
+			</label>
+		))
+	}
+
+	<button
+		type="submit"
+		class="self-start mt-4 inline-flex items-center gap-2 py-2 px-4 duration-200 font-bold text-lg bg-accent text-primary border-2 border-accent md:py-2.5 md:px-4.5 hover:bg-opacity-80 focus:outline-none focus:ring focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-secondary"
+	>
+		Send message
+	</button>
+</form>
+
+<script>
+	const form = document.querySelector('form[name="contact-me"]');
+	const success = document.querySelector("div.bg-success");
+	const failed = document.querySelector("div.bg-error");
+
+	form?.addEventListener("submit", async (event) => {
+		event.preventDefault();
+
+		const form = event.target as HTMLFormElement;
+		const formData = new FormData(form);
+		const data = Object.fromEntries(formData.entries());
+
+		try {
+			const response = await fetch(form.action, {
+				method: form.method,
+				headers: {
+					Accept: "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			if (!response.ok) {
+				throw new Error(response.statusText);
+			}
+
+			if (success) {
+				success.innerHTML = "Message sent successfully.";
+				success.classList.add("block");
+				success.classList.remove("hidden");
+			}
+
+			form.reset();
+		} catch (error) {
+			if (failed) {
+				failed.innerHTML = "Oops! Something seems to be wrong.";
+				failed.classList.add("block");
+				failed.classList.remove("hidden");
+			}
+		} finally {
+			setTimeout(() => {
+				[success, failed].forEach((element) => {
+					if (element) {
+						element.innerHTML = "";
+						element.classList.add("hidden");
+						element.classList.remove("block");
+					}
+				});
+			}, 3000);
+		}
+	});
+</script>

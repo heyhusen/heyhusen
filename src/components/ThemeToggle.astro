@@ -1,0 +1,182 @@
+---
+import ComputerDesktop from "astro-heroicons/outline/ComputerDesktop.astro";
+import Sun from "astro-heroicons/outline/Sun.astro";
+import Moon from "astro-heroicons/outline/Moon.astro";
+
+enum ButtonIcon {
+	LIGHT = "light",
+	DARK = "dark",
+	AUTO = "auto",
+}
+
+interface Button {
+	class: string;
+	icon: ButtonIcon;
+	description: string;
+}
+
+const buttons: Button[] = [
+	{
+		class: "light-theme-button",
+		icon: ButtonIcon.LIGHT,
+		description: "Light",
+	},
+	{
+		class: "dark-theme-button",
+		icon: ButtonIcon.DARK,
+		description: "Dark",
+	},
+	{
+		class: "auto-theme-button",
+		icon: ButtonIcon.AUTO,
+		description: "Auto",
+	},
+];
+---
+
+<div
+	class="theme-toggle flex flex-row justify-end items-center relative text-sm md:text-base"
+>
+	<button aria-label="theme-toggle" >
+		<Sun class="h-5 w-5 md:h-6 md:w-6 stroke-gray-500 light-icon" />
+
+		<Moon class="h-5 w-5 md:h-6 md:w-6 stroke-gray-500 dark-icon" />
+	</button>
+
+	<div
+		class="absolute z-10 hidden flex-col bg-gray-200 dark:bg-secondary top-8 4sm:top-10 md:top-13 lg:top-14"
+	>
+		{
+			buttons.map((item) => (
+				<button
+					class={`flex flex-row items-center gap-1 4sm:gap-1.5 md:gap-2 py-0.5 px-1 3sm:py-1 3sm:px-1.5 4sm:py-1.5 4sm:px-2 md:py-2 md:px-3 hover:bg-gray-300 dark:hover:bg-gray-800 duration-100 ${item.class}`}
+				>
+					{item.icon === ButtonIcon.LIGHT && (
+						<Sun class="h-5 w-5 md:h-6 md:w-6 stroke-gray-500" />
+					)}
+					{item.icon === ButtonIcon.DARK && (
+						<Moon class="h-5 w-5 md:h-6 md:w-6 stroke-gray-500" />
+					)}
+					{item.icon === ButtonIcon.AUTO && (
+						<ComputerDesktop class="h-5 w-5 md:h-6 md:w-6 stroke-gray-500" />
+					)}
+
+					{item.description}
+				</button>
+			))
+		}
+	</div>
+</div>
+
+<script is:inline>
+	const themeToggleButton = document.querySelector(".theme-toggle > button");
+	const lightThemeIcon = document.querySelector(
+		".theme-toggle > button .light-icon"
+	);
+	const darkThemeIcon = document.querySelector(
+		".theme-toggle > button .dark-icon"
+	);
+	const themeToggleDiv = document.querySelector(".theme-toggle > div");
+	const lightThemeButton = document.querySelector(
+		".theme-toggle > div .light-theme-button"
+	);
+	const darkThemeButton = document.querySelector(
+		".theme-toggle > div .dark-theme-button"
+	);
+	const autoThemeButton = document.querySelector(
+		".theme-toggle > div .auto-theme-button"
+	);
+
+	function setTheme(theme) {
+		const getTheme = (() => {
+			if (["light", "dark"].includes(theme)) {
+				window.localStorage.setItem("theme", theme);
+			}
+
+			if (theme === "auto") {
+				window.localStorage.removeItem("theme");
+			}
+
+			if (
+				typeof localStorage !== "undefined" &&
+				localStorage.getItem("theme")
+			) {
+				return localStorage.getItem("theme");
+			}
+
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				return "dark";
+			}
+
+			return "light";
+		})();
+
+		function setGiscusTheme(theme) {
+			function sendMessage(message) {
+				const iframe = document.querySelector("iframe.giscus-frame");
+				if (!iframe) {
+					return;
+				}
+
+				iframe.contentWindow.postMessage(
+					{ giscus: message },
+					"https://giscus.app"
+				);
+			}
+
+			sendMessage({
+				setConfig: {
+					theme,
+				},
+			});
+		}
+
+		if (getTheme === "light") {
+			document.documentElement.classList.remove("dark");
+			lightThemeIcon.classList.add("block");
+			lightThemeIcon.classList.remove("hidden");
+			darkThemeIcon.classList.add("hidden");
+			darkThemeIcon.classList.remove("block");
+			setGiscusTheme("light");
+		} else {
+			document.documentElement.classList.add("dark");
+			darkThemeIcon.classList.add("block");
+			darkThemeIcon.classList.remove("hidden");
+			lightThemeIcon.classList.add("hidden");
+			lightThemeIcon.classList.remove("block");
+			setGiscusTheme("dark");
+		}
+	}
+
+	setTheme();
+
+	let isThemeToggleOpen = false;
+
+	function themeToggle() {
+		isThemeToggleOpen = !isThemeToggleOpen;
+
+		if (isThemeToggleOpen) {
+			themeToggleDiv.classList.add("flex");
+			themeToggleDiv.classList.remove("hidden");
+		} else {
+			themeToggleDiv.classList.add("hidden");
+			themeToggleDiv.classList.remove("flex");
+		}
+	}
+
+	themeToggleButton.addEventListener("click", themeToggle);
+	lightThemeButton.addEventListener("click", () => {
+		setTheme("light");
+		themeToggle();
+	});
+	darkThemeButton.addEventListener("click", () => {
+		setTheme("dark");
+		themeToggle();
+	});
+	autoThemeButton.addEventListener("click", () => {
+		setTheme("auto");
+		themeToggle();
+	});
+
+	document.addEventListener("astro:after-swap", setTheme);
+</script>

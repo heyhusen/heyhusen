@@ -12,47 +12,33 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [22, 23]
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up pnpm
-        uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v4
         with:
-          version: 6.x.x
+          version: 9
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3.4.1
+        uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.96.0'
-          extended: true
-
-      - name: Get Date
-        id: get-date
-        run: |
-          echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
-
-      - name: Cache Hugo
-        uses: actions/cache@v3.0.8
-        with:
-          path: resources
-          key: ${{ runner.os }}-hugo-${{ steps.get-date.outputs.date }}
-          restore-keys: |
-            ${{ runner.os }}-hugo-
+          cache: "pnpm"
 
       - name: Setup pnpm & install dependencies
-        uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v4
         with:
-          version: 6.x.x
+          version: 9
           run_install: |
             - recursive: false
               args: [--frozen-lockfile]
 
       - name: Run build
+        env:
+          GTIHUB_PERSONAL_TOKEN: ${{ secrets.GTIHUB_PERSONAL_TOKEN }}
         run: pnpm run build

@@ -1,0 +1,38 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import Avatar from "../components/Avatar.astro";
+import Layout from "./Layout.astro";
+
+type Props = MarkdownLayoutProps<{
+	title: string;
+	image: string;
+	date: Date;
+}>;
+
+const { frontmatter, rawContent } = Astro.props;
+
+const description = rawContent()
+	.trim()
+	.substring(0, Math.min(150, rawContent().length));
+---
+
+<Layout
+	title={frontmatter.title}
+	description={description}
+>
+	<main
+		class="w-full max-w-5xl mx-auto flex flex-col px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0 py-14 gap-14 md:py-16 md:gap-16 lg:py-18 lg:gap-18"
+	>
+		<article
+			class="w-full mx-auto flex flex-col max-w-3xl px-0 py-4 gap-12 sm:py-6 md:py-8 md:gap-14 lg:py-10 lg:gap-16"
+		>
+			<Avatar className="mx-auto duration-200 hover:filter hover:grayscale" />
+
+			<div
+				class="article prose dark:prose-invert w-full md:prose-lg lg:prose-xl"
+			>
+				<slot />
+			</div>
+		</article>
+	</main>
+</Layout>

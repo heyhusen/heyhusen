@@ -1,0 +1,59 @@
+---
+import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import ArticleList from "../../components/ArticleList.astro";
+
+export async function getStaticPaths() {
+	const allArticles = await getCollection("articles");
+	const tags = await Promise.all(
+		[...new Set(allArticles.map((aritcle) => aritcle.data.tags).flat())].map(
+			async (item) => {
+				const slug = item.toLowerCase().replaceAll(" ", "-");
+				const collection = await getEntry("tags", slug);
+
+				return {
+					slug,
+					title: item,
+					description: collection ? collection.body : null,
+				};
+			}
+		)
+	);
+
+	return tags.map((tag) => {
+		return {
+			params: {
+				slug: tag.slug,
+			},
+			props: {
+				title: tag.title,
+				description: tag.description,
+			},
+		};
+	});
+}
+
+const { slug } = Astro.params;
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description ? description : title}>
+	<main
+		class="w-full max-w-5xl mx-auto flex flex-col px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0 py-14 gap-14 md:py-16 md:gap-16 lg:py-18 lg:gap-18"
+	>
+		<section
+			class="article prose dark:prose-invert w-full md:prose-lg lg:prose-xl"
+		>
+			<h1>Tag: {title}</h1>
+
+			<p>{description}</p>
+		</section>
+
+		<div
+			class="w-full max-w-5xl mx-auto flex flex-col gap-12 md:gap-14 lg:gap-16 py-4 sm:py-6 md:py-8 lg:py-10"
+		>
+			<ArticleList tag={slug} />
+		</div>
+	</main>
+</Layout>
