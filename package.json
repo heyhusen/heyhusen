@@ -13,7 +13,7 @@
 		"@astrojs/check": "^0.9.4",
 		"@astrojs/rss": "^4.0.10",
 		"@astrojs/sitemap": "^3.2.1",
-		"@astrojs/tailwind": "^5.1.4",
+		"@astrojs/tailwind": "^5.1.5",
 		"@fontsource/barlow": "^5.1.0",
 		"@fontsource/jetbrains-mono": "^5.1.0",
 		"@fontsource/lexend-deca": "^5.1.0",
