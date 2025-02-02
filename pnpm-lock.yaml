@@ -30,8 +30,8 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1
       '@fontsource/outfit':
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^5.1.1
+        version: 5.1.1
       '@types/react':
         specifier: ^19.0.8
         version: 19.0.8
@@ -356,8 +356,8 @@ packages:
   '@fontsource/lexend-deca@5.1.1':
     resolution: {integrity: sha512-xdKCDF0FpQV+CgI3cL2SzQ06+vVT7FCjrxQtcD7ewe9rDuaLMjVHNZcBbRkKdj58IZWl0ubJKKxC2tIiouzoDw==}
 
-  '@fontsource/outfit@5.1.0':
-    resolution: {integrity: sha512-mGFW0Ds7wEqBAWWdefnhpmqtA/Efmp+uHIQCD1OnZDhHBwglxbvMSc0gi0LOGkW0T/vXw0wfy1DI4QGCLq7Uqg==}
+  '@fontsource/outfit@5.1.1':
+    resolution: {integrity: sha512-fe4Ok4ycZFFYIfIbofQ4zortJmM3BHE0vAu6yK6ILJ5sW51mXnyQ+mOPSeCIceGj0rscQOXlA45BNDijOMLCLA==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2703,7 +2703,7 @@ snapshots:
 
   '@fontsource/lexend-deca@5.1.1': {}
 
-  '@fontsource/outfit@5.1.0': {}
+  '@fontsource/outfit@5.1.1': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
