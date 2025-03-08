@@ -24,8 +24,8 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1
       '@fontsource/jetbrains-mono':
-        specifier: ^5.1.2
-        version: 5.1.2
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource/lexend-deca':
         specifier: ^5.1.1
         version: 5.1.1
@@ -500,8 +500,8 @@ packages:
   '@fontsource/barlow@5.1.1':
     resolution: {integrity: sha512-41BWOY3bZg0Hc7eQkeMEFIPUIt2wkVYHhfhlV8VVVaiRBdQw5JY8NT9qpB3Z/IKZ9dQuhHzUjuQJu9ALmjEwig==}
 
-  '@fontsource/jetbrains-mono@5.1.2':
-    resolution: {integrity: sha512-muYZK6W3NTrKpKTjoF2dkrtMjXLlPZhniLiLjMmfegRibl2L6jUJh9gB6UcbcZs3zHdIYTmzMkXNbNoI2kXX3Q==}
+  '@fontsource/jetbrains-mono@5.2.5':
+    resolution: {integrity: sha512-TPZ9b/uq38RMdrlZZkl0RwN8Ju9JxuqMETrw76pUQFbGtE1QbwQaNsLlnUrACNNBNbd0NZRXiJJSkC8ajPgbew==}
 
   '@fontsource/lexend-deca@5.1.1':
     resolution: {integrity: sha512-xdKCDF0FpQV+CgI3cL2SzQ06+vVT7FCjrxQtcD7ewe9rDuaLMjVHNZcBbRkKdj58IZWl0ubJKKxC2tIiouzoDw==}
@@ -2914,7 +2914,7 @@ snapshots:
 
   '@fontsource/barlow@5.1.1': {}
 
-  '@fontsource/jetbrains-mono@5.1.2': {}
+  '@fontsource/jetbrains-mono@5.2.5': {}
 
   '@fontsource/lexend-deca@5.1.1': {}
 
