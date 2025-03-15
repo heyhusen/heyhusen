@@ -21,8 +21,8 @@ importers:
         specifier: ^5.1.5
         version: 5.1.5(astro@5.4.2(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0))(tailwindcss@3.4.17)
       '@fontsource/barlow':
-        specifier: ^5.1.1
-        version: 5.1.1
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource/jetbrains-mono':
         specifier: ^5.2.5
         version: 5.2.5
@@ -347,8 +347,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource/barlow@5.1.1':
-    resolution: {integrity: sha512-41BWOY3bZg0Hc7eQkeMEFIPUIt2wkVYHhfhlV8VVVaiRBdQw5JY8NT9qpB3Z/IKZ9dQuhHzUjuQJu9ALmjEwig==}
+  '@fontsource/barlow@5.2.5':
+    resolution: {integrity: sha512-p+2XXEM7v85kbn0Dh8g0YLMjTCDiRCAi9nHik6w/2owZ9CkT1yYGGgaUMshJRqykh7efv1gE0QxAkOhZHd8tEg==}
 
   '@fontsource/jetbrains-mono@5.2.5':
     resolution: {integrity: sha512-TPZ9b/uq38RMdrlZZkl0RwN8Ju9JxuqMETrw76pUQFbGtE1QbwQaNsLlnUrACNNBNbd0NZRXiJJSkC8ajPgbew==}
@@ -2688,7 +2688,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.0':
     optional: true
 
-  '@fontsource/barlow@5.1.1': {}
+  '@fontsource/barlow@5.2.5': {}
 
   '@fontsource/jetbrains-mono@5.2.5': {}
 
