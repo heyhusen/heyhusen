@@ -19,7 +19,7 @@ importers:
         version: 3.3.1
       '@astrojs/tailwind':
         specifier: ^6.0.2
-        version: 6.0.2(astro@5.7.9(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)
+        version: 6.0.2(astro@5.7.10(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)
       '@fontsource/barlow':
         specifier: ^5.2.5
         version: 5.2.5
@@ -39,8 +39,8 @@ importers:
         specifier: ^19.1.2
         version: 19.1.2(@types/react@19.1.2)
       astro:
-        specifier: ^5.7.9
-        version: 5.7.9(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0)
+        specifier: ^5.7.10
+        version: 5.7.10(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0)
       astro-seo:
         specifier: ^0.8.4
         version: 0.8.4(typescript@5.8.3)
@@ -156,21 +156,21 @@ packages:
   '@astrojs/yaml2ts@0.2.2':
     resolution: {integrity: sha512-GOfvSr5Nqy2z5XiwqTouBBpy5FyI6DEe+/g/Mk5am9SjILN1S5fOEvYK0GuWHg98yS/dobP4m8qyqw/URW35fQ==}
 
-  '@babel/helper-string-parser@7.25.9':
-    resolution: {integrity: sha512-4A/SCr/2KLd5jrtOMFzaKjVtAei3+2r/NChoBNoZ3EyP/+GlhoaEGoWOZUmFmoITP7zOJyHIMm+DYRd8o3PvHA==}
+  '@babel/helper-string-parser@7.27.1':
+    resolution: {integrity: sha512-qMlSxKbpRlAridDExk92nSobyDdpPijUq2DW6oDnUqd0iOGxmQjyqhMIihI9+zv4LPyZdRje2cavWPbCbWm3eA==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-validator-identifier@7.25.9':
-    resolution: {integrity: sha512-Ed61U6XJc3CVRfkERJWDz4dJwKe7iLmmJsbOGu9wSloNSFttHV0I8g6UAgb7qnK5ly5bGLPd4oXZlxCdANBOWQ==}
+  '@babel/helper-validator-identifier@7.27.1':
+    resolution: {integrity: sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.27.0':
-    resolution: {integrity: sha512-iaepho73/2Pz7w2eMS0Q5f83+0RKI7i4xmiYeBmDzfRVbQtTOG7Ts0S4HzJVsTMGI9keU8rNfuZr8DKfSt7Yyg==}
+  '@babel/parser@7.27.1':
+    resolution: {integrity: sha512-I0dZ3ZpCrJ1c04OqlNsQcKiZlsrXf/kkE4FXzID9rIOYICsAbA8mMDzhW/luRNAHdCNt7os/u8wenklZDlUVUQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/types@7.27.0':
-    resolution: {integrity: sha512-H45s8fVLYjbhFH62dIJ3WtmJ6RSPt/3DRO0ZcT2SUiYiQyz3BLVb9ADEnLl91m74aQPS3AzzeajZHYOalWe3bg==}
+  '@babel/types@7.27.1':
+    resolution: {integrity: sha512-+EzkxvLNfiUeKMgy/3luqfsCWFRXLb7U6wNQTk60tovuckwB15B191tJWvpp4HjiQWdJkCxO3Wbvc6jlk3Xb2Q==}
     engines: {node: '>=6.9.0'}
 
   '@capsizecss/unpack@2.4.0':
@@ -912,8 +912,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.7.9:
-    resolution: {integrity: sha512-P0cLijpmu4xZEXIh83ROOJqiCWRA7KSo24nhRLIjbMkiPElXu2qL1c28m7xhylCXeHa0lnCGPLyNjs1Wx3GyxA==}
+  astro@5.7.10:
+    resolution: {integrity: sha512-9TQcFZqP2w6//JXXUHfw8/5PX7KUx9EkG5O3m+hISuyeUztvjY1q5+p7+C5HiXyg24Zs3KkpieoL5BGRXGCAGA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1677,8 +1677,8 @@ packages:
   ohash@2.0.11:
     resolution: {integrity: sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==}
 
-  oniguruma-parser@0.12.0:
-    resolution: {integrity: sha512-fD9o5ebCmEAA9dLysajdQvuKzLL7cj+w7DQjuO3Cb6IwafENfx6iL+RGkmyW82pVRsvgzixsWinHvgxTMJvdIA==}
+  oniguruma-parser@0.12.1:
+    resolution: {integrity: sha512-8Unqkvk1RYc6yq2WBYRj4hdnsAxVze8i7iPfQr8e4uSP3tRv0rpZcbGUDvxfQQcdwHt/e9PrMvGCsa8OqG9X3w==}
 
   oniguruma-to-es@4.3.2:
     resolution: {integrity: sha512-Hxxc18dGbVYzcTp2W64YwxQLYabiYM+dOX5Dtycy3qLvuYE4HIQjwfgEeAtPS6chFJs8UdINTQ83/Rlh+1Qwsg==}
@@ -2652,9 +2652,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.3
 
-  '@astrojs/tailwind@6.0.2(astro@5.7.9(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.2(astro@5.7.10(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.7.9(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0)
+      astro: 5.7.10(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0)
       autoprefixer: 10.4.21(postcss@8.5.3)
       postcss: 8.5.3
       postcss-load-config: 4.0.2(postcss@8.5.3)
@@ -2682,18 +2682,18 @@ snapshots:
     dependencies:
       yaml: 2.5.1
 
-  '@babel/helper-string-parser@7.25.9': {}
+  '@babel/helper-string-parser@7.27.1': {}
 
-  '@babel/helper-validator-identifier@7.25.9': {}
+  '@babel/helper-validator-identifier@7.27.1': {}
 
-  '@babel/parser@7.27.0':
+  '@babel/parser@7.27.1':
     dependencies:
-      '@babel/types': 7.27.0
+      '@babel/types': 7.27.1
 
-  '@babel/types@7.27.0':
+  '@babel/types@7.27.1':
     dependencies:
-      '@babel/helper-string-parser': 7.25.9
-      '@babel/helper-validator-identifier': 7.25.9
+      '@babel/helper-string-parser': 7.27.1
+      '@babel/helper-validator-identifier': 7.27.1
 
   '@capsizecss/unpack@2.4.0':
     dependencies:
@@ -3320,7 +3320,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.7.9(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0):
+  astro@5.7.10(@types/node@22.5.5)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.11.0
       '@astrojs/internal-helpers': 0.6.1
@@ -3971,8 +3971,8 @@ snapshots:
 
   magicast@0.3.5:
     dependencies:
-      '@babel/parser': 7.27.0
-      '@babel/types': 7.27.0
+      '@babel/parser': 7.27.1
+      '@babel/types': 7.27.1
       source-map-js: 1.2.1
 
   markdown-table@3.0.4: {}
@@ -4353,11 +4353,11 @@ snapshots:
 
   ohash@2.0.11: {}
 
-  oniguruma-parser@0.12.0: {}
+  oniguruma-parser@0.12.1: {}
 
   oniguruma-to-es@4.3.2:
     dependencies:
-      oniguruma-parser: 0.12.0
+      oniguruma-parser: 0.12.1
       regex: 6.0.1
       regex-recursion: 6.0.2
 
