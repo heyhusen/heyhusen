@@ -27,8 +27,8 @@ importers:
         specifier: ^5.2.5
         version: 5.2.5
       '@fontsource/lexend-deca':
-        specifier: ^5.2.6
-        version: 5.2.6
+        specifier: ^5.2.7
+        version: 5.2.7
       '@fontsource/outfit':
         specifier: ^5.2.5
         version: 5.2.5
@@ -359,8 +359,8 @@ packages:
   '@fontsource/jetbrains-mono@5.2.5':
     resolution: {integrity: sha512-TPZ9b/uq38RMdrlZZkl0RwN8Ju9JxuqMETrw76pUQFbGtE1QbwQaNsLlnUrACNNBNbd0NZRXiJJSkC8ajPgbew==}
 
-  '@fontsource/lexend-deca@5.2.6':
-    resolution: {integrity: sha512-dnWpM+wIOee4qoqIGPTS9nJkxAQPx38xoAhbwMC1OSHIOvVVIUFG9dLDB+CllB0YRwhrh6xa2+pieUoWU5PD2g==}
+  '@fontsource/lexend-deca@5.2.7':
+    resolution: {integrity: sha512-p3oPme4I8/ggDP65QTqiK3HcDyV0MngvcKCZbO9tVKdkmHKuyhHwaGjs/HvlM1E0qgqzMFcwvcpJUxKR8rnOrA==}
 
   '@fontsource/outfit@5.2.5':
     resolution: {integrity: sha512-MoQRZDQ8nKOYxJXJNXzcDaBfw+k6IQ0+O/fQaBh5zJRb1/n7JNqxnc7iLK46YlMaFEGh8rjjF0Pp6o8Qc8JSJw==}
@@ -2815,7 +2815,7 @@ snapshots:
 
   '@fontsource/jetbrains-mono@5.2.5': {}
 
-  '@fontsource/lexend-deca@5.2.6': {}
+  '@fontsource/lexend-deca@5.2.7': {}
 
   '@fontsource/outfit@5.2.5': {}
 
