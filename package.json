@@ -16,7 +16,7 @@
 		"@astrojs/tailwind": "^6.0.2",
 		"@fontsource/barlow": "^5.2.5",
 		"@fontsource/jetbrains-mono": "^5.2.5",
-		"@fontsource/lexend-deca": "^5.2.6",
+		"@fontsource/lexend-deca": "^5.2.7",
 		"@fontsource/outfit": "^5.2.5",
 		"@types/react": "^19.1.2",
 		"@types/react-dom": "^19.1.3",
