@@ -19,7 +19,7 @@ importers:
         version: 3.4.1
       '@astrojs/tailwind':
         specifier: ^6.0.2
-        version: 6.0.2(astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)
+        version: 6.0.2(astro@5.9.4(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)
       '@fontsource/barlow':
         specifier: ^5.2.6
         version: 5.2.6
@@ -39,8 +39,8 @@ importers:
         specifier: ^19.1.6
         version: 19.1.6(@types/react@19.1.8)
       astro:
-        specifier: ^5.9.3
-        version: 5.9.3(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0)
+        specifier: ^5.9.4
+        version: 5.9.4(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0)
       astro-seo:
         specifier: ^0.8.4
         version: 0.8.4(typescript@5.8.3)
@@ -624,8 +624,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@rollup/pluginutils@5.1.4':
-    resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
+  '@rollup/pluginutils@5.2.0':
+    resolution: {integrity: sha512-qWJ2ZTbmumwiLFomfzTyt5Kng4hwPi9rwCYN4SHb6eaRU1KNO4ccxINHr/VhH4GgPlt1XfSTLX2LBTme8ne4Zw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -924,8 +924,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.9.3:
-    resolution: {integrity: sha512-VReZrpUa/3rfeiVvsQ1A2M3ujDPI+pDGIYOMtXPEZwut8tZoEyealXXLjitgCsJ+3dunKGZbg4Eak6i+r0vniw==}
+  astro@5.9.4:
+    resolution: {integrity: sha512-AEulm16C9IijMYrFb3VIFx9z17p/wfDSHUHdbbvSEX+rBca64xV+f67tnsql3s4CE8u2cwYpdX+5yH7l53W4iA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2677,9 +2677,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.55
 
-  '@astrojs/tailwind@6.0.2(astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.2(astro@5.9.4(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.9.3(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0)
+      astro: 5.9.4(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0)
       autoprefixer: 10.4.21(postcss@8.5.3)
       postcss: 8.5.3
       postcss-load-config: 4.0.2(postcss@8.5.3)
@@ -3038,7 +3038,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@rollup/pluginutils@5.1.4(rollup@4.43.0)':
+  '@rollup/pluginutils@5.2.0(rollup@4.43.0)':
     dependencies:
       '@types/estree': 1.0.8
       estree-walker: 2.0.2
@@ -3353,7 +3353,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.9.3(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0):
+  astro@5.9.4(@types/node@24.0.3)(jiti@2.4.2)(rollup@4.43.0)(typescript@5.8.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -3361,7 +3361,7 @@ snapshots:
       '@astrojs/telemetry': 3.3.0
       '@capsizecss/unpack': 2.4.0
       '@oslojs/encoding': 1.1.0
-      '@rollup/pluginutils': 5.1.4(rollup@4.43.0)
+      '@rollup/pluginutils': 5.2.0(rollup@4.43.0)
       acorn: 8.15.0
       aria-query: 5.3.2
       axobject-query: 4.1.0
