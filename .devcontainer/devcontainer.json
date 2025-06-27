@@ -1,6 +1,9 @@
 {
 	"name": "Website",
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:22-bookworm",
+	"features": {
+		"ghcr.io/schlich/devcontainer-features/starship:0": {}
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
