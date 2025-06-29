@@ -1,8 +1,9 @@
 import { defineCollection, z } from "astro:content";
 import type { Project } from "./entities";
+import { glob } from "astro/loaders";
 
 const configurations = defineCollection({
-	type: 'data',
+  loader: glob({ pattern: "**/*.json", base: "./src/content/configurations" }),
 	schema: z.object({
 		site: z.object({
 			title: z.string(),
@@ -22,7 +23,7 @@ const configurations = defineCollection({
 })
 
 const menus = defineCollection({
-	type: 'data',
+  loader: glob({ pattern: "**/*.json", base: "./src/content/menus" }),
 	schema: z.object({
 		href: z.string(),
 		name: z.string()
@@ -30,7 +31,6 @@ const menus = defineCollection({
 })
 
 const projects = defineCollection({
-	type: 'content_layer',
 	loader: async () => {
 		const allProjects: Project[] = [
 			{
@@ -93,7 +93,7 @@ const projects = defineCollection({
 })
 
 const articles = defineCollection({
-	type: 'content',
+  loader: glob({ pattern: "**/*.md", base: "./src/content/articles" }),
 	schema: z.object({
 		title: z.string(),
 		description: z.string().nullable(),
@@ -104,7 +104,7 @@ const articles = defineCollection({
 })
 
 const tags = defineCollection({
-	type: 'content',
+  loader: glob({ pattern: "**/*.md", base: "./src/content/tags" }),
 	schema: z.object({
 		title: z.string(),
 		date: z.date()

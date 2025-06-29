@@ -50,7 +50,13 @@ if (!configs) {
 const { data: config } = configs;
 const allMenus = await getCollection("menus");
 
-const menus = allMenus.map<Menu>(({ data }) => data);
+const menus = allMenus.sort((a, b) => {
+	if (a.id > b.id) {
+		return 1;
+	}
+
+	return -1
+}).map<Menu>(({ data }) => data);
 ---
 
 <!doctype html>

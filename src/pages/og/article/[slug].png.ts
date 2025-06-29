@@ -41,7 +41,7 @@ export async function getStaticPaths() {
 	return allArticles.map((item) => {
 		return {
 			params: {
-				slug: item.slug
+				slug: item.id
 			},
 		};
 	});
