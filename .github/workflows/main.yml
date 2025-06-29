@@ -76,6 +76,7 @@ jobs:
       - name: Run build
         env:
           GTIHUB_PERSONAL_TOKEN: ${{ secrets.GTIHUB_PERSONAL_TOKEN }}
+          ASTRO_SITE: https://husen.id
         run: pnpm run build
 
       - name: Deploy
