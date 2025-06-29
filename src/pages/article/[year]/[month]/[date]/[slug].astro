@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 				date: entry.data.date.toLocaleString("en-US", {
 					day: "2-digit",
 				}),
-				slug: entry.slug,
+				slug: entry.id,
 			},
 			props: {
 				entry,
@@ -44,7 +44,7 @@ const {
 	body,
 	data: { title, date, tags },
 } = entry;
-const description = body.trim().substring(0, Math.min(150, body.length));
+const description = body!.trim().substring(0, Math.min(150, body!.length));
 ---
 
 <Layout title={title} description={description}>
