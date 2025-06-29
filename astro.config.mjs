@@ -7,7 +7,9 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
 	site: process.env.ASTRO_SITE || "http://localhost:4321",
 	image: {
-		domains: ['gravatar.com']
+		domains: ['gravatar.com'],
+		responsiveStyles: true,
+    layout: 'constrained',
 	},
 	integrations: [
 		tailwind({
