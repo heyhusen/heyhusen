@@ -1,15 +1,13 @@
-# Hi there 👋
-
-I'm **Husen**.  
+# Hi there, I'm **Husen**. 👋  
 
 I build things that live from code.  
 
 I'm a software developer with a main focus on simplicity, stability and 
 performance to give you the best software experience possible.
 
-Currently building **ERP** software at **Eigen**.
+🔭 I'm currently building **ERP** software at **Eigen**.
 
-I'm available for freelance projects.
+ 👯 I'm available for freelance projects.
 
 ## Contact
 
