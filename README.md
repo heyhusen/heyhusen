@@ -15,5 +15,5 @@ Feel free to reach out if you'd like to chat about software development, tech, o
 
 - [Website](http://husen.id)
 - [hi@husen.id](mailto:hi@husen.id)
-- [Twitter/X](http://twitter.com/heyhusen)
+- [X (Twitter)](http://twitter.com/heyhusen)
 - [LinkedIn](http://linkedin.com/in/heyhusen)
