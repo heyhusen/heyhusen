@@ -35,6 +35,6 @@
 		"@tailwindcss/typography": "^0.5.16",
 		"astro-feather": "^1.0.0",
 		"astro-heroicons": "2.1.5-1",
-		"wrangler": "^4.42.2"
+		"wrangler": "^4.43.0"
 	}
 }
