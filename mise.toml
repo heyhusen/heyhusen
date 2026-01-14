@@ -1,5 +1,5 @@
 [tools]
-node = "22"
+node = "24"
 "npm:@astrojs/language-server" = "latest"
 "npm:typescript-language-server" = "latest"
 pnpm = "10"
