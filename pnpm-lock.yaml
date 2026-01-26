@@ -42,8 +42,8 @@ importers:
         specifier: ^5.16.11
         version: 5.16.11(@types/node@25.0.3)(jiti@1.21.7)(rollup@4.55.2)(typescript@5.8.3)(yaml@2.8.2)
       astro-seo:
-        specifier: ^0.8.4
-        version: 0.8.4(prettier@3.7.4)(typescript@5.8.3)
+        specifier: ^1.1.0
+        version: 1.1.0(prettier@3.7.4)(typescript@5.8.3)
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -87,12 +87,6 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
-
-  '@astrojs/check@0.5.10':
-    resolution: {integrity: sha512-vliHXM9cu/viGeKiksUM4mXfO816ohWtawTl2ADPgTsd4nUMjFiyAl7xFZhF34yy4hq4qf7jvK1F2PlR3b5I5w==}
-    hasBin: true
-    peerDependencies:
-      typescript: ^5.0.0
 
   '@astrojs/check@0.9.6':
     resolution: {integrity: sha512-jlaEu5SxvSgmfGIFfNgcn5/f+29H61NJzEMfAZ82Xopr4XBchXB1GVlcJsE+elUlsYSbXlptZLX+JMG3b/wZEA==}
@@ -1042,8 +1036,8 @@ packages:
   astro-heroicons@2.1.5-1:
     resolution: {integrity: sha512-Ciy8T7YkH+ZIIUR6czHH8FG/tpI1jGpbUQhlRjB0bi9FTy3gZ1YoQqNhteGeZQHmak+t1GTwfr3b/Vv5ls7Wiw==}
 
-  astro-seo@0.8.4:
-    resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
+  astro-seo@1.1.0:
+    resolution: {integrity: sha512-G6LDNDyga30o+52v58jU7C35n3cORUzk7RSuY+xf/ZRbW6JiNplyaOO1VoYVKO+xzYNaBcxqNln2RFRR/wgJNQ==}
 
   astro@5.16.11:
     resolution: {integrity: sha512-Z7kvkTTT5n6Hn5lCm6T3WU6pkxx84Hn25dtQ6dR7ATrBGq9eVa8EuB/h1S8xvaoVyCMZnIESu99Z9RJfdLRLDA==}
@@ -2605,18 +2599,6 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@astrojs/check@0.5.10(prettier@3.7.4)(typescript@5.8.3)':
-    dependencies:
-      '@astrojs/language-server': 2.16.2(prettier@3.7.4)(typescript@5.8.3)
-      chokidar: 3.6.0
-      fast-glob: 3.3.3
-      kleur: 4.1.5
-      typescript: 5.8.3
-      yargs: 17.7.2
-    transitivePeerDependencies:
-      - prettier
-      - prettier-plugin-astro
-
   '@astrojs/check@0.9.6(prettier@3.7.4)(typescript@5.8.3)':
     dependencies:
       '@astrojs/language-server': 2.16.2(prettier@3.7.4)(typescript@5.8.3)
@@ -3377,9 +3359,9 @@ snapshots:
 
   astro-heroicons@2.1.5-1: {}
 
-  astro-seo@0.8.4(prettier@3.7.4)(typescript@5.8.3):
+  astro-seo@1.1.0(prettier@3.7.4)(typescript@5.8.3):
     dependencies:
-      '@astrojs/check': 0.5.10(prettier@3.7.4)(typescript@5.8.3)
+      '@astrojs/check': 0.9.6(prettier@3.7.4)(typescript@5.8.3)
     transitivePeerDependencies:
       - prettier
       - prettier-plugin-astro
