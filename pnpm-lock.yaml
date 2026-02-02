@@ -33,11 +33,11 @@ importers:
         specifier: ^5.2.6
         version: 5.2.6
       '@types/react':
-        specifier: ^19.2.9
-        version: 19.2.9
+        specifier: ^19.2.10
+        version: 19.2.10
       '@types/react-dom':
         specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.9)
+        version: 19.2.3(@types/react@19.2.10)
       astro:
         specifier: ^5.17.1
         version: 5.17.1(@types/node@25.0.3)(jiti@1.21.7)(rollup@4.57.1)(typescript@5.8.3)(yaml@2.8.2)
@@ -48,11 +48,11 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       react:
-        specifier: ^19.2.3
-        version: 19.2.3
+        specifier: ^19.2.4
+        version: 19.2.4
       react-dom:
         specifier: ^19.2.3
-        version: 19.2.3(react@19.2.3)
+        version: 19.2.3(react@19.2.4)
       satori:
         specifier: ^0.19.1
         version: 0.19.1
@@ -937,8 +937,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.9':
-    resolution: {integrity: sha512-Lpo8kgb/igvMIPeNV2rsYKTgaORYdO1XGVZ4Qz3akwOj0ySGYMPlQWa8BaLn0G63D1aSaAQ5ldR06wCpChQCjA==}
+  '@types/react@19.2.10':
+    resolution: {integrity: sha512-WPigyYuGhgZ/cTPRXB2EwUw+XvsRA3GqHlsP4qteqrnnjDrApbS7MxcGr/hke5iUoeB7E/gQtrs9I37zAJ0Vjw==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -1951,8 +1951,8 @@ packages:
     peerDependencies:
       react: ^19.2.3
 
-  react@19.2.3:
-    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
+  react@19.2.4:
+    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -3247,11 +3247,11 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/react-dom@19.2.3(@types/react@19.2.9)':
+  '@types/react-dom@19.2.3(@types/react@19.2.10)':
     dependencies:
-      '@types/react': 19.2.9
+      '@types/react': 19.2.10
 
-  '@types/react@19.2.9':
+  '@types/react@19.2.10':
     dependencies:
       csstype: 3.2.3
 
@@ -4547,12 +4547,12 @@ snapshots:
 
   radix3@1.1.2: {}
 
-  react-dom@19.2.3(react@19.2.3):
+  react-dom@19.2.3(react@19.2.4):
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
       scheduler: 0.27.0
 
-  react@19.2.3: {}
+  react@19.2.4: {}
 
   read-cache@1.0.0:
     dependencies:
