@@ -1,6 +1,7 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import type { Project } from "./entities";
 import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const configurations = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "./src/content/configurations" }),
@@ -12,7 +13,7 @@ const configurations = defineCollection({
 		}),
 		author: z.object({
 			name: z.string(),
-			email: z.string().email(),
+			email: z.email(),
 			social: z.object({
 				linkedin: z.string(),
 				github: z.string(),
