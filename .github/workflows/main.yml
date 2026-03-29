@@ -78,6 +78,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: dist
+          path: ${{ github.workspace }}/dist
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
