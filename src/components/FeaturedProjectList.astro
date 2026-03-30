@@ -17,7 +17,7 @@ const projects = allProjects.filter((item) => {
 	{
 		projects.map(({ data }) => (
 			<article
-				class="flex flex-col shadow overflow-hidden md:flex-row"
+				class="flex flex-col shadow-sm overflow-hidden md:flex-row"
 				style={`background-color: ${data.accent}`}
 			>
 				<header class="flex flex-col gap-2 p-4 md:gap-4 md:flex-1 md:py-6 md:pl-6 md:pr-0 lg:gap-6 lg:py-8 lg:pl-8">
@@ -25,14 +25,16 @@ const projects = allProjects.filter((item) => {
 						{`${data.name.charAt(0).toUpperCase()}${data.name.slice(1)}`}
 					</h2>
 
-					<div class="md:text-lg lg:text-xl dark:text-secondary">{data.description}</div>
+					<div class="md:text-lg lg:text-xl dark:text-secondary">
+						{data.description}
+					</div>
 
 					<div class="flex flex-wrap items-start gap-2 mt-4 md:gap-3 md:mt-6 lg:mt-8">
 						<a
 							href={data.html_url}
-							class="bg-secondary text-primary inline-flex items-center gap-2 py-2 px-4 duration-200 focus:outline-none focus:ring focus:ring-secondary focus:ring-offset-2 hover:bg-opacity-80"
+							class="bg-secondary text-primary inline-flex items-center gap-2 py-2 px-4 duration-200 focus:outline-hidden focus:ring-3 focus:ring-secondary focus:ring-offset-2 hover:bg-secondary/80"
 						>
-							<GithubIcon customClasses="h-5 w-5 focus:outline-none" />
+							<GithubIcon customClasses="h-5 w-5 focus:outline-hidden" />
 
 							<span>View on GitHub</span>
 						</a>

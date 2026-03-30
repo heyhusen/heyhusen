@@ -26,14 +26,14 @@ const { data: config } = configs;
 			>
 				<a
 					href="#projects"
-					class="font-bold text-lg md:py-2.5 md:px-4.5 md:text-xl inline-flex items-center gap-2 py-2 px-4 duration-200 hover:bg-opacity-80 focus:outline-none focus:ring focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-secondary lg:py-3 lg:px-5 lg:text-2xl bg-accent text-primary border-2 border-accent"
+					class="font-bold text-lg md:py-2.5 md:px-4.5 md:text-xl inline-flex items-center gap-2 py-2 px-4 duration-200 hover:bg-accent/80 focus:outline-hidden focus:ring-3 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-secondary lg:py-3 lg:px-5 lg:text-2xl bg-accent text-primary border-2 border-accent"
 				>
 					See projects
 				</a>
 
 				<a
 					href="#contact-me"
-					class="font-bold text-lg md:py-2.5 md:px-4.5 md:text-xl inline-flex items-center gap-2 py-2 px-4 duration-200 focus:outline-none focus:ring focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-secondary lg:py-3 lg:px-5 lg:text-2xl border-2 border-accent bg-transparent text-accent hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary"
+					class="font-bold text-lg md:py-2.5 md:px-4.5 md:text-xl inline-flex items-center gap-2 py-2 px-4 duration-200 focus:outline-hidden focus:ring-3 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-secondary lg:py-3 lg:px-5 lg:text-2xl border-2 border-accent bg-transparent text-accent hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary"
 				>
 					Contact me
 				</a>
@@ -82,6 +82,8 @@ const { data: config } = configs;
 </Layout>
 
 <style is:global>
+	@reference "../styles/global.css";
+
 	section.home {
 		h1 {
 			@apply text-xl text-secondary dark:text-primary md:text-2xl lg:text-3xl;

@@ -1,9 +1,9 @@
 import type { MarkdownHeading } from "astro";
 
 export interface Project {
-	url: string
-	image: string | null
-	accent: string | null
+	url: string;
+	image: string | null;
+	accent: string | null;
 }
 
 export interface TocItem extends MarkdownHeading {
@@ -16,9 +16,9 @@ export interface Menu {
 }
 
 export interface GenerateOpenGraphImageParam {
-	type: "home" | "page" | "article"
+	type: "home" | "page" | "article";
 	fontSize: string;
-	title?: string
-	gravatarHash?: string
-	author?: string
+	title?: string;
+	gravatarHash?: string;
+	author?: string;
 }

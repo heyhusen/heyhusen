@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* Plugins */
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+/* Theme customization */
+@theme {
+	/* Fonts */
+	--font-sans: "Lexend Deca", sans-serif;
+	--font-mono: "JetBrains Mono", monospace;
+
+	/* Colors */
+	--color-primary: white;
+	--color-dark-primary: theme(colors.gray.200);
+	--color-secondary: theme(colors.gray.900);
+	--color-dark-secondary: theme(colors.gray.950);
+	--color-accent: theme(colors.blue.700);
+	--color-success: theme(colors.emerald.200);
+	--color-error: theme(colors.red.200);
+
+	/* Breakpoints */
+	--breakpoint-sm: 320px;
+	--breakpoint-2sm: 499px;
+	--breakpoint-3sm: 550px;
+	--breakpoint-4sm: 640px;
+	--breakpoint-md: 768px;
+	--breakpoint-2md: 790px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+
+	/* Font sizes */
+	--text-xs: 0.75rem;
+	--text-xs--line-height: 1.5;
+
+	--text-sm: 0.875rem;
+	--text-sm--line-height: 1.5;
+
+	--text-base: 1rem;
+	--text-base--line-height: 1.5;
+
+	--text-lg: 1.125rem;
+	--text-lg--line-height: 1.5;
+
+	--text-xl: 1.25rem;
+	--text-xl--line-height: 1.375;
+
+	--text-2xl: 1.5rem;
+	--text-2xl--line-height: 1.375;
+
+	--text-3xl: 1.875rem;
+	--text-3xl--line-height: 1.375;
+
+	--text-4xl: 2.25rem;
+	--text-4xl--line-height: 1.375;
+
+	--text-5xl: 3rem;
+	--text-5xl--line-height: 1.375;
+
+	--text-6xl: 3.75rem;
+	--text-6xl--line-height: 1.25;
+
+	--text-7xl: 4.5rem;
+	--text-7xl--line-height: 1.25;
+
+	--text-8xl: 6rem;
+	--text-8xl--line-height: 1.25;
+
+	--text-9xl: 8rem;
+	--text-9xl--line-height: 1.25;
+
+	/* Extended spacing */
+	--spacing-4_5: 1.125rem;
+	--spacing-9_5: 2.375rem;
+	--spacing-13: 3.25rem;
+	--spacing-15: 3.75rem;
+	--spacing-17: 4.25rem;
+	--spacing-18: 4.5rem;
+	--spacing-19: 4.75rem;
+	--spacing-21: 5.25rem;
+	--spacing-22: 5.5rem;
+	--spacing-25: 6.125rem;
+	--spacing-26: 6.5rem;
+	--spacing-29: 7.25rem;
+	--spacing-30: 7.5rem;
+	--spacing-34: 8.5rem;
+	--spacing-42: 10.5rem;
+
+	/* Border */
+	--border-width-0_5: 0.5px;
+}
+
+@source not inline('container');
+
+@custom-variant dark (&:where(.dark, .dark *));

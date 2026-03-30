@@ -21,7 +21,7 @@ const { pathname, siteTitle, menus } = Astro.props;
 		<div class="flex justify-between items-center">
 			<a
 				href="/"
-				class="justify-self-start text-secondary dark:text-primary duration-200 hover:text-opacity-75"
+				class="justify-self-start text-secondary dark:text-primary duration-200 hover:text-secondary/75"
 				aria-label={siteTitle}
 			>
 				<Logo />
@@ -29,14 +29,14 @@ const { pathname, siteTitle, menus } = Astro.props;
 
 			<button
 				aria-label="Navigation Menu Toggle"
-				class="inline-flex 4sm:hidden items-center gap-2 duration-200 hover:bg-opacity-80 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-secondary dark:focus:ring-primary focus:ring-offset-transparent"
+				class="inline-flex 4sm:hidden items-center gap-2 duration-200 focus:outline-hidden focus:ring-3 focus:ring-offset-2 focus:ring-secondary dark:focus:ring-primary focus:ring-offset-transparent"
 			>
 				<span class="open-icon block">
-					<Bars3BottomRight class="w-8 h-8 focus:outline-none" />
+					<Bars3BottomRight class="w-8 h-8 focus:outline-hidden" />
 				</span>
 
 				<span class="close-icon hidden">
-					<XMark class="w-8 h-8 focus:outline-none" />
+					<XMark class="w-8 h-8 focus:outline-hidden" />
 				</span>
 			</button>
 		</div>
@@ -53,13 +53,13 @@ const { pathname, siteTitle, menus } = Astro.props;
 	const navMenuIcon = document.querySelector(".header button .open-icon");
 	const navCloseIcon = document.querySelector(".header button .close-icon");
 	const hLightThemeButton = document.querySelector(
-		".theme-toggle > div .light-theme-button"
+		".theme-toggle > div .light-theme-button",
 	);
 	const hDarkThemeButton = document.querySelector(
-		".theme-toggle > div .dark-theme-button"
+		".theme-toggle > div .dark-theme-button",
 	);
 	const hAutoThemeButton = document.querySelector(
-		".theme-toggle > div .auto-theme-button"
+		".theme-toggle > div .auto-theme-button",
 	);
 
 	function navMenuToggle() {

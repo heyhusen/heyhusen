@@ -12,6 +12,7 @@ import { getCollection, getEntry } from "astro:content";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import type { Menu } from "../entities";
+import "../styles/global.css";
 
 interface Props {
 	title: string;
@@ -50,13 +51,15 @@ if (!configs) {
 const { data: config } = configs;
 const allMenus = await getCollection("menus");
 
-const menus = allMenus.sort((a, b) => {
-	if (a.id > b.id) {
-		return 1;
-	}
+const menus = allMenus
+	.sort((a, b) => {
+		if (a.id > b.id) {
+			return 1;
+		}
 
-	return -1
-}).map<Menu>(({ data }) => data);
+		return -1;
+	})
+	.map<Menu>(({ data }) => data);
 ---
 
 <!doctype html>
@@ -177,6 +180,8 @@ const menus = allMenus.sort((a, b) => {
 </html>
 
 <style is:global>
+	@reference "../styles/global.css";
+
 	::selection {
 		@apply bg-accent text-primary;
 	}

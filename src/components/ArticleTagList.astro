@@ -11,7 +11,7 @@ const { tags } = Astro.props;
 		tags.map((tag) => (
 			<a
 				href={`/tags/${tag.toLowerCase().replaceAll(" ", "-")}`}
-				class="py-0.5 px-2 rounded-full border border-gray-300 dark:border-gray-700 duration-200 hover:bg-secondary dark:hover:bg-dark-primary hover:text-primary dark:hover:text-dark-secondary hover:border-secondary dark:hover:border-dark-primary focus:bg-secondary dark:focus:bg-dark-primary focus:text-primary dark:focus:text-dark-secondary focus:border-secondary dark:focus:border-dark-secondary focus:outline-none focus:ring focus:ring-secondary dark:focus:ring-dark-primary focus:ring-offset-2"
+				class="py-0.5 px-2 rounded-full border border-gray-300 dark:border-gray-700 duration-200 hover:bg-secondary dark:hover:bg-dark-primary hover:text-primary dark:hover:text-dark-secondary hover:border-secondary dark:hover:border-dark-primary focus:bg-secondary dark:focus:bg-dark-primary focus:text-primary dark:focus:text-dark-secondary focus:border-secondary dark:focus:border-dark-secondary focus:outline-hidden focus:ring-3 focus:ring-secondary dark:focus:ring-dark-primary focus:ring-offset-2"
 			>
 				{tag}
 			</a>
