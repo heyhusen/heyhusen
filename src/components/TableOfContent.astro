@@ -32,11 +32,11 @@ const { headings } = Astro.props;
 const tableOfContents = generateToc(headings);
 ---
 
-<div class="space-y-3 font-extralight md:sticky md:top-6 lg:top-8">
+<div class="flex flex-col gap--3 font-extralight md:sticky md:top-6 lg:top-8">
 	<h3 class="font-normal text-lg">On this page</h3>
 
 	<nav class="toc">
-		<ul class="space-y-1">
+		<ul class="flex flex-col gap-1">
 			{tableOfContents.map((toc) => <TableOfContentHeading heading={toc} />)}
 		</ul>
 	</nav>
@@ -57,21 +57,21 @@ const tableOfContents = generateToc(headings);
 						"active-toc-item",
 						"font-normal",
 						"bg-accent",
-						"bg-opacity-10",
+						"bg-accent/10",
 						"text-accent",
-						"dark:text-accent"
+						"dark:text-accent",
 					);
 					tocItem?.classList.add(
 						"active-toc-item",
 						"font-normal",
 						"bg-accent",
-						"bg-opacity-10",
+						"bg-accent/10",
 						"text-accent",
-						"dark:text-accent"
+						"dark:text-accent",
 					);
 				} else {
 					const isAnyOtherEntryIntersecting = entries.some(
-						(e) => e.target.id !== entry.target.id && e.isIntersecting
+						(e) => e.target.id !== entry.target.id && e.isIntersecting,
 					);
 
 					if (isAnyOtherEntryIntersecting) {
@@ -79,9 +79,9 @@ const tableOfContents = generateToc(headings);
 							"active-toc-item",
 							"font-normal",
 							"bg-accent",
-							"bg-opacity-10",
+							"bg-accent/10",
 							"text-accent",
-							"dark:text-accent"
+							"dark:text-accent",
 						);
 					}
 				}
@@ -91,11 +91,11 @@ const tableOfContents = generateToc(headings);
 			root: null,
 			rootMargin: "0px",
 			threshold: [1],
-		}
+		},
 	);
 
 	const sectionHeadings = document.querySelectorAll(
-		".article h2, .article h3, .article h4, .article h5, article h6"
+		".article h2, .article h3, .article h4, .article h5, article h6",
 	);
 
 	for (const heading of sectionHeadings) {
