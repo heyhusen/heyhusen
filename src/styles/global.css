@@ -5,11 +5,13 @@
 @plugin "@tailwindcss/typography";
 
 /* Theme customization */
-@theme {
+@theme inline {
 	/* Fonts */
-	--font-sans: "Lexend Deca", sans-serif;
-	--font-mono: "JetBrains Mono", monospace;
+	--font-sans: var(--font-lexend-deca);
+	--font-mono: var(--font-jetbrains-mono);
+}
 
+@theme {
 	/* Colors */
 	--color-primary: white;
 	--color-dark-primary: theme(colors.gray.200);
