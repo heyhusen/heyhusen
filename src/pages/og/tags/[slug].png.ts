@@ -35,7 +35,7 @@ export const GET: APIRoute = async ({ params }) => {
 		fontSize: '6rem',
 	}));
 
-	return new Response(png, {
+	return new Response(new Uint8Array(png), {
 		headers: {
 			"Content-Type": "image/png",
 		},
